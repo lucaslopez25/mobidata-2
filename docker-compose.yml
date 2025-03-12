@@ -1,0 +1,47 @@
+version: '3.9'
+
+secrets:
+    postgres_password:
+        # Você precisará criar um arquivo com a senha correta.
+        file: ./postgres-password.txt
+
+services:
+    # Base de dados Postgres
+    mobidata-postgres:
+        image: postgres:17-alpine
+        # Pasta de persistência do banco no container docker é mobidata-db-postgres
+        volumes:
+            - mobidata-db-postgres:/var/lib/postgresql/data
+        environment:
+            POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+            POSTGRES_USER: mobidatauser
+            POSTGRES_DB: postgres
+        # Porta exposta no localhost do usuário é 25432
+        ports:
+            - "25432:5432"
+        secrets:
+            - postgres_password
+        
+    mobidata-app:
+        container_name: mobidata_app
+        # Quando você ver "build: .", isso significa que estamos importando o Dockerfile localizado na mesma pasta que o docker-compose
+        build: .
+        # Porta exposta do django no localhost do usuário é 28000, evitando de conflitar com a porta 8000, mas é possível configurar outras portas no lugar dela :)
+        ports:
+            - "28000:8000" 
+        # Pasta de persistência mobidata-app é homônima ao app (não precisa ser homônimo mas estamos tentando manter as coisas aqui um pouco higiênicas)
+        volumes:
+            - ./mobidata2-app:/app
+        command: >
+            sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+        environment:
+            - DB_HOST=mobidata-postgres
+            - DB_NAME=postgres
+            - DB_USER=mobidatauser
+            - DB_PASSWORD=k1llC4r5
+        depends_on:
+            - mobidata-postgres
+
+volumes:
+    mobidata-db-postgres:
+        
