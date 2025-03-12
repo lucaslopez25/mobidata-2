@@ -42,6 +42,17 @@ services:
         depends_on:
             - mobidata-postgres
 
+    pgadmin-mobidata:
+        image: dpage/pgadmin4
+        restart: always
+        ports:
+            - "25050:80"
+        environment:
+            PGADMIN_DEFAULT_EMAIL: acesso@mobidata2.net
+            PGADMIN_DEFAULT_PASSWORD: acessoMobidata2025
+        volumes:
+            - pgadmin-data:/var/lib/pgadmin
+
 volumes:
     mobidata-db-postgres:
         
