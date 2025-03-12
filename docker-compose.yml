@@ -35,12 +35,14 @@ services:
         command: >
             sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
         environment:
-            - DB_HOST=mobidata-postgres
-            - DB_NAME=postgres
-            - DB_USER=mobidatauser
-            - DB_PASSWORD=k1llC4r5
+            DB_HOST: mobidata-postgres
+            DB_NAME: postgres
+            DB_USER: mobidatauser
+            DB_PASSWORD: /run/secrets/postgres_password
         depends_on:
             - mobidata-postgres
+        secrets:
+            - postgres_password
 
     pgadmin-mobidata:
         image: dpage/pgadmin4
@@ -55,4 +57,4 @@ services:
 
 volumes:
     mobidata-db-postgres:
-        
+    pgadmin-data:
