@@ -146,7 +146,7 @@ INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) 
 ('SPE2', 9, 2022, 969), -- Setembro
 ('SPE2', 10, 2022, 970), -- Outubro
 ('SPE2', 11, 2022, 976), -- Novembro
-('SPE2', 12, 2022, 942); -- Dezembro
+('SPE2', 12, 2022, 942), -- Dezembro
 
 -- SPE3 => PLATAFORMA
 INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) VALUES
@@ -185,7 +185,7 @@ INSERT INTO frota_total(id_concessionaria, mes, ano, qtd_total_de_onibus) VALUES
 ('SPE2', 9, 2022, 1034),
 ('SPE2', 10, 2022, 1044),
 ('SPE2', 11, 2022, 1044),
-('SPE2', 12, 2022, 1044);
+('SPE2', 12, 2022, 1044),
 -- SPE3 => PLATAFORMA
 ('SPE3', 1, 2022, 772),
 ('SPE3', 2, 2022, 770),
@@ -532,4 +532,4 @@ INSERT INTO historico_idade_media_frota(ano, mes, idade_media) VALUES
 (2022, 09, 7.58),
 (2022, 10, 7.63),
 (2022, 11, 7.70),
-(2022, 12, 7.79),
+(2022, 12, 7.79);

@@ -77,11 +77,20 @@ WSGI_APPLICATION = 'mobidata2project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+DATABASE_ROUTERS = ['mobidata2project.database_router.DadosRouter']
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'HOST': os.environ.get("DB_HOST"),
         'NAME': os.environ.get("DB_NAME"),
+        'USER': os.environ.get("DB_USER"),
+        'PASSWORD': os.environ.get("DB_PASSWORD"),
+    },
+    'dados_db': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': os.environ.get("DB_HOST"),
+        'NAME': os.environ.get('DB_NAME_2'),
         'USER': os.environ.get("DB_USER"),
         'PASSWORD': os.environ.get("DB_PASSWORD"),
     }
