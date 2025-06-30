@@ -1,4 +1,4 @@
-CREATE TABLE corredores_de_onibus(
+CREATE TABLE IF NOT EXISTS corredores_de_onibus(
     id_corredor SERIAL PRIMARY KEY,
     nome_corredor VARCHAR(255),
     qtd_onibus_por_hora INTEGER,
@@ -30,9 +30,10 @@ INSERT INTO corredores_de_onibus(nome_corredor, qtd_onibus_por_hora, extensao_em
 ('AV. JOANA ANGÉLICA(Colégio Central)', 23, 1.38, 4, 2022),
 ('RUA CARLOS GOMES(Igreja Universal)', 69, 1.11, 18, 2022),
 ('AV. BARROS REIS(Madeireira Cristo Rei)', 113, 2.00, 30, 2022),
-('AV. HEITOR DIAS(Bar Sertanejo)', 77, 2.00, 18, 2022);
+('AV. HEITOR DIAS(Bar Sertanejo)', 77, 2.00, 18, 2022)
+ON CONFLICT DO NOTHING;
 
-CREATE TABLE concessionarias(
+CREATE TABLE IF NOT EXISTS concessionarias(
     id_concessionaria VARCHAR(10) PRIMARY KEY,
     nome_concessionaria VARCHAR(60),
     endereco_garagens VARCHAR(255),
@@ -43,9 +44,10 @@ CREATE TABLE concessionarias(
 INSERT INTO concessionarias(id_concessionaria, nome_concessionaria, endereco_garagens, cep, telefone) VALUES
 ('SPE1', 'CSN', 'A preencher', '00.000-000', '71 0000 0000'),
 ('SPE2', 'OT TRANS', 'ESTRADA VELHA DE CAMPINAS, 1.175 - Pirajá', '41.280-520', '71 3525 8433'),
-('SPE3', 'PLATAFORMA', 'RUA TOMAZ GONZAGA, 262 - Pernambués', '41.100-000', '71 2203 4131');
+('SPE3', 'PLATAFORMA', 'RUA TOMAZ GONZAGA, 262 - Pernambués', '41.100-000', '71 2203 4131')
+ON CONFLICT DO NOTHING;
 
-CREATE TABLE tipo_de_veiculo(
+CREATE TABLE IF NOT EXISTS tipo_de_veiculo(
     id_tipo_veiculo SERIAL PRIMARY KEY,
     nome_tipo VARCHAR(60),
     vida_util_em_anos INTEGER
@@ -60,9 +62,10 @@ INSERT INTO tipo_de_veiculo(nome_tipo, vida_util_em_anos) VALUES
 ('ônibus convencional alongado', 7),
 ('ônibus articulado', NULL),
 ('ônibus biarticulado', NULL),
-('ônibus super articulado', NULL);
+('ônibus super articulado', NULL)
+ON CONFLICT DO NOTHING;
 
-CREATE TABLE aquisicoes_de_onibus_por_mes(
+CREATE TABLE IF NOT EXISTS aquisicoes_de_onibus_por_mes(
     id_aquisicao_mes SERIAL PRIMARY KEY,
     id_concessionaria VARCHAR(10) REFERENCES concessionarias(id_concessionaria),
     mes INTEGER,
@@ -96,10 +99,8 @@ INSERT INTO aquisicoes_de_onibus_por_mes(id_concessionaria, mes, ano, qtd_onibus
 ('SPE2', 11, 2022, 0, TRUE),
 ('SPE2', 11, 2022, 0, FALSE),
 ('SPE2', 12, 2022, 0, TRUE),
-('SPE2', 12, 2022, 0, FALSE);
-
+('SPE2', 12, 2022, 0, FALSE),
 -- SPE3 => PLATAFORMA
-INSERT INTO aquisicoes_de_onibus_por_mes(id_concessionaria, mes, ano, qtd_onibus, novo_ou_usado) VALUES
 ('SPE3', 1, 2022, 10, TRUE),
 ('SPE3', 1, 2022, 0, FALSE),
 ('SPE3', 2, 2022, 0, TRUE),
@@ -123,9 +124,10 @@ INSERT INTO aquisicoes_de_onibus_por_mes(id_concessionaria, mes, ano, qtd_onibus
 ('SPE3', 11, 2022, 0, TRUE),
 ('SPE3', 11, 2022, 0, FALSE),
 ('SPE3', 12, 2022, 0, TRUE),
-('SPE3', 12, 2022, 0, FALSE);
+('SPE3', 12, 2022, 0, FALSE)
+ON CONFLICT DO NOTHING;
 
-CREATE TABLE frota_operante(
+CREATE TABLE IF NOT EXISTS frota_operante(
     id_frota_operante_mes SERIAL PRIMARY KEY,
     id_concessionaria VARCHAR(10) REFERENCES concessionarias(id_concessionaria),
     mes INTEGER,
@@ -147,11 +149,9 @@ INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) 
 ('SPE2', 10, 2022, 970), -- Outubro
 ('SPE2', 11, 2022, 976), -- Novembro
 ('SPE2', 12, 2022, 942), -- Dezembro
-
 -- SPE3 => PLATAFORMA
-INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) VALUES
 ('SPE3', 1, 2022, 612), -- Janeiro
-('SPE3', 2, 2022, 684); -- Fevereiro
+('SPE3', 2, 2022, 684), -- Fevereiro
 ('SPE3', 3, 2022, 689), -- Março
 ('SPE3', 4, 2022, 693), -- Abril
 ('SPE3', 5, 2022, 697), -- Maio
@@ -161,9 +161,10 @@ INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) 
 ('SPE3', 9, 2022, 709), -- Setembro
 ('SPE3', 10, 2022, 709), -- Outubro
 ('SPE3', 11, 2022, 710), -- Novembro
-('SPE3', 12, 2022, 688); -- Dezembro
+('SPE3', 12, 2022, 688) -- Dezembro
+ON CONFLICT DO NOTHING;
 
-CREATE TABLE frota_total(
+CREATE TABLE IF NOT EXISTS frota_total(
     id_frota_total_mes SERIAL PRIMARY KEY,
     id_concessionaria VARCHAR(10) REFERENCES concessionarias(id_concessionaria),
     mes INTEGER,
@@ -198,9 +199,10 @@ INSERT INTO frota_total(id_concessionaria, mes, ano, qtd_total_de_onibus) VALUES
 ('SPE3', 9, 2022, 769),
 ('SPE3', 10, 2022, 771),
 ('SPE3', 11, 2022, 745),
-('SPE3', 12, 2022, 745);
+('SPE3', 12, 2022, 745)
+ON CONFLICT DO NOTHING;
 
-CREATE TABLE idade_media_da_frota(
+CREATE TABLE IF NOT EXISTS idade_media_da_frota(
     id_idade_media_mes SERIAL PRIMARY KEY,
     id_concessionaria VARCHAR(10) REFERENCES concessionarias(id_concessionaria),
     mes INTEGER,
@@ -234,12 +236,13 @@ INSERT INTO idade_media_da_frota(id_concessionaria, mes, ano, idade_media) VALUE
 ('SPE3', 9, 2022, 7.47),
 ('SPE3', 10, 2022, 7.56),
 ('SPE3', 11, 2022, 7.60),
-('SPE3', 12, 2022, 7.69);
+('SPE3', 12, 2022, 7.69)
+ON CONFLICT DO NOTHING;
 
 -- PAGINA 38 DE 98 DO ANUARIO 2022
 -- HISTÓRICO DA IDADE MÉDIA DA FROTA DE ÔNIBUS
 
-CREATE TABLE historico_idade_media_frota(
+CREATE TABLE IF NOT EXISTS historico_idade_media_frota(
     id_historico SERIAL PRIMARY KEY,
     ano INTEGER,
 	mes INTEGER,
@@ -390,6 +393,123 @@ INSERT INTO historico_idade_media_frota(ano, mes, idade_media) VALUES
 (2011, 11, 4.79),
 (2011, 12, 4.86),
 
+(2012, 01, 4.89),
+(2012, 02, 4.95),
+(2012, 03, 4.93),
+(2012, 04, 4.87),
+(2012, 05, 4.92),
+(2012, 06, 4.98),
+(2012, 07, 5.01),
+(2012, 08, 5.07),
+(2012, 09, 5.12),
+(2012, 10, 5.18),
+(2012, 11, 4.96),
+(2012, 12, 4.96),
+
+(2013, 01, 5.00),
+(2013, 02, 5.05),
+(2013, 03, 5.03),
+(2013, 04, 4.92),
+(2013, 05, 4.77),
+(2013, 06, 4.72),
+(2013, 07, 4.74),
+(2013, 08, 4.74),
+(2013, 09, 4.79),
+(2013, 10, 4.72),
+(2013, 11, 4.68),
+(2013, 12, 4.64),
+
+(2014, 01, 4.62),
+(2014, 02, 4.61),
+(2014, 03, 4.63),
+(2014, 04, 4.61),
+(2014, 05, 4.67),
+(2014, 06, 4.83),
+(2014, 07, 4.76),
+(2014, 08, 4.69),
+(2014, 09, 4.72),
+(2014, 10, 4.79),
+(2014, 11, 4.81),
+(2014, 12, 4.54),
+
+(2015, 01, 4.33),
+(2015, 02, 4.33),
+(2015, 03, 3.79),
+(2015, 04, 3.79),
+(2015, 05, 3.68),
+(2015, 06, 3.75),
+(2015, 07, 3.63),
+(2015, 08, 3.70),
+(2015, 09, 3.60),
+(2015, 10, 3.55),
+(2015, 11, 3.54),
+(2015, 12, 3.61),
+
+(2016, 01, 3.54),
+(2016, 02, 3.62),
+(2016, 03, 3.69),
+(2016, 04, 3.76),
+(2016, 05, 3.84),
+(2016, 06, 3.92),
+(2016, 07, 4.00),
+(2016, 08, 4.09),
+(2016, 09, 4.16),
+(2016, 10, 4.25),
+(2016, 11, 4.33),
+(2016, 12, 4.40),
+
+(2017, 01, 4.49),
+(2017, 02, 4.56),
+(2017, 03, 4.65),
+(2017, 04, 4.74),
+(2017, 05, 4.82),
+(2017, 06, 4.89),
+(2017, 07, 4.97),
+(2017, 08, 5.05),
+(2017, 09, 5.13),
+(2017, 10, 5.22),
+(2017, 11, 5.30),
+(2017, 12, 5.38),
+
+(2018, 01, 5.44),
+(2018, 02, 5.47),
+(2018, 03, 5.47),
+(2018, 04, 5.54),
+(2018, 05, 5.63),
+(2018, 06, 5.70),
+(2018, 07, 5.88),
+(2018, 08, 5.96),
+(2018, 09, 6.23),
+(2018, 10, 6.14),
+(2018, 11, 6.22),
+(2018, 12, 6.30),
+
+(2019, 01, 6.38),
+(2019, 02, 6.46),
+(2019, 03, 6.54),
+(2019, 04, 6.62),
+(2019, 05, 6.71),
+(2019, 06, 6.78),
+(2019, 07, 6.60),
+(2019, 08, 6.56),
+(2019, 09, 6.47),
+(2019, 10, 6.51),
+(2019, 11, 6.51),
+(2019, 12, 6.53),
+
+(2020, 01, 6.61),
+(2020, 02, 6.69),
+(2020, 03, 6.80),
+(2020, 04, 6.88),
+(2020, 05, 6.96),
+(2020, 06, 7.05),
+(2020, 07, 7.21),
+(2020, 08, 7.21),
+(2020, 09, 7.03),
+(2020, 10, 7.11),
+(2020, 11, 7.28),
+(2020, 12, 7.29),
+
 (2021, 01, 7.30),
 (2021, 02, 7.35),
 (2021, 03, 7.34),
@@ -414,4 +534,5 @@ INSERT INTO historico_idade_media_frota(ano, mes, idade_media) VALUES
 (2022, 09, 7.58),
 (2022, 10, 7.63),
 (2022, 11, 7.70),
-(2022, 12, 7.79);
+(2022, 12, 7.79)
+ON CONFLICT DO NOTHING;
