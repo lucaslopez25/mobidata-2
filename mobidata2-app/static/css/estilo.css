@@ -1,0 +1,34 @@
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #003366;
+    padding: 10px 20px;
+}
+
+nav h1 {
+    color: white;
+    margin: 0;
+    font-size: 24px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.grafico {
+    margin-bottom: 40px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+select {
+    font-size: 16px;
+    padding: 6px;
+}
