@@ -47,8 +47,10 @@ INSERT INTO concessionarias(id_concessionaria, nome_concessionaria, endereco_gar
 -- FONTE para OUTROS DADOS - Veja anuário mais recente
 ('SPE2', 'OT TRANS', 'ESTRADA VELHA DE CAMPINAS, 1.175 - Pirajá', '41.280-520', '71 3525 8433'),
 ('SPE3', 'PLATAFORMA', 'RUA TOMAZ GONZAGA, 262 - Pernambués', '41.100-000', '71 2203 4131'),
+('BRT1', 'BRT (CCO)', 'Av. Barros Reis, 1.427 - Retiro ', '41.185-300', '71 4020 1550'),
 ('STEC', 'STEC', 'n/a', 'n/a', 'n/a'),
-('TOTAL', 'TOTAL', 'n/a', 'n/a', 'n/a')
+('STCO', 'TOTAL - SISTEMA DE TRANSPORTE COLETIVO POR ÔNIBUS', 'n/a', 'n/a', 'n/a'),
+('TOTL', 'TOTAL - STCO, BRT E STEC', 'n/a', 'n/a', 'n/a')
 ON CONFLICT (id_concessionaria)
 DO UPDATE SET
     nome_concessionaria = EXCLUDED.nome_concessionaria,
@@ -258,18 +260,18 @@ INSERT INTO frota_total(id_concessionaria, mes, ano, qtd_total_de_onibus) VALUES
 -- FROTA TOTAL DE 2021
 -- VER PÁGINA 21 DO ANUÁRIO DE 2021
 -- Infelizmente os dados não estão discriminados por concessionária para Frota Total em 2021
-('TOTAL', 1, 2021, 2244),
-('TOTAL', 2, 2021, 2231),
-('TOTAL', 3, 2021, 2178),
-('TOTAL', 4, 2021, 2280),
-('TOTAL', 5, 2021, 2277),
-('TOTAL', 6, 2021, 2267),
-('TOTAL', 7, 2021, 2268),
-('TOTAL', 8, 2021, 2266),
-('TOTAL', 9, 2021, 2169),
-('TOTAL', 10, 2021, 2032),
-('TOTAL', 11, 2021, 2101),
-('TOTAL', 12, 2021, 1776)
+('STCO', 1, 2021, 2244),
+('STCO', 2, 2021, 2231),
+('STCO', 3, 2021, 2178),
+('STCO', 4, 2021, 2280),
+('STCO', 5, 2021, 2277),
+('STCO', 6, 2021, 2267),
+('STCO', 7, 2021, 2268),
+('STCO', 8, 2021, 2266),
+('STCO', 9, 2021, 2169),
+('STCO', 10, 2021, 2032),
+('STCO', 11, 2021, 2101),
+('STCO', 12, 2021, 1776)
 ON CONFLICT DO NOTHING;
 
 CREATE TABLE IF NOT EXISTS idade_media_da_frota(
@@ -604,5 +606,34 @@ INSERT INTO historico_idade_media_frota(ano, mes, idade_media) VALUES
 (2022, 09, 7.58),
 (2022, 10, 7.63),
 (2022, 11, 7.70),
-(2022, 12, 7.79)
+(2022, 12, 7.79),
+
+-- FONTE: ANUÁRIO 2024
+-- HISTÓRICO DE IDADE MÉDIA
+-- PÁGINA 40 DE 122
+(2023, 01, 7.89),
+(2023, 02, 7.73),
+(2023, 03, 7.79),
+(2023, 04, 7.70),
+(2023, 05, 7.52),
+(2023, 06, 7.61),
+(2023, 07, 7.61),
+(2023, 08, 7.69),
+(2023, 09, 7.81),
+(2023, 10, 7.89),
+(2023, 11, 7.97),
+(2023, 12, 8.05),
+
+(2024, 01, 8.14),
+(2024, 02, 8.21),
+(2024, 03, 8.24),
+(2024, 04, 8.06),
+(2024, 05, 8.14),
+(2024, 06, 8.21),
+(2024, 07, 8.16),
+(2024, 08, 8.23),
+(2024, 09, 8.27),
+(2024, 10, 8.24),
+(2024, 11, 8.33),
+(2024, 12, 8.42)
 ON CONFLICT DO NOTHING;

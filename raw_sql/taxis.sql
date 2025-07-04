@@ -61,7 +61,7 @@ CREATE TABLE distribuicao_taxis_por_tipo_de_servico (
     total_de_veiculos INTEGER
 );
 
-INSERT INTO distribuicao_taxis_por_tipo_de_servico ( tipo_de_servico, entidade_operadora, total_de_veiculos ) VALUES
+INSERT INTO distribuicao_taxis_por_tipo_de_servico (ano, tipo_de_servico, entidade_operadora, total_de_veiculos) VALUES
 (2022, 'Táxis Especiais', 'COMTAS - Cooperativa Mista de Trabalho dos Motoristas Autônomos de Salvador', 147),
 (2022, 'Táxis Especiais', 'COOMETAS - Cooperativa Metropolitana de Táxis Especiais de Salvador', 116),
 (2022, 'Táxis Comuns - Empresas', 'IRACEMA OLIVEIRA', 2),
@@ -108,7 +108,7 @@ INSERT INTO taxis_por_combustivel (ano, tipo_combustivel, quantidade) VALUES
 CREATE TABLE idade_media_da_frota_de_taxis (
     id_idade_media_taxis SERIAL PRIMARY KEY,
     ano INTEGER,
-    idade_media_ FLOAT
+    idade_media FLOAT
     -- A IDADE MÉDIA É EM ANOS!
 );
 
