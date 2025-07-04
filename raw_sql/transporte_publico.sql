@@ -42,10 +42,19 @@ CREATE TABLE IF NOT EXISTS concessionarias(
 );
 
 INSERT INTO concessionarias(id_concessionaria, nome_concessionaria, endereco_garagens, cep, telefone) VALUES
-('SPE1', 'CSN', 'A preencher', '00.000-000', '71 0000 0000'),
+-- FONTE para DADOS da SPE1 - INTEGRA SALVADOR NORTE: Página 10, Anuário 2020
+('SPE1', 'INTEGRA SALVADOR NORTE', 'AV. SANTIAGO DE COMPOSTELA, 370 - Parque Bela Vista', '40.279-150', '71 3111 3134'),
+-- FONTE para OUTROS DADOS - Veja anuário mais recente
 ('SPE2', 'OT TRANS', 'ESTRADA VELHA DE CAMPINAS, 1.175 - Pirajá', '41.280-520', '71 3525 8433'),
-('SPE3', 'PLATAFORMA', 'RUA TOMAZ GONZAGA, 262 - Pernambués', '41.100-000', '71 2203 4131')
-ON CONFLICT DO NOTHING;
+('SPE3', 'PLATAFORMA', 'RUA TOMAZ GONZAGA, 262 - Pernambués', '41.100-000', '71 2203 4131'),
+('STEC', 'STEC', 'n/a', 'n/a', 'n/a'),
+('TOTAL', 'TOTAL', 'n/a', 'n/a', 'n/a')
+ON CONFLICT (id_concessionaria)
+DO UPDATE SET
+    nome_concessionaria = EXCLUDED.nome_concessionaria,
+    endereco_garagens = EXCLUDED.endereco_garagens,
+    cep = EXCLUDED.cep,
+    telefone = EXCLUDED.telefone;
 
 CREATE TABLE IF NOT EXISTS tipo_de_veiculo(
     id_tipo_veiculo SERIAL PRIMARY KEY,
@@ -135,8 +144,8 @@ CREATE TABLE IF NOT EXISTS frota_operante(
     qtd_operante_de_onibus INTEGER
 );
 
--- SPE2 => OTTRANS
 INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) VALUES
+-- SPE2 => OTTRANS
 ('SPE2', 1, 2022, 884), -- Janeiro
 ('SPE2', 2, 2022, 934), -- Fevereiro
 ('SPE2', 3, 2022, 948), -- Março
@@ -164,6 +173,50 @@ INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) 
 ('SPE3', 12, 2022, 688) -- Dezembro
 ON CONFLICT DO NOTHING;
 
+INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) VALUES
+-- FROTA OPERANTE DE 2021
+-- VER PÁGINA 21 DO ANUÁRIO DE 2021
+-- SPE1 => SALVADOR NORTE
+('SPE1', 1, 2021, 444), -- Janeiro
+('SPE1', 2, 2021, 445), -- Fevereiro
+('SPE1', 3, 2021, 412), -- Março
+('SPE1', 4, 2021, 329), -- Abril
+('SPE1', 5, 2021, 333), -- Maio
+('SPE1', 6, 2021, 237), -- Junho
+('SPE1', 7, 2021, 235), -- Julho
+('SPE1', 8, 2021, 199), -- Agosto
+('SPE1', 9, 2021, 145), -- Setembro
+('SPE1', 10, 2021, 0), -- Outubro
+('SPE1', 11, 2021, 0), -- Novembro
+('SPE1', 12, 2021, 0), -- Dezembro
+-- SPE2 => OTTRANS
+('SPE2', 1, 2021, 803), -- Janeiro
+('SPE2', 2, 2021, 787), -- Fevereiro
+('SPE2', 3, 2021, 695), -- Março
+('SPE2', 4, 2021, 774), -- Abril
+('SPE2', 5, 2021, 793), -- Maio
+('SPE2', 6, 2021, 804), -- Junho
+('SPE2', 7, 2021, 802), -- Julho
+('SPE2', 8, 2021, 809), -- Agosto
+('SPE2', 9, 2021, 822), -- Setembro
+('SPE2', 10, 2021, 908), -- Outubro
+('SPE2', 11, 2021, 931), -- Novembro
+('SPE2', 12, 2021, 928), -- Dezembro
+-- SPE3 => PLATAFORMA
+('SPE3', 1, 2021, 619), -- Janeiro
+('SPE3', 2, 2021, 604), -- Fevereiro
+('SPE3', 3, 2021, 490), -- Março
+('SPE3', 4, 2021, 562), -- Abril
+('SPE3', 5, 2021, 571), -- Maio
+('SPE3', 6, 2021, 584), -- Junho
+('SPE3', 7, 2021, 595), -- Julho
+('SPE3', 8, 2021, 599), -- Agosto
+('SPE3', 9, 2021, 671), -- Setembro
+('SPE3', 10, 2021, 684), -- Outubro
+('SPE3', 11, 2021, 683), -- Novembro
+('SPE3', 12, 2021, 683) -- Dezembro
+ON CONFLICT DO NOTHING;
+
 CREATE TABLE IF NOT EXISTS frota_total(
     id_frota_total_mes SERIAL PRIMARY KEY,
     id_concessionaria VARCHAR(10) REFERENCES concessionarias(id_concessionaria),
@@ -172,7 +225,6 @@ CREATE TABLE IF NOT EXISTS frota_total(
     qtd_total_de_onibus INTEGER
 );
 
--- SPE2 => OTTRANS
 INSERT INTO frota_total(id_concessionaria, mes, ano, qtd_total_de_onibus) VALUES
 -- SPE2 => OTTRANS
 ('SPE2', 1, 2022, 1041),
@@ -200,6 +252,24 @@ INSERT INTO frota_total(id_concessionaria, mes, ano, qtd_total_de_onibus) VALUES
 ('SPE3', 10, 2022, 771),
 ('SPE3', 11, 2022, 745),
 ('SPE3', 12, 2022, 745)
+ON CONFLICT DO NOTHING;
+
+INSERT INTO frota_total(id_concessionaria, mes, ano, qtd_total_de_onibus) VALUES
+-- FROTA TOTAL DE 2021
+-- VER PÁGINA 21 DO ANUÁRIO DE 2021
+-- Infelizmente os dados não estão discriminados por concessionária para Frota Total em 2021
+('TOTAL', 1, 2021, 2244),
+('TOTAL', 2, 2021, 2231),
+('TOTAL', 3, 2021, 2178),
+('TOTAL', 4, 2021, 2280),
+('TOTAL', 5, 2021, 2277),
+('TOTAL', 6, 2021, 2267),
+('TOTAL', 7, 2021, 2268),
+('TOTAL', 8, 2021, 2266),
+('TOTAL', 9, 2021, 2169),
+('TOTAL', 10, 2021, 2032),
+('TOTAL', 11, 2021, 2101),
+('TOTAL', 12, 2021, 1776)
 ON CONFLICT DO NOTHING;
 
 CREATE TABLE IF NOT EXISTS idade_media_da_frota(

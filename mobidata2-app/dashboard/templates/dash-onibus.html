@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Frota de Ônibus</h1>
+
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group me-2"> 
+                <button type="button" class="btn btn-sm btn-outline-secondary">Exportar SQL</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Exportar CSV</button> 
+            </div>
+            <form method="get" class="d-flex align-items-center">
+                <label for="ano" class="me-2">Ano:</label>
+                <select name="ano" id="ano" class="form-select form-select-sm btn btn-outline-secondary" onchange="this.form.submit()" style="width: fit-content;">
+                    {% for ano in anos %}
+                    <option value="{{ ano }}" {% if ano == ano_selecionado %}selected{% endif %}>{{ ano }}</option>
+                    {% endfor %}
+                </select>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="grafico">
+            <h2>Idade Média da Frota</h2>
+            {{ grafico_historico|safe }}
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="grafico">
+            <h2>Frota Total de Ônibus</h2>
+            {{ grafico_frota_total|safe }}
+        </div>
+    </div>
+</main>
+
+
+    
+
+    
+</div>
+<br><br>
+<a href="{% url 'exportar_csv' %}?ano={{ ano_selecionado }}">Exportar CSV deste ano</a>
+{% endblock %}

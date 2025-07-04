@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Bem-vindo ao Mobidata</h1>
+    </div>
+
+    <p>O Mobidata é um grande painel de mobilidade da região metropolitana de Salvador.</p>
+    <img style="height: 400px;" class="" src="{% static 'img/salvador.jpg' %}" title="Salvador vista do Farol da Barra" alt="Fotografia do Farol da Barra visto de cima, provavelmente por drone. A visão mostra a parte de trás do edifício, mas a perspectiva é ampla, permitindo ver não somente o farol, mas as pedras da costa da Barra, a praia da Barra, os prédios, mansões, ruas e outras características geográficas">
+    <h4>Características e Indicadores da Cidade do Salvador</h4>
+    <p>Área: 693,442 km2<br>População: 2.568.928 habitantes (Estimativa 2024)</p>
+    <p>Fonte: IBGE 2024</p>
+    <p>
+        Cidade histórica; centro industrial, cultural, comercial e turístico.<br>Fundada em 29 de março de 1549<br>Rede Cicloviária: 310 km (Ago/2021)<br>
+        Altitude: 70m<br>Coordenadas Geográficas: 13° 00' S (lat); 38° 30' W (lon)<br>Clima: Quente e Úmido<br>Temperatura: 32,8°C máx; 19,6°C min; 25,0°C média<br>
+        Umidade Relativa do Ar: 82%<br>Precipitação Pluviométrica: 1.780,7 mm (Altura Total: 2.960,8 mm)<br>
+    </p>
+    <p>
+        Modos de transporte:<br>Rodoviário:    Ônibus, BRT, táxis<br>Ferroviário:     Metrô<br>Hidroviário:    Barcas, Ferry-boat<br>Ascensores:   Elevador, Funiculares<br>
+        Órgão gerenciador de Transportes : SEMOB<br>Rua Alceu Amoroso Lima, 581 – Caminho das Árvores<br>41.820-770 – Salvador – Bahia<br>
+    </p>
+    <h4>Ver mais:</h4>
+    <a class="" aria-current="page" href="https://www.salvador.ba.gov.br/">salvador.ba.gov.br</a><BR>
+    <a class="" aria-current="page" href="https://www.dados.salvador.ba.gov.br/">Portal Salvador Dados</a>
+ 
+ 
+</main>
+{% endblock %}

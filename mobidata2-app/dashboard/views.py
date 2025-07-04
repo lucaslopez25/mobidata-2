@@ -8,7 +8,10 @@ from .models import FrotaTotal
 import pandas
 import plotly.express as plotxp
 
-def mainpage_dashboard(request):
+def landing(request):
+    return render(request, 'landing.html')
+
+def frota_de_onibus_por_ano(request):
     anos_disponiveis = HistoricoIdadeMediaFrota.objects.values_list('ano', flat=True).distinct().order_by('ano')
     ano_selecionado = int(request.GET.get('ano', 2022))
 
@@ -34,7 +37,7 @@ def mainpage_dashboard(request):
 
     ###################### RENDER
 
-    return render(request, 'mainpage_dashboard.html', {
+    return render(request, 'dash-onibus.html', {
         'anos': anos_disponiveis,
         'ano_selecionado': ano_selecionado,
         'grafico_historico': grafico_historico.to_html(full_html=False),
