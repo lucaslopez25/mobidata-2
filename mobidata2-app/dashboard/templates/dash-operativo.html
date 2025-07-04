@@ -3,7 +3,7 @@
 {% block content %}
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Frota de Ônibus</h1>
+        <h1 class="h2">Dados Operacionais</h1>
 
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2"> 
@@ -27,41 +27,29 @@
 
     <div class="container">
         <div class="row">
-            <div class="col">
-                {% if grafico_historico %}
+            <div class="col-sm">
+                {% if grafico_hist_pax_transp %}
                     <div class="grafico">
-                        {{ grafico_historico|safe }}
+                        {{ grafico_hist_pax_transp|safe }}
                     </div>
                 {% else %}
                     <div class="alert alert-warning">
-                        Nenhum dado disponível de Idade Média da Frota para o ano selecionado.
+                        Nenhum dado disponível de Histórico de Passageiros Transportados para o ano selecionado.
                     </div>
                 {% endif %}
             </div>
-            <div class="col">
-                {% if grafico_frota_total %}
+            <div class="col-sm">
+                {% if grafico_kmt_perc_transp %}
                     <div class="grafico">
-                        {{ grafico_frota_total|safe }}
+                        {{ grafico_kmt_perc_transp|safe }}
                     </div>
                 {% else %}
                     <div class="alert alert-warning">
-                        Nenhum dado disponível de Frota Total de Ônibus para o ano selecionado.
+                        Nenhum dado disponível de Histórico de Quilometragem Percorrida para o ano selecionado.
                     </div>
                 {% endif %}
             </div>
         </div>
-    </div>
-
-    <div class="container">
-    {% if grafico_frota_operante %}
-        <div class="grafico">
-            {{ grafico_frota_operante|safe }}
-        </div>
-    {% else %}
-        <div class="alert alert-warning">
-            Nenhum dado disponível de Frota Operante de Ônibus para o ano selecionado.
-        </div>
-    {% endif %}
     </div>
 </main>
 {% endblock %}
