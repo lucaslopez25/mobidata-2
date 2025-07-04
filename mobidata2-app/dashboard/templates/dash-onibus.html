@@ -22,17 +22,29 @@
     </div>
 
     <div class="container">
-        <div class="grafico">
-            <h2>Idade Média da Frota</h2>
-            {{ grafico_historico|safe }}
-        </div>
+        {% if grafico_historico %}
+            <div class="grafico">
+                <h2>Idade Média da Frota</h2>
+                {{ grafico_historico|safe }}
+            </div>
+        {% else %}
+            <div class="alert alert-warning">
+                Nenhum dado disponível para o ano selecionado.
+            </div>
+        {% endif %}
     </div>
 
     <div class="container">
-        <div class="grafico">
-            <h2>Frota Total de Ônibus</h2>
-            {{ grafico_frota_total|safe }}
-        </div>
+        {% if grafico_frota_total %}
+            <div class="grafico">
+                <h2>Frota Total de Ônibus</h2>
+                {{ grafico_frota_total|safe }}
+            </div>
+        {% else %}
+            <div class="alert alert-warning">
+                Nenhum dado disponível para o ano selecionado.
+            </div>
+        {% endif %}
     </div>
 </main>
 
