@@ -43,10 +43,10 @@
                                     <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'frota_de_onibus_por_ano' %}active{% endif %}" aria-current="page" href="{% url 'dados_operativos_por_ano' %}">Dados Operacionais</a>
                                 </li>
                                 <li class="nav-item"> 
-                                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">Táxis</a>
+                                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">Táxis TODO</a>
                                 </li>
                                 <li class="nav-item"> 
-                                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">Metrô</a>
+                                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">Metrô TODO</a>
                                 </li>
                             </ul>
                         </div>
@@ -57,7 +57,7 @@
                             </h6>
                             <ul class="nav flex-column">
                                 <li class="nav-item"> 
-                                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">Frota de Ônibus</a>
+                                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">Frota de Ônibus TODO</a>
                                 </li>
                             </ul>
                         </div>
@@ -68,5 +68,17 @@
             </div>
         </div>
 
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-2 border-top">
+            <div class="col-md-4 d-flex align-items-center" style="padding-left: 30px;">
+                <img style="height: 30px; margin: 5px;" src="{% static 'img/Bandeira_da_Bahia.png' %}">
+                <img style="height: 30px; margin: 5px;" src="{% static 'img/Flag_of_Brazil.png' %}">
+                <span class="mb-3 mb-md-0 text-body-secondary">Mobidata 2.0 2025</span> 
+            </div> 
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3">
+                    <img style="height: 50px; padding-right: 30px;" src="{% static 'img/MARCA_IFBA_HORIZONTAL_completa_CMYK_IFBA.png' %}">
+                </li>
+            </ul>
+        </footer>
     </body>
 </html>

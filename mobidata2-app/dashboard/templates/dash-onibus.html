@@ -10,7 +10,7 @@
                 <button type="button" class="btn btn-sm btn-outline-secondary">
                     Exportar SQL
                 </button>
-                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='{% url 'exportar_csv' %}'">
+                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="TODO">
                     Exportar CSV
                 </button> 
             </div>
@@ -39,6 +39,22 @@
                 {% endif %}
             </div>
             <div class="col">
+                {% if grafico_aquisicoes %}
+                    <div class="grafico">
+                        {{ grafico_aquisicoes|safe }}
+                    </div>
+                {% else %}
+                    <div class="alert alert-warning">
+                        Nenhum dado disponível de Aquisições por Mês para o ano selecionado.
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
                 {% if grafico_frota_total %}
                     <div class="grafico">
                         {{ grafico_frota_total|safe }}
@@ -49,19 +65,19 @@
                     </div>
                 {% endif %}
             </div>
+            <div class="col">
+                {% if grafico_frota_operante %}
+                    <div class="grafico">
+                        {{ grafico_frota_operante|safe }}
+                        <p style="font-size: x-small; margin-bottom: 0;">OBS.: Frota média nos dias úteis.</p>
+                    </div>
+                {% else %}
+                    <div class="alert alert-warning">
+                        Nenhum dado disponível de Frota Operante de Ônibus para o ano selecionado.
+                    </div>
+                {% endif %}
+            </div>
         </div>
-    </div>
-
-    <div class="container">
-    {% if grafico_frota_operante %}
-        <div class="grafico">
-            {{ grafico_frota_operante|safe }}
-        </div>
-    {% else %}
-        <div class="alert alert-warning">
-            Nenhum dado disponível de Frota Operante de Ônibus para o ano selecionado.
-        </div>
-    {% endif %}
     </div>
 </main>
 {% endblock %}
