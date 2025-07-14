@@ -57,7 +57,7 @@ class DistribuicaoTaxisPorTipoDeServico(models.Model):
         db_table = 'distribuicao_taxis_por_tipo_de_servico'
 
 
-class FrotaDeTaxis(models.Model):
+class FrotaDeTaxis(models.Model): 
     id_frota_taxis = models.AutoField(primary_key=True)
     ano = models.IntegerField(blank=True, null=True)
     taxis_comum_autonomos = models.IntegerField(blank=True, null=True)

@@ -1,6 +1,6 @@
 -- PAGINA 58 DE 98 DO ANUARIO 2022
 -- EVOLUÇÃO DA FROTA DE TÁXIS
-CREATE TABLE frota_de_taxis (
+CREATE TABLE IF NOT EXISTS frota_de_taxis (
     id_frota_taxis SERIAL PRIMARY KEY,
     ano INTEGER,
     taxis_comum_autonomos INTEGER,
@@ -51,8 +51,12 @@ INSERT INTO frota_de_taxis (ano, taxis_comum_autonomos, taxis_comum_empresas, to
 (2021, 6996, 50, 7046, 263, 7309),
 (2022, 6642, 31, 6673, 263, 6936);
 
--- PAGINA 59 DE 98 DO ANUARIO 2022
--- DISTRIBUIÇÃO DA FROTA DE TAXIS POR SERVIÇO
+-- PAGINA 74/122 DO ANUARIO 2024 - páginas absolutas, a página é 66, se seguir o número na folha
+-- EVOLUÇÃO DA FROTA DE TÁXIS
+INSERT INTO frota_de_taxis (ano, taxis_comum_autonomos, taxis_comum_empresas, total_taxis_comum, taxis_especiais, total_geral ) VALUES
+(2023, 6680, 10, 6690, 248, 6938),
+(2024, 6789, 8, 6797, 247, 7044);
+
 CREATE TABLE distribuicao_taxis_por_tipo_de_servico (
     id_distribuicao_taxis_por_tipo_de_servico SERIAL PRIMARY KEY,
     ano INTEGER,
@@ -61,6 +65,8 @@ CREATE TABLE distribuicao_taxis_por_tipo_de_servico (
     total_de_veiculos INTEGER
 );
 
+-- PAGINA 59 DE 98 DO ANUARIO 2022
+-- DISTRIBUIÇÃO DA FROTA DE TAXIS POR SERVIÇO
 INSERT INTO distribuicao_taxis_por_tipo_de_servico (ano, tipo_de_servico, entidade_operadora, total_de_veiculos) VALUES
 (2022, 'Táxis Especiais', 'COMTAS - Cooperativa Mista de Trabalho dos Motoristas Autônomos de Salvador', 147),
 (2022, 'Táxis Especiais', 'COOMETAS - Cooperativa Metropolitana de Táxis Especiais de Salvador', 116),
@@ -104,6 +110,20 @@ INSERT INTO taxis_por_combustivel (ano, tipo_combustivel, quantidade) VALUES
 (2022, 'Óleo Diesel', 1),
 (2022, 'Não Informado', 202);
 -- O TOTAL CONFERE COM O TOTAL DE TÁXIS NA PÁGINA 59
+
+INSERT INTO taxis_por_combustivel (ano, tipo_combustivel, quantidade) VALUES
+-- PAGINA 76/122 - ANUÁRIO 2024
+-- TÁXIS POR TIPO DE COMBUSTÍVEL; RODAPÉ
+(2024, 'Álcool', 11),
+(2024, 'Álcool/GNV', 36),
+(2024, 'Álcool/Gasolina', 5321),
+(2024, 'Álcool/Gasolina/GNV', 1554),
+(2024, 'Gasolina/GNV', 14),
+(2024, 'Gasolina', 40),
+(2024, 'Gasolina/Álcool/Elétrico', 49),
+(2024, 'Elétrico', 15),
+(2024, 'Óleo Diesel', 3),
+(2024, 'Não Informado', 0);
 
 CREATE TABLE idade_media_da_frota_de_taxis (
     id_idade_media_taxis SERIAL PRIMARY KEY,

@@ -103,7 +103,7 @@ INSERT INTO aquisicoes_de_onibus_por_mes(id_concessionaria, mes, ano, qtd_onibus
 ('SPE3', 3, 2024, 0, TRUE),
 ('SPE3', 3, 2024, 0, FALSE),
 ('SPE3', 4, 2024, 0, TRUE),
-('SPE3', 4, 2024, 3, FALSE),
+('SPE3', 4, 2024, 3, FALSE)
 ON CONFLICT DO NOTHING;
 
 INSERT INTO aquisicoes_de_onibus_por_mes(id_concessionaria, mes, ano, qtd_onibus, novo_ou_usado) VALUES

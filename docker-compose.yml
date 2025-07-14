@@ -3,7 +3,10 @@
 services:
     # Base de dados Postgres
     mobidata-postgres:
-        image: postgres:17-alpine
+        container_name: mobidata_postgres
+        build:
+            context: .
+            dockerfile: ./docker/mobidata-postgres/Dockerfile
         # Pasta de persistência do banco no container docker é mobidata-db-postgres
         volumes:
             - mobidata-db-postgres:/var/lib/postgresql/data
@@ -18,7 +21,9 @@ services:
     mobidata-app:
         container_name: mobidata_app
         # Quando você ver "build: .", isso significa que estamos importando o Dockerfile localizado na mesma pasta que o docker-compose
-        build: .
+        build: 
+            context: .
+            dockerfile: ./docker/mobidata-django/Dockerfile
         # Porta exposta do django no localhost do usuário é 28000, evitando de conflitar com a porta 8000, mas é possível configurar outras portas no lugar dela :)
         ports:
             - "28000:8000" 

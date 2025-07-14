@@ -18,6 +18,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
         <script src="{% static 'js/teste.js' %}"></script>
+
+        
     </head>
 
     <body>
@@ -43,10 +45,10 @@
                                     <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'frota_de_onibus_por_ano' %}active{% endif %}" aria-current="page" href="{% url 'dados_operativos_por_ano' %}">Dados Operacionais</a>
                                 </li>
                                 <li class="nav-item"> 
-                                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">Táxis TODO</a>
+                                    <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'dados_taxis_por_ano' %}active{% endif %}" aria-current="page" href="{% url 'dados_taxis_por_ano' %}">Táxis</a>
                                 </li>
                                 <li class="nav-item"> 
-                                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">Metrô TODO</a>
+                                    <a class="nav-link d-flex align-items-center gap-2" aria-current="page" href="#">Metrô TODO</a>
                                 </li>
                             </ul>
                         </div>

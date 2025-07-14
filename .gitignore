@@ -1,5 +1,5 @@
 postgres-password.txt
-raw_sql/linhas_de_onibus_julio.sql
+docker/sql/linhas_de_onibus_julio.sql
 marca-ifba-horizontalcompleta/
 
 # Byte-compiled / optimized / DLL files

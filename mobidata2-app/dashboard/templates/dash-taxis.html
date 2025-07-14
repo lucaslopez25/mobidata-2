@@ -1,4 +1,4 @@
-{% extends 'mainpage.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
@@ -28,17 +28,17 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                {% if grafico_hist_pax_transp %}
+                {% if grafico_frota_taxis %}
                     <div class="grafico">
-                        {{ grafico_hist_pax_transp|safe }}
+                        {{ grafico_frota_taxis|safe }}
                     </div>
                 {% else %}
                     <div class="alert alert-warning">
-                        Nenhum dado disponível de Histórico de Passageiros Transportados para o ano selecionado.
+                        Nenhum dado disponível de Frota de Táxis para o ano selecionado.
                     </div>
                 {% endif %}
             </div>
-            <div class="col-sm">
+            <!-- <div class="col-sm">
                 {% if grafico_kmt_perc_transp %}
                     <div class="grafico">
                         {{ grafico_kmt_perc_transp|safe }}
@@ -48,9 +48,9 @@
                         Nenhum dado disponível de Histórico de Quilometragem Percorrida para o ano selecionado.
                     </div>
                 {% endif %}
-            </div>
+            </div> -->
         </div>
-        <p>Observações: (1) Valores arredondados    (2) BRT incluido a partir de Setembro/2022</p>
+        <!-- <p>Observações: (1) Valores arredondados    (2) BRT incluido a partir de Setembro/2022</p> -->
     </div>
 </main>
 {% endblock %}
