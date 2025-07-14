@@ -1,0 +1,16 @@
+{
+"type": "FeatureCollection",
+"name": "Modais",
+"features": [
+{ "type": "Feature", "properties": { "Name": "Plano Inclinado Calçada - Liberdade", "description": "Seg. a Sab. das 7h às 19h (Tv. Cabo Bartholomeu - R. Sérgio Cardoso)", "timestamp": null, "begin": null, "end": null }, "geometry": { "type": "Point", "coordinates": [ -38.4982182, -12.9482657, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Plano Inclinado Gonçalves", "description": "Seg. a Sab. das 7h às 19h (R. São Francisco Gonçalves - Praça da Sé)", "timestamp": null, "begin": null, "end": null }, "geometry": { "type": "Point", "coordinates": [ -38.5107857, -12.9715004, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Elevador Lacerda", "description": "Todos os dias, 24h (R. da Conceição da Praia - Praça Municipal, Centro Histórico)", "timestamp": null, "begin": null, "end": null }, "geometry": { "type": "Point", "coordinates": [ -38.5134136, -12.9739617, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Plano Inclinado Pilar", "description": "Seg. a Sab. das 7h às 19h (R. do Pilar - St° Antônio)", "timestamp": null, "begin": null, "end": null }, "geometry": { "type": "Point", "coordinates": [ -38.5075982, -12.9670891, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Terminal Marítimo Ribeira - Plataforma", "description": "Todos os dias das 6h às 19h (Largo da Ribeira - R. Almeida Brandão, Plataforma)", "timestamp": null, "begin": null, "end": null }, "geometry": { "type": "Point", "coordinates": [ -38.494377, -12.912173, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Terminal Marítimo Plataforma - Ribeira", "description": "Todos os dias das 6h às 19h (R. Almeida Brandão, Plataforma - Largo da Ribeira)", "timestamp": null, "begin": null, "end": null }, "geometry": { "type": "Point", "coordinates": [ -38.4903642, -12.9034548, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": null, "description": null, "timestamp": null, "begin": null, "end": null }, "geometry": { "type": "LineString", "coordinates": [ [ -38.5134128, -12.9739536, 0.0 ], [ -38.5132693, -12.9742764, 0.0 ], [ -38.5129032, -12.9744933, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Name": null, "description": null, "timestamp": null, "begin": null, "end": null }, "geometry": { "type": "LineString", "coordinates": [ [ -38.5107803, -12.9714846, 0.0 ], [ -38.510716, -12.972403, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Name": null, "description": null, "timestamp": null, "begin": null, "end": null }, "geometry": { "type": "LineString", "coordinates": [ [ -38.5075733, -12.9670187, 0.0 ], [ -38.5070872, -12.9675465, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Name": null, "description": null, "timestamp": null, "begin": null, "end": null }, "geometry": { "type": "LineString", "coordinates": [ [ -38.4982127, -12.9482032, 0.0 ], [ -38.4970647, -12.9490554, 0.0 ] ] } }
+]
+}

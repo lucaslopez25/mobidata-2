@@ -6,5 +6,6 @@ urlpatterns = [
     path('frota_de_onibus_por_ano', views.frota_de_onibus_por_ano, name='frota_de_onibus_por_ano'),
     path('dados_operativos_por_ano', views.dados_operativos_por_ano, name='dados_operativos_por_ano'),
     path('dados_taxis_por_ano', views.dados_taxis_por_ano, name='dados_taxis_por_ano'),
+    path('bicicletas', views.bicicletas, name='bicicletas'),
     path('exportar_csv', views.exportar_csv, name='exportar_csv'),
 ]

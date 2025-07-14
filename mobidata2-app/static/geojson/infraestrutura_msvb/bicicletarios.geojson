@@ -1,0 +1,312 @@
+{
+   "type":"FeatureCollection",
+   "name":"Bicicletários",
+   "features":[
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Estação Bike Ribeira",
+            "description":"A iniciativa patrocinada pelo Itaú e com operação da Tembici busca facilitar o uso do modal na ida e volta diária ao trabalho<br><br>A Prefeitura de Salvador, por meio do Movimento Salvador Vai de Bike, em parceria com o Banco Itaú e a Tembici, lança uma nova forma de compartilhamento de bicicletas na Estação Bike Ribeira. Agora é possível alugar bicicletas por períodos de até 12h. <br>O usuário que tiver cadastro no projeto Bike SSA e fizer retirada de uma bicicleta na Estação Bike Ribeira poderá continuar com a mesma por até 12h consecutivas, contadas a partir do momento da retirada. Mesmo sendo retiradas da Estação Bike Ribeira a “laranjinha” poderá ser devolvida em qualquer uma das 50 estações Bike SSA espalhadas pela cidade.<br><br>A Estação Bike Ribeira fica localizada próximo ao Terminal Marítimo, no final de linha do bairro. O equipamento funciona todos os dias, das 6h às 22h. Uma vez cadastrado na Estação Bike Ribeira o usuário também poderá fazer empréstimos das “laranjinhas” em outras estações respeitando, no entanto, a política de tempo máximo das demais estações, de até 60 minutos com a mesma bicicleta, podendo fazer novas viagens 15 minutos após o empréstimo anterior.<br><br>No local onde, desde 2015, já funcionava um estacionamento público de bicicletas particulares, formado por um módulo de container marítimo e com 44 vagas distribuídas em dois andares, ganha uma estação de empréstimos renovada e segura. Com a inauguração da Estação Bike Ribeira 12 horas as pessoas que não possuírem bicicleta própria também poderão usar as “laranjinhas” para voltar para casa e no dia seguinte ir ao trabalho.<br><br>Regras - Para o empréstimo das bicicletas, o ciclista deverá se cadastrar no Bike SSA. O cadastro pode ser feito através do site www.bikeitau.com.br ou pelo aplicativo Bike Itaú.<br>O plano diário tem o custo de R$ 8, o mensal de R$ 10 e o plano anual é de R$ 100. A venda de passes pode ser paga com débito, crédito ou boleto bancário. Após 12 horas de uso contínuo da bicicleta, serão cobrados R$ 5 para cada 60 minutos excedentes.",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4947529,
+               -12.9119202,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário Bonocô ",
+            "description":"108 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4846439,
+               -12.98447,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário Acesso Norte",
+            "description":"108 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4765768,
+               -12.9698282,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário Retiro",
+            "description":"108 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4727303,
+               -12.9561304,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário Bom Juá",
+            "description":"78 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4700373,
+               -12.9410289,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário Pirajá",
+            "description":"108 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4671914,
+               -12.9252717,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário  Detran",
+            "description":"108 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.470747,
+               -12.9776474,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário Rodoviária",
+            "description":"108 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4627949,
+               -12.9790072,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário Pernambués",
+            "description":"78 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4576356,
+               -12.9761398,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário Imbuí",
+            "description":"108 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4352882,
+               -12.9636346,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário CAB",
+            "description":"108 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4301776,
+               -12.9574648,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário Pituaçu",
+            "description":"108 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.420014,
+               -12.9445284,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário Flamboyant",
+            "description":"Vagas 108 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4064773,
+               -12.938285,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário Tamburugy",
+            "description":"108 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.3950468,
+               -12.9352193,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário Bairro da Paz",
+            "description":"108 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.3793685,
+               -12.9255323,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário Mussurunga",
+            "description":"108 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.3592661,
+               -12.9223794,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Bicicletário Aeroporto",
+            "description":"108 vagas",
+            "timestamp":null,
+            "begin":null,
+            "end":null
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.3423141,
+               -12.9038626,
+               0.0
+            ]
+         }
+      }
+   ]
+}

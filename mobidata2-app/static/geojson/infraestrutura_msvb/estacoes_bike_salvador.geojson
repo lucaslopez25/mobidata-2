@@ -1,0 +1,1856 @@
+{
+   "type":"FeatureCollection",
+   "name":"Estações Bike Salvador",
+   "features":[
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Boulevard 161 (Itaigara)",
+            "description":"descrição: descrição: End.: Calçada próximo à saída do estacionamento.<br>Simples - 15 vagas.<br>Instalado: 10.05.18.<br>id: 24 - Boulevard 161 (Itaigara)<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15<br>NÚMERO: 24<br>id: 24 - Boulevard 161 (Itaigara)<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15.0<br>NÚMERO: 24",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Calçada próximo à saída do estacionamento.\nSimples - 15 vagas.\nInstalado: 10.05.18.\nid: 24 - Boulevard 161 (Itaigara)\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 3\nfase tembici: 3\nauto atend.: N\ntipo: Simples\nalvará: 17267\nVagas: 15\nNÚMERO: 24",
+            "id":"24 - Boulevard 161 (Itaigara)",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":3,
+            "fase_tembici":"3",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":15.0,
+            "NUMERO":24,
+            "Dupla":null,
+            "Instalado":"10.05.18.",
+            "Instaldo":null,
+            "MERO":24,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"3",
+            "o2":"descrição: End.: Calçada próximo à saída do estacionamento."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.464503,
+               -12.995611,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Praça Ana Lúcia Magalhães",
+            "description":"descrição: descrição: End.: Na gramado, atrás da academia, (perto do estacionamento).<br>Simples - 11 vagas.<br>Instalado: 10.05.18.<br>id: 27 - Praça Ana Lúcia Magalhães<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 11<br>NÚMERO: 27<br>id: 27 - Praça Ana Lúcia Magalhães<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 11.0<br>NÚMERO: 27",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Na gramado, atrás da academia, (perto do estacionamento).\nSimples - 11 vagas.\nInstalado: 10.05.18.\nid: 27 - Praça Ana Lúcia Magalhães\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 3\nfase tembici: 3\nauto atend.: N\ntipo: Simples\nalvará: 17267\nVagas: 11\nNÚMERO: 27",
+            "id":"27 - Praça Ana Lúcia Magalhães",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":3,
+            "fase_tembici":"3",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":11.0,
+            "NUMERO":27,
+            "Dupla":null,
+            "Instalado":"10.05.18.",
+            "Instaldo":null,
+            "MERO":27,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"3",
+            "o2":"descrição: End.: Na gramado, atrás da academia, (perto do estacionamento)."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.461242,
+               -12.99297,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Paseo Itaigara",
+            "description":"descrição: descrição: End.: Av. Antonio Carlos Guimarães, no estacionamento do Shopping Paseo Itaigara (entre palmeiras).<br>Simples - 11 vagas.<br>id: 25 - Paseo Itaigara<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 6<br>fase tembici: 6<br>auto atend.: N<br>tipo: Simples<br>alvará: 17762<br>Vagas: 11<br>NÚMERO: 25<br>id: 25 - Paseo Itaigara<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 6<br>fase tembici: 6<br>auto atend.: N<br>tipo: Simples<br>alvará: 17762<br>Vagas: 11.0<br>NÚMERO: 25",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Av. Antonio Carlos Guimarães, no estacionamento do Shopping Paseo Itaigara (entre palmeiras).\nSimples - 11 vagas.\nid: 25 - Paseo Itaigara\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 6\nfase tembici: 6\nauto atend.: N\ntipo: Simples\nalvará: 17762\nVagas: 11\nNÚMERO: 25",
+            "id":"25 - Paseo Itaigara",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":6,
+            "fase_tembici":"6",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17762,
+            "Vagas":11.0,
+            "NUMERO":25,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":25,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"6",
+            "o2":"descrição: End.: Av. Antonio Carlos Guimarães, no estacionamento do Shopping Paseo Itaigara (entre palmeiras)."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4708846,
+               -12.9957643,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Praça Nª Srª da Luz",
+            "description":"descrição: descrição: End.: Av. Otávio Mangabeira, esquina com R. Pernambuco.<br>Simples - 15 vagas.<br>emporariamente instalado na praça Nª Srª da Luz.<br>id: 23 - Praça Nª Srª da Luz<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM PROXIM<br>FASE: 5<br>fase tembici: 5<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15<br>NÚMERO: 23<br>id: 23 - Praça Nª Srª da Luz<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM PROXIM<br>FASE: 5<br>fase tembici: 5<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15.0<br>NÚMERO: 23",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Av. Otávio Mangabeira, esquina com R. Pernambuco.\nSimples - 15 vagas.\nemporariamente instalado na praça Nª Srª da Luz.\nid: 23 - Praça Nª Srª da Luz\nOPÇÃO: INSTALADO\nMANTIDA: SIM PROXIM\nFASE: 5\nfase tembici: 5\nauto atend.: N\ntipo: Simples\nalvará: 17267\nVagas: 15\nNÚMERO: 23",
+            "id":"23 - Praça Nª Srª da Luz",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM PROXIM",
+            "FASE":5,
+            "fase_tembici":"5",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":15.0,
+            "NUMERO":23,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":23,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"5",
+            "o2":"descrição: End.: Av. Otávio Mangabeira, esquina com R. Pernambuco."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4573,
+               -13.00598,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Praça Marconi (Pituba)",
+            "description":"descrição: descrição: End: Esquina com a Rua Bahia.<br>Simples - 11 vagas.<br>Instalado: 03.04.18.<br>id: 12 - Praça Marconi (Pituba)<br>OPÇÃO: INSTALADO<br>MANTIDA: Sim<br>FASE: 1<br>fase tembici: 1<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 11<br>NÚMERO: 12<br>id: 12 - Praça Marconi (Pituba)<br>OPÇÃO: INSTALADO<br>MANTIDA: Sim<br>FASE: 1<br>fase tembici: 1<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 11.0<br>NÚMERO: 12",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End: Esquina com a Rua Bahia.\nSimples - 11 vagas.\nInstalado: 03.04.18.\nid: 12 - Praça Marconi (Pituba)\nOPÇÃO: INSTALADO\nMANTIDA: Sim\nFASE: 1\nfase tembici: 1\nauto atend.: N\ntipo: Simples\nalvará: 17228\nVagas: 11\nNÚMERO: 12",
+            "id":"12 - Praça Marconi (Pituba)",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Sim",
+            "FASE":1,
+            "fase_tembici":"1",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17228,
+            "Vagas":11.0,
+            "NUMERO":12,
+            "Dupla":null,
+            "Instalado":"03.04.18.",
+            "Instaldo":null,
+            "MERO":12,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"1",
+            "o2":"descrição: End: Esquina com a Rua Bahia."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.455329,
+               -13.0027476,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Amaralina",
+            "description":"descrição: descrição: End.: Av. Otávio Mangabeira (lado oposto ao salão de festas Bombom Eventos - Próximo a esquina da Rua Dr. Guilherme Reis).<br>Dupla: 11 vagas.<br>Instalado: 03.04.18.<br>id: 11 - Amaralina<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM PROXIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 11<br>NÚMERO: 11<br>id: 11 - Amaralina<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM PROXIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 11.0<br>NÚMERO: 11",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Av. Otávio Mangabeira (lado oposto ao salão de festas Bombom Eventos - Próximo a esquina da Rua Dr. Guilherme Reis).\nDupla: 11 vagas.\nInstalado: 03.04.18.\nid: 11 - Amaralina\nOPÇÃO: INSTALADO\nMANTIDA: SIM PROXIM\nFASE: 1\nfase tembici: 1\nauto atend.: N\ntipo: Simples\nalvará: 17228\nVagas: 11\nNÚMERO: 11",
+            "id":"11 - Amaralina",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM PROXIM",
+            "FASE":1,
+            "fase_tembici":"1",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17228,
+            "Vagas":11.0,
+            "NUMERO":11,
+            "Dupla":"11 vagas.",
+            "Instalado":"03.04.18.",
+            "Instaldo":null,
+            "MERO":11,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"1",
+            "o2":"descrição: End.: Av. Otávio Mangabeira (lado oposto ao salão de festas Bombom Eventos - Próximo a esquina da Rua Dr. Guilherme Reis)."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.468013,
+               -13.012247,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Quadras do Rio Vermeho",
+            "description":"descrição: descrição: End.: Rua da Paciência, ao lado da quadra de futebol, esquina da Travessa Lydio de Mesquita, oposto ao Mar Hotel Rio Vermelho.<br>Com auto-atendimento.<br>Simples - 15 vagas.<br>Instalado: 24.04.18.<br>id: 08 - Quadras do Rio Vermelho<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 2<br>fase tembici: 2<br>auto atend.: S<br>tipo: Simples<br>alvará: 17228<br>Vagas: 15<br>NÚMERO: 8<br>id: 08 - Quadras do Rio Vermelho<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 2<br>fase tembici: 2<br>auto atend.: S<br>tipo: Simples<br>alvará: 17228<br>Vagas: 15.0<br>NÚMERO: 8",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Rua da Paciência, ao lado da quadra de futebol, esquina da Travessa Lydio de Mesquita, oposto ao Mar Hotel Rio Vermelho.\nCom auto-atendimento.\nSimples - 15 vagas.\nInstalado: 24.04.18.\nid: 08 - Quadras do Rio Vermelho\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 2\nfase tembici: 2\nauto atend.: S\ntipo: Simples\nalvará: 17228\nVagas: 15\nNÚMERO: 8",
+            "id":"08 - Quadras do Rio Vermelho",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":2,
+            "fase_tembici":"2",
+            "auto_atend":null,
+            "tipo":"Simples",
+            "alvara":17228,
+            "Vagas":15.0,
+            "NUMERO":8,
+            "Dupla":null,
+            "Instalado":"24.04.18.",
+            "Instaldo":null,
+            "MERO":8,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"2",
+            "o2":"descrição: End.: Rua da Paciência, ao lado da quadra de futebol, esquina da Travessa Lydio de Mesquita, oposto ao Mar Hotel Rio Vermelho."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4933732,
+               -13.0113098,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Largo da Mariquita (Rio Vermelho)",
+            "description":"descrição: descrição: End.: Largo da Mariquita, na Rua Odilon Santos / Esquina com a Rua Monte Conselho.<br>Com auto-atendimento.<br>Dupla: 11 vagas.<br>Instalado: 03.04.18.<br>id: 10 - Largo da Mariquita (Rio Vermelho)<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: S<br>tipo: Simples<br>alvará: 17228<br>Vagas: 11<br>NÚMERO: 10<br>id: 10 - Largo da Mariquita (Rio Vermelho)<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: S<br>tipo: Simples<br>alvará: 17228<br>Vagas: 11.0<br>NÚMERO: 10",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Largo da Mariquita, na Rua Odilon Santos / Esquina com a Rua Monte Conselho.\nCom auto-atendimento.\nDupla: 11 vagas.\nInstalado: 03.04.18.\nid: 10 - Largo da Mariquita (Rio Vermelho)\nOPÇÃO: INSTALADO\nMANTIDA: SIM\nFASE: 1\nfase tembici: 1\nauto atend.: S\ntipo: Simples\nalvará: 17228\nVagas: 11\nNÚMERO: 10",
+            "id":"10 - Largo da Mariquita (Rio Vermelho)",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM",
+            "FASE":1,
+            "fase_tembici":"1",
+            "auto_atend":null,
+            "tipo":"Simples",
+            "alvara":17228,
+            "Vagas":11.0,
+            "NUMERO":10,
+            "Dupla":"11 vagas.",
+            "Instalado":"03.04.18.",
+            "Instaldo":null,
+            "MERO":10,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"1",
+            "o2":"descrição: End.: Largo da Mariquita, na Rua Odilon Santos / Esquina com a Rua Monte Conselho."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4882034,
+               -13.0137953,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"R. Fonte do Boi (Rio Vermelho)",
+            "description":"descrição: descrição: End.: Lado oposto ao Restaurante Cabana da Cely.<br>Simples - 15 vagas.<br>id: 31 - R. Fonte do Boi (Rio Vermelho)<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 4<br>fase tembici: 4 - C<br>auto atend.: S<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15<br>NÚMERO: 31<br>id: 31 - R. Fonte do Boi (Rio Vermelho)<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 4<br>fase tembici: 4 - C<br>auto atend.: S<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15.0<br>NÚMERO: 31",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Lado oposto ao Restaurante Cabana da Cely.\nSimples - 15 vagas.\nid: 31 - R. Fonte do Boi (Rio Vermelho)\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 4\nfase tembici: 4 - C\nauto atend.: S\ntipo: Simples\nalvará: 17267\nVagas: 15\nNÚMERO: 31",
+            "id":"31 - R. Fonte do Boi (Rio Vermelho)",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":4,
+            "fase_tembici":"4 - C",
+            "auto_atend":null,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":15.0,
+            "NUMERO":31,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":31,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"4 - C",
+            "o2":"descrição: End.: Lado oposto ao Restaurante Cabana da Cely."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4858616,
+               -13.0136486,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Praça Carlos Batalha (Rio Vermelho)",
+            "description":"descrição: descrição: End.: Rua Alagoinhas (oposto ao nº 84).<br>Simples - 11 vagas.<br>Instalado: 03.04.18.<br>id: 09 - Praça Carlos Batalha (Rio Vermelho)<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 11<br>NÚMERO: 9<br>id: 09 - Praça Carlos Batalha (Rio Vermelho)<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 11.0<br>NÚMERO: 9",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Rua Alagoinhas (oposto ao nº 84).\nSimples - 11 vagas.\nInstalado: 03.04.18.\nid: 09 - Praça Carlos Batalha (Rio Vermelho)\nOPÇÃO: INSTALADO\nMANTIDA: SIM\nFASE: 1\nfase tembici: 1\nauto atend.: N\ntipo: Simples\nalvará: 17228\nVagas: 11\nNÚMERO: 9",
+            "id":"09 - Praça Carlos Batalha (Rio Vermelho)",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM",
+            "FASE":1,
+            "fase_tembici":"1",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17228,
+            "Vagas":11.0,
+            "NUMERO":9,
+            "Dupla":null,
+            "Instalado":"03.04.18.",
+            "Instaldo":null,
+            "MERO":9,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"1",
+            "o2":"descrição: End.: Rua Alagoinhas (oposto ao nº 84)."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.489889,
+               -13.010333,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"UFBA - Ondina I",
+            "description":"descrição: descrição: End.: Av. Adhemar de Barros, no acesso a UFBA - Portão 01 e ao ADAB / Oposto ao CDA.<br>Simples: 15 vagas.<br>Instalado: 03.04.18.<br>id: 07 - UFBA - Ondina I<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 15<br>NÚMERO: 7<br>id: 07 - UFBA - Ondina I<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 15.0<br>NÚMERO: 7",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Av. Adhemar de Barros, no acesso a UFBA - Portão 01 e ao ADAB / Oposto ao CDA.\nSimples: 15 vagas.\nInstalado: 03.04.18.\nid: 07 - UFBA - Ondina I\nOPÇÃO: INSTALADO\nMANTIDA: SIM\nFASE: 1\nfase tembici: 1\nauto atend.: N\ntipo: Simples\nalvará: 17228\nVagas: 15\nNÚMERO: 7",
+            "id":"07 - UFBA - Ondina I",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM",
+            "FASE":1,
+            "fase_tembici":"1",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17228,
+            "Vagas":15.0,
+            "NUMERO":7,
+            "Dupla":null,
+            "Instalado":"03.04.18.",
+            "Instaldo":null,
+            "MERO":7,
+            "O":"INSTALADO",
+            "Simples":"15 vagas.",
+            "fase tembici":"1",
+            "o2":"descrição: End.: Av. Adhemar de Barros, no acesso a UFBA - Portão 01 e ao ADAB / Oposto ao CDA."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.50716,
+               -13.002526,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"UFBA - Ondina II",
+            "description":"descrição: descrição: End.: R. Barão de Jeremoabo, esquina com Av. Adhemar de Barros, entrada da UFBA, oposto ao Zoológico.<br>Simples - 15 vagas.<br>Instalado: 24.04.18.<br>id: 06 - UFBA - Ondina 2<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 2<br>fase tembici: 2<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 15<br>NÚMERO: 6<br>id: 06 - UFBA - Ondina 2<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 2<br>fase tembici: 2<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 15.0<br>NÚMERO: 6",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: R. Barão de Jeremoabo, esquina com Av. Adhemar de Barros, entrada da UFBA, oposto ao Zoológico.\nSimples - 15 vagas.\nInstalado: 24.04.18.\nid: 06 - UFBA - Ondina 2\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 2\nfase tembici: 2\nauto atend.: N\ntipo: Simples\nalvará: 17228\nVagas: 15\nNÚMERO: 6",
+            "id":"06 - UFBA - Ondina 2",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":2,
+            "fase_tembici":"2",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17228,
+            "Vagas":15.0,
+            "NUMERO":6,
+            "Dupla":null,
+            "Instalado":"24.04.18.",
+            "Instaldo":null,
+            "MERO":6,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"2",
+            "o2":"descrição: End.: R. Barão de Jeremoabo, esquina com Av. Adhemar de Barros, entrada da UFBA, oposto ao Zoológico."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.509656,
+               -13.00614,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"R. Prof. Sabino Silva",
+            "description":"descrição: descrição: End.: No canteiro central da Rua Prof Sabino Silva, próximo à Rua Manuel Dias Morais.<br>Simples - 15 vagas.<br>Instalado: 24.04.18.<br>id: 05 - R. Prof. Sabino Silva<br>OPÇÃO: INSTALADO<br>MANTIDA: Não<br>FASE: 2<br>fase tembici: 2<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 15<br>NÚMERO: 5<br>id: 05 - R. Prof. Sabino Silva<br>OPÇÃO: INSTALADO<br>MANTIDA: Não<br>FASE: 2<br>fase tembici: 2<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 15.0<br>NÚMERO: 5",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: No canteiro central da Rua Prof Sabino Silva, próximo à Rua Manuel Dias Morais.\nSimples - 15 vagas.\nInstalado: 24.04.18.\nid: 05 - R. Prof. Sabino Silva\nOPÇÃO: INSTALADO\nMANTIDA: Não\nFASE: 2\nfase tembici: 2\nauto atend.: N\ntipo: Simples\nalvará: 17228\nVagas: 15\nNÚMERO: 5",
+            "id":"05 - R. Prof. Sabino Silva",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não",
+            "FASE":2,
+            "fase_tembici":"2",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17228,
+            "Vagas":15.0,
+            "NUMERO":5,
+            "Dupla":null,
+            "Instalado":"24.04.18.",
+            "Instaldo":null,
+            "MERO":5,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"2",
+            "o2":"descrição: End.: No canteiro central da Rua Prof Sabino Silva, próximo à Rua Manuel Dias Morais."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.517852,
+               -13.004933,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Praça Orungan",
+            "description":"descrição: descrição: End.: Praça Orungan, na Av. Oceânica, ao lado do ponto de ônibus.<br>Simples - 11 vagas.<br>Instalado: 24.04.18.<br>id: 04 - Praça Orungan<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 2<br>fase tembici: 2<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 11<br>NÚMERO: 4<br>id: 04 - Praça Orungan<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 2<br>fase tembici: 2<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 11.0<br>NÚMERO: 4",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Praça Orungan, na Av. Oceânica, ao lado do ponto de ônibus.\nSimples - 11 vagas.\nInstalado: 24.04.18.\nid: 04 - Praça Orungan\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 2\nfase tembici: 2\nauto atend.: N\ntipo: Simples\nalvará: 17228\nVagas: 11\nNÚMERO: 4",
+            "id":"04 - Praça Orungan",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":2,
+            "fase_tembici":"2",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17228,
+            "Vagas":11.0,
+            "NUMERO":4,
+            "Dupla":null,
+            "Instalado":"24.04.18.",
+            "Instaldo":null,
+            "MERO":4,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"2",
+            "o2":"descrição: End.: Praça Orungan, na Av. Oceânica, ao lado do ponto de ônibus."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.5185256,
+               -13.0079307,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Centenário",
+            "description":"descrição: descrição: End.: Canteiro Central da Avenida Centenário, oposto ao Shopping Barra / Próximo à esquina da Rua Professor Sabino Silva.<br>Dupla - 17 vagas.<br>Instalado: 24.04.18<br><br>id: 30 - Centenário<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 2<br>fase tembici: 2<br>auto atend.: S<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 17<br>NÚMERO: 30<br>id: 30 - Centenário<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 2<br>fase tembici: 2<br>auto atend.: S<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 17.0<br>NÚMERO: 30",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Canteiro Central da Avenida Centenário, oposto ao Shopping Barra / Próximo à esquina da Rua Professor Sabino Silva.\nDupla - 17 vagas.\nInstalado: 24.04.18\n\nid: 30 - Centenário\nOPÇÃO: INSTALADO\nMANTIDA: SIM\nFASE: 2\nfase tembici: 2\nauto atend.: S\ntipo: Dupla\nalvará: 17267\nVagas: 17\nNÚMERO: 30",
+            "id":"30 - Centenário",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM",
+            "FASE":2,
+            "fase_tembici":"2",
+            "auto_atend":null,
+            "tipo":"Dupla",
+            "alvara":17267,
+            "Vagas":17.0,
+            "NUMERO":30,
+            "Dupla":null,
+            "Instalado":"24.04.18",
+            "Instaldo":null,
+            "MERO":30,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"2",
+            "o2":"descrição: End.: Canteiro Central da Avenida Centenário, oposto ao Shopping Barra / Próximo à esquina da Rua Professor Sabino Silva."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.523216,
+               -13.006123,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Porto da Barra",
+            "description":"descrição: descrição: End.: Av. Sete de Setembro, oposto ao número 3717 / Esquina com a Rua César Zama.<br>Com auto-atendimento.<br>Simples: 23 vagas.<br>Instalado: 03.04.18.<br>id: 02 - Porto da Barra<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM PROXIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: S<br>tipo: Simples<br>alvará: 17228<br>Vagas: 23<br>NÚMERO: 2<br>id: 02 - Porto da Barra<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM PROXIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: S<br>tipo: Simples<br>alvará: 17228<br>Vagas: 23.0<br>NÚMERO: 2",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Av. Sete de Setembro, oposto ao número 3717 / Esquina com a Rua César Zama.\nCom auto-atendimento.\nSimples: 23 vagas.\nInstalado: 03.04.18.\nid: 02 - Porto da Barra\nOPÇÃO: INSTALADO\nMANTIDA: SIM PROXIM\nFASE: 1\nfase tembici: 1\nauto atend.: S\ntipo: Simples\nalvará: 17228\nVagas: 23\nNÚMERO: 2",
+            "id":"02 - Porto da Barra",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM PROXIM",
+            "FASE":1,
+            "fase_tembici":"1",
+            "auto_atend":null,
+            "tipo":"Simples",
+            "alvara":17228,
+            "Vagas":23.0,
+            "NUMERO":2,
+            "Dupla":null,
+            "Instalado":"03.04.18.",
+            "Instaldo":null,
+            "MERO":2,
+            "O":"INSTALADO",
+            "Simples":"23 vagas.",
+            "fase tembici":"1",
+            "o2":"descrição: End.: Av. Sete de Setembro, oposto ao número 3717 / Esquina com a Rua César Zama."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.532712,
+               -13.003387,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"R. Prof. Lemos de Brito (Barra)",
+            "description":"descrição: descrição: End.: Av. Oceânica com R. Prof. Lemos de Brito, Nº 409.<br>Dupla - 11 vagas.<br>Novo local vistoriado dia 08.05.<br>Retirada em 11.06. Encontrar novo ponto.<br>NOVO LOCAL VISTORIADO 20.09 - LEMOS DE BRITO (BARRA)<br>id: 03 - R. Prof. Lemos de Brito - (Barra)<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 6<br>fase tembici: 6<br>auto atend.: -<br>tipo: Dupla<br>alvará: 17762<br>Vagas: 11<br>NÚMERO: 3<br>id: 03 - R. Prof. Lemos de Brito - (Barra)<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 6<br>fase tembici: 6<br>auto atend.: -<br>tipo: Dupla<br>alvará: 17762<br>Vagas: 11.0<br>NÚMERO: 3",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Av. Oceânica com R. Prof. Lemos de Brito, Nº 409.\nDupla - 11 vagas.\nNovo local vistoriado dia 08.05.\nRetirada em 11.06. Encontrar novo ponto.\nNOVO LOCAL VISTORIADO 20.09 - LEMOS DE BRITO (BARRA)\nid: 03 - R. Prof. Lemos de Brito - (Barra)\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 6\nfase tembici: 6\nauto atend.: -\ntipo: Dupla\nalvará: 17762\nVagas: 11\nNÚMERO: 3",
+            "id":"03 - R. Prof. Lemos de Brito - (Barra)",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":6,
+            "fase_tembici":"6",
+            "auto_atend":null,
+            "tipo":"Dupla",
+            "alvara":17762,
+            "Vagas":11.0,
+            "NUMERO":3,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":3,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"6",
+            "o2":"descrição: End.: Av. Oceânica com R. Prof. Lemos de Brito, Nº 409."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.52811,
+               -13.009532,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Largo da Graça",
+            "description":"descrição: descrição: End.: Largo da Vitória, em frente ao número 75 / Esquina com a Ladeira da Barra.<br>Simples: 11 vagas.<br>Instalado: 24.04.18<br>id: 22 - Largo da Graça<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 11<br>NÚMERO: 22<br>id: 22 - Largo da Graça<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 11.0<br>NÚMERO: 22",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Largo da Vitória, em frente ao número 75 / Esquina com a Ladeira da Barra.\nSimples: 11 vagas.\nInstalado: 24.04.18\nid: 22 - Largo da Graça\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 3\nfase tembici: 3\nauto atend.: N\ntipo: Simples\nalvará: 17267\nVagas: 11\nNÚMERO: 22",
+            "id":"22 - Largo da Graça",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":3,
+            "fase_tembici":"3",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":11.0,
+            "NUMERO":22,
+            "Dupla":null,
+            "Instalado":"24.04.18",
+            "Instaldo":null,
+            "MERO":22,
+            "O":"INSTALADO",
+            "Simples":"11 vagas.",
+            "fase tembici":"3",
+            "o2":"descrição: End.: Largo da Vitória, em frente ao número 75 / Esquina com a Ladeira da Barra."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.523728,
+               -12.999143,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Campo Grande",
+            "description":"descrição: descrição: End.: Calçada da Praça do Campo Grande (em frente ao TCA).<br>Instalado: 24.04.18<br>Dupla - 11 vagas<br>id: 21 - Campo Grande<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Próxima<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15<br>NÚMERO: 21<br>id: 21 - Campo Grande<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Próxima<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15.0<br>NÚMERO: 21",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Calçada da Praça do Campo Grande (em frente ao TCA).\nInstalado: 24.04.18\nDupla - 11 vagas\nid: 21 - Campo Grande\nOPÇÃO: INSTALADO\nMANTIDA: Não. Próxima\nFASE: 3\nfase tembici: 3\nauto atend.: N\ntipo: Simples\nalvará: 17267\nVagas: 15\nNÚMERO: 21",
+            "id":"21 - Campo Grande",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Próxima",
+            "FASE":3,
+            "fase_tembici":"3",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":15.0,
+            "NUMERO":21,
+            "Dupla":null,
+            "Instalado":"24.04.18",
+            "Instaldo":null,
+            "MERO":21,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"3",
+            "o2":"descrição: End.: Calçada da Praça do Campo Grande (em frente ao TCA)."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.520283,
+               -12.989102,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Praça da Piedade",
+            "description":"descrição: descrição: End.: Oposto a Livraria Monteiro (entre a Av. sete de Setembro e Av Joana Angélica).<br>Simples: 15 vagas.<br>Instaldo: 03.04.18.<br>id: 13 - Praça da Piedade<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 15<br>NÚMERO: 13<br>id: 13 - Praça da Piedade<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 15.0<br>NÚMERO: 13",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Oposto a Livraria Monteiro (entre a Av. sete de Setembro e Av Joana Angélica).\nSimples: 15 vagas.\nInstaldo: 03.04.18.\nid: 13 - Praça da Piedade\nOPÇÃO: INSTALADO\nMANTIDA: SIM\nFASE: 1\nfase tembici: 1\nauto atend.: N\ntipo: Simples\nalvará: 17228\nVagas: 15\nNÚMERO: 13",
+            "id":"13 - Praça da Piedade",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM",
+            "FASE":1,
+            "fase_tembici":"1",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17228,
+            "Vagas":15.0,
+            "NUMERO":13,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":"03.04.18.",
+            "MERO":13,
+            "O":"INSTALADO",
+            "Simples":"15 vagas.",
+            "fase tembici":"1",
+            "o2":"descrição: End.: Oposto a Livraria Monteiro (entre a Av. sete de Setembro e Av Joana Angélica)."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.51504,
+               -12.982769,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Praça Castro Alves",
+            "description":"descrição: descrição: End.: Avenida Sete de Setembro, em frente ao Espaço Unibanco de Cinema / Esquina com a Ladeira da Montanha.<br>Simples: 15 vagas.<br>Instalado: 03.04.18.<br>id: 14 - Praça Castro Alves<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 15<br>NÚMERO: 14<br>id: 14 - Praça Castro Alves<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: N<br>tipo: Simples<br>alvará: 17228<br>Vagas: 15.0<br>NÚMERO: 14",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Avenida Sete de Setembro, em frente ao Espaço Unibanco de Cinema / Esquina com a Ladeira da Montanha.\nSimples: 15 vagas.\nInstalado: 03.04.18.\nid: 14 - Praça Castro Alves\nOPÇÃO: INSTALADO\nMANTIDA: SIM\nFASE: 1\nfase tembici: 1\nauto atend.: N\ntipo: Simples\nalvará: 17228\nVagas: 15\nNÚMERO: 14",
+            "id":"14 - Praça Castro Alves",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM",
+            "FASE":1,
+            "fase_tembici":"1",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17228,
+            "Vagas":15.0,
+            "NUMERO":14,
+            "Dupla":null,
+            "Instalado":"03.04.18.",
+            "Instaldo":null,
+            "MERO":14,
+            "O":"INSTALADO",
+            "Simples":"15 vagas.",
+            "fase tembici":"1",
+            "o2":"descrição: End.: Avenida Sete de Setembro, em frente ao Espaço Unibanco de Cinema / Esquina com a Ladeira da Montanha."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.514523,
+               -12.977201,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Mercado Modelo",
+            "description":"descrição: descrição: End.: Em frente ao Mercado Modelo (em frente ao monumento localizado na entrada principal do Mercado Modelo).<br>Instalado: 10.05.18.<br>Dupla - 11 vagas.<br>id: 17 - Mercado Modelo<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM PROXIM<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 11<br>NÚMERO: 17<br>id: 17 - Mercado Modelo<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM PROXIM<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 11.0<br>NÚMERO: 17",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Em frente ao Mercado Modelo (em frente ao monumento localizado na entrada principal do Mercado Modelo).\nInstalado: 10.05.18.\nDupla - 11 vagas.\nid: 17 - Mercado Modelo\nOPÇÃO: INSTALADO\nMANTIDA: SIM PROXIM\nFASE: 3\nfase tembici: 3\nauto atend.: N\ntipo: Dupla\nalvará: 17267\nVagas: 11\nNÚMERO: 17",
+            "id":"17 - Mercado Modelo",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM PROXIM",
+            "FASE":3,
+            "fase_tembici":"3",
+            "auto_atend":false,
+            "tipo":"Dupla",
+            "alvara":17267,
+            "Vagas":11.0,
+            "NUMERO":17,
+            "Dupla":null,
+            "Instalado":"10.05.18.",
+            "Instaldo":null,
+            "MERO":17,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"3",
+            "o2":"descrição: End.: Em frente ao Mercado Modelo (em frente ao monumento localizado na entrada principal do Mercado Modelo)."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.513545,
+               -12.973663,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Terminal da França",
+            "description":"descrição: descrição: End.: Em frente ao espaço de eventos localizado ao lado do Porto.<br>Instalado: 10.05.18.<br>Dupla  - 11 vagas.<br>id: 16 - Terminal da França<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM PROXIM<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 11<br>NÚMERO: 16<br>id: 16 - Terminal da França<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM PROXIM<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 11.0<br>NÚMERO: 16",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Em frente ao espaço de eventos localizado ao lado do Porto.\nInstalado: 10.05.18.\nDupla  - 11 vagas.\nid: 16 - Terminal da França\nOPÇÃO: INSTALADO\nMANTIDA: SIM PROXIM\nFASE: 3\nfase tembici: 3\nauto atend.: N\ntipo: Dupla\nalvará: 17267\nVagas: 11\nNÚMERO: 16",
+            "id":"16 - Terminal da França",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM PROXIM",
+            "FASE":3,
+            "fase_tembici":"3",
+            "auto_atend":false,
+            "tipo":"Dupla",
+            "alvara":17267,
+            "Vagas":11.0,
+            "NUMERO":16,
+            "Dupla":null,
+            "Instalado":"10.05.18.",
+            "Instaldo":null,
+            "MERO":16,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"3",
+            "o2":"descrição: End.: Em frente ao espaço de eventos localizado ao lado do Porto."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.514129,
+               -12.971059,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Metrô Lapa",
+            "description":"descrição: descrição: End.: Ao lado do Colégio Central (entrada Joana Angelica).<br>Simples - 11 vagas.<br>id: 20 - Metrô Lapa<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 5<br>fase tembici: 5<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 11<br>NÚMERO: 20<br>id: 20 - Metrô Lapa<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 5<br>fase tembici: 5<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 11.0<br>NÚMERO: 20",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Ao lado do Colégio Central (entrada Joana Angelica).\nSimples - 11 vagas.\nid: 20 - Metrô Lapa\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 5\nfase tembici: 5\nauto atend.: N\ntipo: Simples\nalvará: 17267\nVagas: 11\nNÚMERO: 20",
+            "id":"20 - Metrô Lapa",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":5,
+            "fase_tembici":"5",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":11.0,
+            "NUMERO":20,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":20,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"5",
+            "o2":"descrição: End.: Ao lado do Colégio Central (entrada Joana Angelica)."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.511878,
+               -12.980995,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Fórum Ruy Barbosa",
+            "description":"descrição: descrição: End.: Rua Tingui (saída do metrô - esquina com a Av Joana Angélica.<br>Dupla: 17 vagas.<br>Instalado: 03.04.18.<br>id: 15 - Praça do Fórum Ruy Barbosa<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17228<br>Vagas: 17<br>NÚMERO: 15<br>id: 15 - Praça do Fórum Ruy Barbosa<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 1<br>fase tembici: 1<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17228<br>Vagas: 17.0<br>NÚMERO: 15",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Rua Tingui (saída do metrô - esquina com a Av Joana Angélica.\nDupla: 17 vagas.\nInstalado: 03.04.18.\nid: 15 - Praça do Fórum Ruy Barbosa\nOPÇÃO: INSTALADO\nMANTIDA: SIM\nFASE: 1\nfase tembici: 1\nauto atend.: N\ntipo: Dupla\nalvará: 17228\nVagas: 17\nNÚMERO: 15",
+            "id":"15 - Praça do Fórum Ruy Barbosa",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM",
+            "FASE":1,
+            "fase_tembici":"1",
+            "auto_atend":false,
+            "tipo":"Dupla",
+            "alvara":17228,
+            "Vagas":17.0,
+            "NUMERO":15,
+            "Dupla":"17 vagas.",
+            "Instalado":"03.04.18.",
+            "Instaldo":null,
+            "MERO":15,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"1",
+            "o2":"descrição: End.: Rua Tingui (saída do metrô - esquina com a Av Joana Angélica."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.5079792,
+               -12.9790928,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Hotel Bahia do Sol",
+            "description":"descrição: descrição: End.: Corredor da Vitória - bike turista.<br> Mesmo local do Bike Turista.<br>Simples - 7 vagas.<br><br>id: 32 - Hotel Bahia Sol<br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 6<br>fase tembici: 6<br>auto atend.: N<br>tipo: Simples<br>alvará: 17762<br>Vagas: 7<br>NÚMERO: 32<br>id: 32 - Hotel Bahia Sol<br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 6<br>fase tembici: 6<br>auto atend.: N<br>tipo: Simples<br>alvará: 17762<br>Vagas: 7.0<br>NÚMERO: 32",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Corredor da Vitória - bike turista.\n Mesmo local do Bike Turista.\nSimples - 7 vagas.\n\nid: 32 - Hotel Bahia Sol\nOPÇÃO: INSTALADO\nMANTIDA: NÃO\nFASE: 6\nfase tembici: 6\nauto atend.: N\ntipo: Simples\nalvará: 17762\nVagas: 7\nNÚMERO: 32",
+            "id":"32 - Hotel Bahia Sol",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"NÃO",
+            "FASE":6,
+            "fase_tembici":"6",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17762,
+            "Vagas":7.0,
+            "NUMERO":32,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":32,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"6",
+            "o2":"descrição: End.: Corredor da Vitória - bike turista."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.524905,
+               -12.99094,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Jardim de Alah",
+            "description":"descrição: descrição: End.: Calçada da orla, lado oposto ao Salvador Suites Residence.<br>Simples - 15 vagas.<br>Instalado: 10.05.18<br>id: 33 - Jardim de Alah<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15<br>NÚMERO: 33<br>id: 33 - Jardim de Alah<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15.0<br>NÚMERO: 33",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Calçada da orla, lado oposto ao Salvador Suites Residence.\nSimples - 15 vagas.\nInstalado: 10.05.18\nid: 33 - Jardim de Alah\nOPÇÃO: INSTALADO\nMANTIDA: SIM\nFASE: 3\nfase tembici: 3\nauto atend.: N\ntipo: Simples\nalvará: 17267\nVagas: 15\nNÚMERO: 33",
+            "id":"33 - Jardim de Alah",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM",
+            "FASE":3,
+            "fase_tembici":"3",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":15.0,
+            "NUMERO":33,
+            "Dupla":null,
+            "Instalado":"10.05.18",
+            "Instaldo":null,
+            "MERO":33,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"3",
+            "o2":"descrição: End.: Calçada da orla, lado oposto ao Salvador Suites Residence."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4402746,
+               -12.9940921,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Boca do Rio",
+            "description":"descrição: descrição: End.: Boca do Rio: proximo ao paraciclo de bikes (Praça dos ciclistas).<br>Simples - 15 vagas.<br>Instalado: 08.06.2018<br>id: 34 - Boca do Rio (Praça Osório Villas Boas)<br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 4<br>fase tembici: 4 - A<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15<br>NÚMERO: 34<br>id: 34 - Boca do Rio (Praça Osório Villas Boas)<br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 4<br>fase tembici: 4 - A<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15.0<br>NÚMERO: 34",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Boca do Rio: proximo ao paraciclo de bikes (Praça dos ciclistas).\nSimples - 15 vagas.\nInstalado: 08.06.2018\nid: 34 - Boca do Rio (Praça Osório Villas Boas)\nOPÇÃO: INSTALADO\nMANTIDA: NÃO\nFASE: 4\nfase tembici: 4 - A\nauto atend.: N\ntipo: Simples\nalvará: 17267\nVagas: 15\nNÚMERO: 34",
+            "id":"34 - Boca do Rio (Praça Osório Villas Boas)",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"NÃO",
+            "FASE":4,
+            "fase_tembici":"4 - A",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":15.0,
+            "NUMERO":34,
+            "Dupla":null,
+            "Instalado":"08.06.2018",
+            "Instaldo":null,
+            "MERO":34,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"4 - A",
+            "o2":"descrição: End.: Boca do Rio: proximo ao paraciclo de bikes (Praça dos ciclistas)."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.424337,
+               -12.978385,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Jaguaribe",
+            "description":"descrição: descrição: End.: Relocada para proximo a faixa de pedreste e ponte.<br>Simples - 15 vagas.<br>id: 37 - Jaguaribe<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 4<br>fase tembici: 4 - B<br>auto atend.: S<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15<br>NÚMERO: 37<br>id: 37 - Jaguaribe<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 4<br>fase tembici: 4 - B<br>auto atend.: S<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15.0<br>NÚMERO: 37",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Relocada para proximo a faixa de pedreste e ponte.\nSimples - 15 vagas.\nid: 37 - Jaguaribe\nOPÇÃO: INSTALADO\nMANTIDA: SIM\nFASE: 4\nfase tembici: 4 - B\nauto atend.: S\ntipo: Simples\nalvará: 17267\nVagas: 15\nNÚMERO: 37",
+            "id":"37 - Jaguaribe",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM",
+            "FASE":4,
+            "fase_tembici":"4 - B",
+            "auto_atend":null,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":15.0,
+            "NUMERO":37,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":37,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"4 - B",
+            "o2":"descrição: End.: Relocada para proximo a faixa de pedreste e ponte."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.393328,
+               -12.959372,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Piatã",
+            "description":"descrição: descrição: End.: Em frente ao Atakarejo.<br>Dulpa - 17 vagas.<br>Instalado: 24.04.18.<br>id: 38 - Piatã<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 2<br>fase tembici: 3<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 17<br>NÚMERO: 38<br>id: 38 - Piatã<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 2<br>fase tembici: 3<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 17.0<br>NÚMERO: 38",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Em frente ao Atakarejo.\nDulpa - 17 vagas.\nInstalado: 24.04.18.\nid: 38 - Piatã\nOPÇÃO: INSTALADO\nMANTIDA: SIM\nFASE: 2\nfase tembici: 3\nauto atend.: N\ntipo: Dupla\nalvará: 17267\nVagas: 17\nNÚMERO: 38",
+            "id":"38 - Piatã",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM",
+            "FASE":2,
+            "fase_tembici":"3",
+            "auto_atend":false,
+            "tipo":"Dupla",
+            "alvara":17267,
+            "Vagas":17.0,
+            "NUMERO":38,
+            "Dupla":null,
+            "Instalado":"24.04.18.",
+            "Instaldo":null,
+            "MERO":38,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"3",
+            "o2":"descrição: End.: Em frente ao Atakarejo."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.379526,
+               -12.953653,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Itapuã",
+            "description":"descrição: descrição: End.: Em frente ao Restaurante Portal de Itapuã.<br>Simples - 19 vagas.<br>id: 39 - Itapuã<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 4<br>fase tembici: 4 - B<br>auto atend.: S<br>tipo: Simples<br>alvará: 17267<br>Vagas: 19<br>NÚMERO: 39<br>id: 39 - Itapuã<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 4<br>fase tembici: 4 - B<br>auto atend.: S<br>tipo: Simples<br>alvará: 17267<br>Vagas: 19.0<br>NÚMERO: 39",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Em frente ao Restaurante Portal de Itapuã.\nSimples - 19 vagas.\nid: 39 - Itapuã\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 4\nfase tembici: 4 - B\nauto atend.: S\ntipo: Simples\nalvará: 17267\nVagas: 19\nNÚMERO: 39",
+            "id":"39 - Itapuã",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":4,
+            "fase_tembici":"4 - B",
+            "auto_atend":null,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":19.0,
+            "NUMERO":39,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":39,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"4 - B",
+            "o2":"descrição: End.: Em frente ao Restaurante Portal de Itapuã."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.365653,
+               -12.950219,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Praça Lord Cochrane",
+            "description":"descrição: descrição: End.: Perto da Faixa de Pedestre, lado oposto a ladeira, Garibaldi.<br>Simples - 15 vagas.<br>Instalado: 10.05.18.<br>id: 41 - Praça Lord Cochrane<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15<br>NÚMERO: 41<br>id: 41 - Praça Lord Cochrane<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15.0<br>NÚMERO: 41",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Perto da Faixa de Pedestre, lado oposto a ladeira, Garibaldi.\nSimples - 15 vagas.\nInstalado: 10.05.18.\nid: 41 - Praça Lord Cochrane\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 3\nfase tembici: 3\nauto atend.: N\ntipo: Simples\nalvará: 17267\nVagas: 15\nNÚMERO: 41",
+            "id":"41 - Praça Lord Cochrane",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":3,
+            "fase_tembici":"3",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":15.0,
+            "NUMERO":41,
+            "Dupla":null,
+            "Instalado":"10.05.18.",
+            "Instaldo":null,
+            "MERO":41,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"3",
+            "o2":"descrição: End.: Perto da Faixa de Pedestre, lado oposto a ladeira, Garibaldi."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.507954,
+               -12.993193,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Jardim dos Namorados",
+            "description":"descrição: descrição: Próximo á primeira faixa de pedestre. perto do anfiteatro, dos quiosques e do monumento.<br>Simples - 15 vagas.<br>Instalado: 10.05.18.<br>id: 45 - Jardim dos Namorados<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 19<br>NÚMERO: 45<br>id: 45 - Jardim dos Namorados<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 19.0<br>NÚMERO: 45",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: Próximo á primeira faixa de pedestre. perto do anfiteatro, dos quiosques e do monumento.\nSimples - 15 vagas.\nInstalado: 10.05.18.\nid: 45 - Jardim dos Namorados\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 3\nfase tembici: 3\nauto atend.: N\ntipo: Simples\nalvará: 17267\nVagas: 19\nNÚMERO: 45",
+            "id":"45 - Jardim dos Namorados",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":3,
+            "fase_tembici":"3",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":19.0,
+            "NUMERO":45,
+            "Dupla":null,
+            "Instalado":"10.05.18.",
+            "Instaldo":null,
+            "MERO":45,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"3",
+            "o2":"descrição: Próximo á primeira faixa de pedestre. perto do anfiteatro, dos quiosques e do monumento."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.451568,
+               -13.002738,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Magalhães Neto (Colégio Módulo)",
+            "description":"descrição: descrição: Pequena Praça em frente ao Colégio Módulo - Necessário verificar manutenção do poste e intervenção quanto ao Jardim.<br>Com auto-atendimento.<br>Simples - 11 vagas.<br>id: 48 - Magalhães Neto (Colégio Módulo)<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 4<br>fase tembici: 4 - B<br>auto atend.: S<br>tipo: Simples<br>alvará: 17267<br>Vagas: 11<br>NÚMERO: 48<br>id: 48 - Magalhães Neto (Colégio Módulo)<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 4<br>fase tembici: 4 - B<br>auto atend.: S<br>tipo: Simples<br>alvará: 17267<br>Vagas: 11.0<br>NÚMERO: 48",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: Pequena Praça em frente ao Colégio Módulo - Necessário verificar manutenção do poste e intervenção quanto ao Jardim.\nCom auto-atendimento.\nSimples - 11 vagas.\nid: 48 - Magalhães Neto (Colégio Módulo)\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 4\nfase tembici: 4 - B\nauto atend.: S\ntipo: Simples\nalvará: 17267\nVagas: 11\nNÚMERO: 48",
+            "id":"48 - Magalhães Neto (Colégio Módulo)",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":4,
+            "fase_tembici":"4 - B",
+            "auto_atend":null,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":11.0,
+            "NUMERO":48,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":48,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"4 - B",
+            "o2":"descrição: Pequena Praça em frente ao Colégio Módulo - Necessário verificar manutenção do poste e intervenção quanto ao Jardim."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.450251,
+               -12.989912,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Quartel de Amaralina",
+            "description":"descrição: descrição: End.: Nova Praça, em frente ao Quartel.<br>Simples - 11 vagas.<br>Com auto-atendimento.<br>Instalado: 08.06.2018.<br>id: 44 - Quartel de Amaralina<br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 4<br>fase tembici: 4 - A<br>auto atend.: S<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15<br>NÚMERO: 44<br>id: 44 - Quartel de Amaralina<br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 4<br>fase tembici: 4 - A<br>auto atend.: S<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15.0<br>NÚMERO: 44",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Nova Praça, em frente ao Quartel.\nSimples - 11 vagas.\nCom auto-atendimento.\nInstalado: 08.06.2018.\nid: 44 - Quartel de Amaralina\nOPÇÃO: INSTALADO\nMANTIDA: NÃO\nFASE: 4\nfase tembici: 4 - A\nauto atend.: S\ntipo: Simples\nalvará: 17267\nVagas: 15\nNÚMERO: 44",
+            "id":"44 - Quartel de Amaralina",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"NÃO",
+            "FASE":4,
+            "fase_tembici":"4 - A",
+            "auto_atend":null,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":15.0,
+            "NUMERO":44,
+            "Dupla":null,
+            "Instalado":"08.06.2018.",
+            "Instaldo":null,
+            "MERO":44,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"4 - A",
+            "o2":"descrição: End.: Nova Praça, em frente ao Quartel."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.4780844,
+               -13.0136011,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Farol de Itapuã",
+            "description":"descrição: descrição: End.: Ao lado da rampa de acesso da praça.<br>Simples - 11 vagas<br>Com auto-atendimento.<br>id: 50 - Farol de Itapuã<br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 4<br>fase tembici: 4 - B<br>auto atend.: S<br>tipo: Simples<br>alvará: 17267<br>Vagas: 11<br>NÚMERO: 50<br>id: 50 - Farol de Itapuã<br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 4<br>fase tembici: 4 - B<br>auto atend.: S<br>tipo: Simples<br>alvará: 17267<br>Vagas: 11.0<br>NÚMERO: 50",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Ao lado da rampa de acesso da praça.\nSimples - 11 vagas\nCom auto-atendimento.\nid: 50 - Farol de Itapuã\nOPÇÃO: INSTALADO\nMANTIDA: NÃO\nFASE: 4\nfase tembici: 4 - B\nauto atend.: S\ntipo: Simples\nalvará: 17267\nVagas: 11\nNÚMERO: 50",
+            "id":"50 - Farol de Itapuã",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"NÃO",
+            "FASE":4,
+            "fase_tembici":"4 - B",
+            "auto_atend":null,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":11.0,
+            "NUMERO":50,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":50,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"4 - B",
+            "o2":"descrição: End.: Ao lado da rampa de acesso da praça."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.353222,
+               -12.956118,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Praça Clériston Andrade",
+            "description":"descrição: descrição: End.: Na Praça, Lado oposto ao Centro Médico Garibaldi. Canteiro central.<br>Dupla - 11 vagas.<br>Instalado: 10.05.18<br>id: 43 - Praça Clériston Andrade<br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 11<br>NÚMERO: 43<br>id: 43 - Praça Clériston Andrade<br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 11.0<br>NÚMERO: 43",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Na Praça, Lado oposto ao Centro Médico Garibaldi. Canteiro central.\nDupla - 11 vagas.\nInstalado: 10.05.18\nid: 43 - Praça Clériston Andrade\nOPÇÃO: INSTALADO\nMANTIDA: NÃO\nFASE: 3\nfase tembici: 3\nauto atend.: N\ntipo: Dupla\nalvará: 17267\nVagas: 11\nNÚMERO: 43",
+            "id":"43 - Praça Clériston Andrade",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"NÃO",
+            "FASE":3,
+            "fase_tembici":"3",
+            "auto_atend":false,
+            "tipo":"Dupla",
+            "alvara":17267,
+            "Vagas":11.0,
+            "NUMERO":43,
+            "Dupla":null,
+            "Instalado":"10.05.18",
+            "Instaldo":null,
+            "MERO":43,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"3",
+            "o2":"descrição: End.: Na Praça, Lado oposto ao Centro Médico Garibaldi. Canteiro central."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.503661,
+               -13.002239,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Imbuí II",
+            "description":"descrição: descrição: End.: Praça Principal perto da faixa de pedestre.<br>Simples - 15 vagas<br>Instalado: 08/06/2018<br>id: 40 - Imbuí II<br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 4<br>fase tembici: 4 - A<br>auto atend.: S<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15<br>NÚMERO: 40<br>id: 40 - Imbuí II<br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 4<br>fase tembici: 4 - A<br>auto atend.: S<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15.0<br>NÚMERO: 40",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Praça Principal perto da faixa de pedestre.\nSimples - 15 vagas\nInstalado: 08/06/2018\nid: 40 - Imbuí II\nOPÇÃO: INSTALADO\nMANTIDA: NÃO\nFASE: 4\nfase tembici: 4 - A\nauto atend.: S\ntipo: Simples\nalvará: 17267\nVagas: 15\nNÚMERO: 40",
+            "id":"40 - Imbuí II",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"NÃO",
+            "FASE":4,
+            "fase_tembici":"4 - A",
+            "auto_atend":null,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":15.0,
+            "NUMERO":40,
+            "Dupla":null,
+            "Instalado":"08/06/2018",
+            "Instaldo":null,
+            "MERO":40,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"4 - A",
+            "o2":"descrição: End.: Praça Principal perto da faixa de pedestre."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.435094,
+               -12.969281,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Imbuí I",
+            "description":"descrição: descrição: End.: Praça Principal ao lado da Quadra.<br>Simples - 11 vagas.<br>Instalado: 08.06.2018.<br>id: 28 - Imbuí I <br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 4<br>fase tembici: 4 - A<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 11<br>NÚMERO: 28<br>id: 28 - Imbuí I<br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 4<br>fase tembici: 4 - A<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 11.0<br>NÚMERO: 28",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Praça Principal ao lado da Quadra.\nSimples - 11 vagas.\nInstalado: 08.06.2018.\nid: 28 - Imbuí I \nOPÇÃO: INSTALADO\nMANTIDA: NÃO\nFASE: 4\nfase tembici: 4 - A\nauto atend.: N\ntipo: Simples\nalvará: 17267\nVagas: 11\nNÚMERO: 28",
+            "id":"28 - Imbuí I",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"NÃO",
+            "FASE":4,
+            "fase_tembici":"4 - A",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":11.0,
+            "NUMERO":28,
+            "Dupla":null,
+            "Instalado":"08.06.2018.",
+            "Instaldo":null,
+            "MERO":28,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"4 - A",
+            "o2":"descrição: End.: Praça Principal ao lado da Quadra."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.431088,
+               -12.969171,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Praça do Sol (Ondina)",
+            "description":"descrição: descrição: End.: Ao lado do Ponto de Onibus, em frente as gordinhas.<br>Simples - 15 vagas.<br>id: 29 - Praça do Sol (Ondina)<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM PROXIM<br>FASE: 4<br>fase tembici: 4 - C<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15<br>NÚMERO: 29<br>id: 29 - Praça do Sol (Ondina)<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM PROXIM<br>FASE: 4<br>fase tembici: 4 - C<br>auto atend.: N<br>tipo: Simples<br>alvará: 17267<br>Vagas: 15.0<br>NÚMERO: 29",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Ao lado do Ponto de Onibus, em frente as gordinhas.\nSimples - 15 vagas.\nid: 29 - Praça do Sol (Ondina)\nOPÇÃO: INSTALADO\nMANTIDA: SIM PROXIM\nFASE: 4\nfase tembici: 4 - C\nauto atend.: N\ntipo: Simples\nalvará: 17267\nVagas: 15\nNÚMERO: 29",
+            "id":"29 - Praça do Sol (Ondina)",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM PROXIM",
+            "FASE":4,
+            "fase_tembici":"4 - C",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17267,
+            "Vagas":15.0,
+            "NUMERO":29,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":29,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"4 - C",
+            "o2":"descrição: End.: Ao lado do Ponto de Onibus, em frente as gordinhas."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.5092036,
+               -13.0106826,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Parque dos ventos",
+            "description":"descrição: descrição: End.: antes do Centro de convenções, 3 poste logo após a entrada.<br>Simples - 19 vagas.<br>id: 35 - Parque dos ventos<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 4<br>fase tembici: 4 - B<br>auto atend.: S<br>tipo: SImples<br>alvará: 17267<br>Vagas: 19<br>NÚMERO: 35<br>id: 35 - Parque dos ventos<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 4<br>fase tembici: 4 - B<br>auto atend.: S<br>tipo: SImples<br>alvará: 17267<br>Vagas: 19.0<br>NÚMERO: 35",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: antes do Centro de convenções, 3 poste logo após a entrada.\nSimples - 19 vagas.\nid: 35 - Parque dos ventos\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 4\nfase tembici: 4 - B\nauto atend.: S\ntipo: SImples\nalvará: 17267\nVagas: 19\nNÚMERO: 35",
+            "id":"35 - Parque dos ventos",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":4,
+            "fase_tembici":"4 - B",
+            "auto_atend":null,
+            "tipo":"SImples",
+            "alvara":17267,
+            "Vagas":19.0,
+            "NUMERO":35,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":35,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"4 - B",
+            "o2":"descrição: End.: antes do Centro de convenções, 3 poste logo após a entrada."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.433592,
+               -12.986072,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Praça da Sé",
+            "description":"descrição: descrição: End.: Em frente ao espaço de eventos localizado ao lado do Porto.<br>Instalado: 10.05.18.<br>Dupla - 11 vagas.<br>id: 18 - Praça da Sé<br>OPÇÃO: INSTALADO<br>MANTIDA: NULL<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 11<br>NÚMERO: 18<br>id: 18 - Praça da Sé<br>OPÇÃO: INSTALADO<br>MANTIDA: NULL<br>FASE: 3<br>fase tembici: 3<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 11.0<br>NÚMERO: 18",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Em frente ao espaço de eventos localizado ao lado do Porto.\nInstalado: 10.05.18.\nDupla - 11 vagas.\nid: 18 - Praça da Sé\nOPÇÃO: INSTALADO\nMANTIDA: NULL\nFASE: 3\nfase tembici: 3\nauto atend.: N\ntipo: Dupla\nalvará: 17267\nVagas: 11\nNÚMERO: 18",
+            "id":"18 - Praça da Sé",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"NULL",
+            "FASE":3,
+            "fase_tembici":"3",
+            "auto_atend":false,
+            "tipo":"Dupla",
+            "alvara":17267,
+            "Vagas":11.0,
+            "NUMERO":18,
+            "Dupla":null,
+            "Instalado":"10.05.18.",
+            "Instaldo":null,
+            "MERO":18,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"3",
+            "o2":"descrição: End.: Em frente ao espaço de eventos localizado ao lado do Porto."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.510642,
+               -12.972888,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Av. Tamburugy",
+            "description":"descrição: descrição: No mesmo local que a estação  anterior Bike Salvador - Estação 20 - Pinto de Aguiar.<br>Simples - 11 vagas.<br>id: 49 - Av. Tamburugy<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 5<br>fase tembici: 5<br>auto atend.: N<br>tipo: Simples<br>alvará: -<br>Vagas: 11<br>NÚMERO: 49<br>id: 49 - Av. Tamburugy<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 5<br>fase tembici: 5<br>auto atend.: N<br>tipo: Simples<br>alvará: -<br>Vagas: 11.0<br>NÚMERO: 49",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: No mesmo local que a estação  anterior Bike Salvador - Estação 20 - Pinto de Aguiar.\nSimples - 11 vagas.\nid: 49 - Av. Tamburugy\nOPÇÃO: INSTALADO\nMANTIDA: SIM\nFASE: 5\nfase tembici: 5\nauto atend.: N\ntipo: Simples\nalvará: -\nVagas: 11\nNÚMERO: 49",
+            "id":"49 - Av. Tamburugy",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM",
+            "FASE":5,
+            "fase_tembici":"5",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":0,
+            "Vagas":11.0,
+            "NUMERO":49,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":49,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"5",
+            "o2":"descrição: No mesmo local que a estação  anterior Bike Salvador - Estação 20 - Pinto de Aguiar."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.40176,
+               -12.959367,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"CAB (Metrô Pituaçu)",
+            "description":"descrição: descrição: End.: Saída da passarela que liga ao Metrô e ao estádio - CAB.<br>Simples - 11 Vagas.<br>id: 46 - CAB (Metrô Pituaçu)<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 6<br>fase tembici: 6<br>auto atend.: N<br>tipo: Simples<br>alvará: 17762<br>Vagas: 11<br>NÚMERO: 46<br>id: 46 - CAB (Metrô Pituaçu)<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 6<br>fase tembici: 6<br>auto atend.: N<br>tipo: Simples<br>alvará: 17762<br>Vagas: 11.0<br>NÚMERO: 46",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Saída da passarela que liga ao Metrô e ao estádio - CAB.\nSimples - 11 Vagas.\nid: 46 - CAB (Metrô Pituaçu)\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 6\nfase tembici: 6\nauto atend.: N\ntipo: Simples\nalvará: 17762\nVagas: 11\nNÚMERO: 46",
+            "id":"46 - CAB (Metrô Pituaçu)",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":6,
+            "fase_tembici":"6",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17762,
+            "Vagas":11.0,
+            "NUMERO":46,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":46,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"6",
+            "o2":"descrição: End.: Saída da passarela que liga ao Metrô e ao estádio - CAB."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.421872,
+               -12.944045,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Parque Costa Azul",
+            "description":"descrição: descrição: End.: Rua Adelaide Fernandes da Costa, oposto ao número 300 / Esquina com a Rua Doutor Baureau.<br>Simples - 23 Vagas.<br>id: <br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 6<br>fase tembici: 6<br>auto atend.: N<br>tipo: Simples<br>alvará: 17762<br>Vagas: 19<br>NÚMERO: 1<br>id: <br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 6<br>fase tembici: 6<br>auto atend.: N<br>tipo: Simples<br>alvará: 17762<br>Vagas: 19.0<br>NÚMERO: 1",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Rua Adelaide Fernandes da Costa, oposto ao número 300 / Esquina com a Rua Doutor Baureau.\nSimples - 23 Vagas.\nid: \nOPÇÃO: INSTALADO\nMANTIDA: SIM\nFASE: 6\nfase tembici: 6\nauto atend.: N\ntipo: Simples\nalvará: 17762\nVagas: 19\nNÚMERO: 1",
+            "id":null,
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM",
+            "FASE":6,
+            "fase_tembici":"6",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17762,
+            "Vagas":19.0,
+            "NUMERO":1,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":1,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"6",
+            "o2":"descrição: End.: Rua Adelaide Fernandes da Costa, oposto ao número 300 / Esquina com a Rua Doutor Baureau."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.448301,
+               -12.998054,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Centenário II",
+            "description":"descrição: descrição: End.: Canteiro central em frente ao Centro Empresarial.<br>Dupla - 11 Vagas.<br>id: 42 - Centenário II<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 5<br>fase tembici: 5<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 11<br>NÚMERO: 42<br>id: 42 - Centenário II<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 5<br>fase tembici: 5<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 11.0<br>NÚMERO: 42",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Canteiro central em frente ao Centro Empresarial.\nDupla - 11 Vagas.\nid: 42 - Centenário II\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 5\nfase tembici: 5\nauto atend.: N\ntipo: Dupla\nalvará: 17267\nVagas: 11\nNÚMERO: 42",
+            "id":"42 - Centenário II",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":5,
+            "fase_tembici":"5",
+            "auto_atend":false,
+            "tipo":"Dupla",
+            "alvara":17267,
+            "Vagas":11.0,
+            "NUMERO":42,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":42,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"5",
+            "o2":"descrição: End.: Canteiro central em frente ao Centro Empresarial."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.521484,
+               -13.002309,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Praça Aquarius",
+            "description":"descrição: descrição: End.: No centro da praça (em frente ao hotel Mercure).<br>Dupla - 17 vagas.<br>id: 26 - Praça Aquarius<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 3<br>fase tembici: 3<br>auto atend.: S<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 17<br>NÚMERO: 26<br>id: 26 - Praça Aquarius<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 3<br>fase tembici: 3<br>auto atend.: S<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 17.0<br>NÚMERO: 26",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: No centro da praça (em frente ao hotel Mercure).\nDupla - 17 vagas.\nid: 26 - Praça Aquarius\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 3\nfase tembici: 3\nauto atend.: S\ntipo: Dupla\nalvará: 17267\nVagas: 17\nNÚMERO: 26",
+            "id":"26 - Praça Aquarius",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":3,
+            "fase_tembici":"3",
+            "auto_atend":null,
+            "tipo":"Dupla",
+            "alvara":17267,
+            "Vagas":17.0,
+            "NUMERO":26,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":26,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"3",
+            "o2":"descrição: End.: No centro da praça (em frente ao hotel Mercure)."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.452359,
+               -12.986788,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Praça joão Mangabeira (Barris)",
+            "description":"descrição: descrição: End.: Praça reformada do vale dos barris.<br>Simples - 11 vagas.<br>id: 47 - Barris (Praça João Mangabeira)<br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 6<br>fase tembici: 6<br>auto atend.: N<br>tipo: Simples<br>alvará: 17762<br>Vagas: 11<br>NÚMERO: 47<br>id: 47 - Barris (Praça João Mangabeira)<br>OPÇÃO: INSTALADO<br>MANTIDA: NÃO<br>FASE: 6<br>fase tembici: 6<br>auto atend.: N<br>tipo: Simples<br>alvará: 17762<br>Vagas: 11.0<br>NÚMERO: 47",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Praça reformada do vale dos barris.\nSimples - 11 vagas.\nid: 47 - Barris (Praça João Mangabeira)\nOPÇÃO: INSTALADO\nMANTIDA: NÃO\nFASE: 6\nfase tembici: 6\nauto atend.: N\ntipo: Simples\nalvará: 17762\nVagas: 11\nNÚMERO: 47",
+            "id":"47 - Barris (Praça João Mangabeira)",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"NÃO",
+            "FASE":6,
+            "fase_tembici":"6",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17762,
+            "Vagas":11.0,
+            "NUMERO":47,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":47,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"6",
+            "o2":"descrição: End.: Praça reformada do vale dos barris."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.5116744,
+               -12.9881253,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Pinto de Aguiar (UCSAL)",
+            "description":"descrição: descrição: End.: Calçada da Universidade Católica de Salvador.<br>Simples - 15 vagas.<br>id: 19 - Pinto de Aguiar (UCSAL)<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 6<br>fase tembici: 6<br>auto atend.: N<br>tipo: Simples<br>alvará: 17762<br>Vagas: 15<br>NÚMERO: 19<br>id: 19 - Pinto de Aguiar (UCSAL)<br>OPÇÃO: INSTALADO<br>MANTIDA: Não. Nova<br>FASE: 6<br>fase tembici: 6<br>auto atend.: N<br>tipo: Simples<br>alvará: 17762<br>Vagas: 15.0<br>NÚMERO: 19",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Calçada da Universidade Católica de Salvador.\nSimples - 15 vagas.\nid: 19 - Pinto de Aguiar (UCSAL)\nOPÇÃO: INSTALADO\nMANTIDA: Não. Nova\nFASE: 6\nfase tembici: 6\nauto atend.: N\ntipo: Simples\nalvará: 17762\nVagas: 15\nNÚMERO: 19",
+            "id":"19 - Pinto de Aguiar (UCSAL)",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"Não. Nova",
+            "FASE":6,
+            "fase_tembici":"6",
+            "auto_atend":false,
+            "tipo":"Simples",
+            "alvara":17762,
+            "Vagas":15.0,
+            "NUMERO":19,
+            "Dupla":null,
+            "Instalado":null,
+            "Instaldo":null,
+            "MERO":19,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"6",
+            "o2":"descrição: End.: Calçada da Universidade Católica de Salvador."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.414029,
+               -12.946366,
+               0.0
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "Name":"Patamares",
+            "description":"descrição: descrição: End.: Lado oposto ao Posto Menor Preço, próximo ao posto salva-vidas .<br>Dupla - 17 vagas.<br>Instalado: 24.04.18.<br>id: 36 - Patamares<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 2<br>fase tembici: 2<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 17<br>NÚMERO: 36<br>id: 36 - Patamares<br>OPÇÃO: INSTALADO<br>MANTIDA: SIM<br>FASE: 2<br>fase tembici: 2<br>auto atend.: N<br>tipo: Dupla<br>alvará: 17267<br>Vagas: 17.0<br>NÚMERO: 36",
+            "timestamp":null,
+            "begin":null,
+            "end":null,
+            "descricao":"descrição: End.: Lado oposto ao Posto Menor Preço, próximo ao posto salva-vidas .\nDupla - 17 vagas.\nInstalado: 24.04.18.\nid: 36 - Patamares\nOPÇÃO: INSTALADO\nMANTIDA: SIM\nFASE: 2\nfase tembici: 2\nauto atend.: N\ntipo: Dupla\nalvará: 17267\nVagas: 17\nNÚMERO: 36",
+            "id":"36 - Patamares",
+            "OPCAO":"INSTALADO",
+            "MANTIDA":"SIM",
+            "FASE":2,
+            "fase_tembici":"2",
+            "auto_atend":false,
+            "tipo":"Dupla",
+            "alvara":17267,
+            "Vagas":17.0,
+            "NUMERO":36,
+            "Dupla":null,
+            "Instalado":"24.04.18.",
+            "Instaldo":null,
+            "MERO":36,
+            "O":"INSTALADO",
+            "Simples":null,
+            "fase tembici":"2",
+            "o2":"descrição: End.: Lado oposto ao Posto Menor Preço, próximo ao posto salva-vidas ."
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -38.405424,
+               -12.967279,
+               0.0
+            ]
+         }
+      }
+   ]
+}

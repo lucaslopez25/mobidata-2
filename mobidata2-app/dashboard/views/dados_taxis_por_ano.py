@@ -22,7 +22,6 @@ def dados_taxis_por_ano(request):
     # total_geral = models.IntegerField(blank=True, null=True)
 
     frota_taxis_filtrado = FrotaDeTaxis.objects.filter(ano=ano_selecionado).first()
-    print(frota_taxis_filtrado)
 
     if frota_taxis_filtrado:
         frota_taxis_labels = ['Táxis Comuns (Autônomos)', 'Táxis Comuns (Empresas)', 'Táxis Especiais']
@@ -38,8 +37,6 @@ def dados_taxis_por_ano(request):
         )
         grafico_frota_taxis.update_traces(textinfo='percent+label')
         grafico_frota_taxis = grafico_frota_taxis.to_html(full_html=False)
-
-        print(grafico_frota_taxis)
     else:
         grafico_frota_taxis = None
 

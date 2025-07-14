@@ -12,18 +12,15 @@
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
         <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-        <script src="{% static 'js/teste.js' %}"></script>
-
-        
+    
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     </head>
 
     <body>
-        
         <div class="container-fluid">
             <div class="row">
                 <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
@@ -45,10 +42,13 @@
                                     <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'frota_de_onibus_por_ano' %}active{% endif %}" aria-current="page" href="{% url 'dados_operativos_por_ano' %}">Dados Operacionais</a>
                                 </li>
                                 <li class="nav-item"> 
-                                    <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'dados_taxis_por_ano' %}active{% endif %}" aria-current="page" href="{% url 'dados_taxis_por_ano' %}">Táxis</a>
+                                    <p class="nav-link-deactivated d-flex align-items-center gap-2 active">Metrô</p>
                                 </li>
                                 <li class="nav-item"> 
-                                    <a class="nav-link d-flex align-items-center gap-2" aria-current="page" href="#">Metrô TODO</a>
+                                    <p class="nav-link-deactivated d-flex align-items-center gap-2 active">Aquaviário</p>
+                                </li>
+                                <li class="nav-item"> 
+                                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="{% url 'dados_taxis_por_ano' %}">Táxis</a>
                                 </li>
                             </ul>
                         </div>
@@ -59,7 +59,21 @@
                             </h6>
                             <ul class="nav flex-column">
                                 <li class="nav-item"> 
-                                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">Frota de Ônibus TODO</a>
+                                    <p class="nav-link-deactivated d-flex align-items-center gap-2 active">Frota de Ônibus</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="offcanvas-body d-md-flex flex-column p-0 overflow-y-auto">
+                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-1 text-body-secondary text-uppercase">
+                                <span>Visão Geral</span>
+                            </h6>
+                            <ul class="nav flex-column">
+                                <li class="nav-item"> 
+                                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="{% url 'bicicletas' %}">Bicicletas</a>
+                                </li>
+                                <li class="nav-item"> 
+                                    <p class="nav-link-deactivated d-flex align-items-center gap-2 active">Passarelas</p>
                                 </li>
                             </ul>
                         </div>
