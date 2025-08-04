@@ -8,6 +8,10 @@ import pandas # type: ignore
 import plotly.express as plotxp # type: ignore
 
 def dados_operativos_por_ano(request):
+    titulo_da_pagina = "Dados Operacionais (Ano a Ano)"
+    exportar_sql_csv_ativado = False
+    selecionar_ano_ativado = True
+
     anos_disponiveis = HistoricoPassageirosTransportados.objects.values_list('ano', flat=True).distinct().order_by('ano')
     ano_selecionado = int(request.GET.get('ano', 2024))
 
@@ -24,8 +28,7 @@ def dados_operativos_por_ano(request):
             x='mes', 
             y='passageiros', 
             markers=True, 
-            title='Passageiros Transportados em Milhões',
-            width=600
+            title='Passageiros Transportados em Milhões'
         )
         grafico_hist_pax_transp.update_layout(xaxis_title='Mês', yaxis_title='Passageiros')
         grafico_hist_pax_transp = grafico_hist_pax_transp.to_html(full_html=False)
@@ -53,6 +56,9 @@ def dados_operativos_por_ano(request):
         grafico_kmt_perc_transp = None
 
     return render(request, 'dash-operativo.html', {
+        'titulo_da_pagina': titulo_da_pagina,
+        'exportar_sql_csv_ativado': exportar_sql_csv_ativado,
+        'selecionar_ano_ativado': selecionar_ano_ativado,
         'anos': anos_disponiveis,
         'ano_selecionado': ano_selecionado,
         'grafico_hist_pax_transp': grafico_hist_pax_transp,

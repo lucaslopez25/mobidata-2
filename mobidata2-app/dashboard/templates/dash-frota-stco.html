@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    {% include 'toolbar.html' %}
+    
+    <div class="container">
+        <div class="row">
+            {% if grafico_historico %}
+                <div class="grafico">
+                    {{ grafico_historico|safe }}
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Idade Média da Frota.
+                </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            {% if grafico_aquisicoes %}
+                <div class="grafico">
+                    {{ grafico_aquisicoes|safe }}
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Aquisições por Mês.
+                </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            {% if grafico_frota_total %}
+                <div class="grafico">
+                    {{ grafico_frota_total|safe }}
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Frota Total de Ônibus.
+                </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            {% if grafico_frota_operante %}
+                <div class="grafico">
+                    {{ grafico_frota_operante|safe }}
+                    <p style="font-size: x-small; margin-bottom: 0;">OBS.: Frota média nos dias úteis.</p>
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Frota Operante de Ônibus.
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}
