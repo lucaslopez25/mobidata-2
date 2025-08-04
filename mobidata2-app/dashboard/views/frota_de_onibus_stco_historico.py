@@ -9,7 +9,7 @@ import plotly.express as plotxp # type: ignore
 
 def frota_de_onibus_stco_historico(request):
     titulo_da_pagina = "Frota de Ônibus (Histórico)"
-    exportar_sql_csv_ativado = True
+    exportar_sql_csv_ativado = False
     selecionar_ano_ativado = False
 
     cores_concessionarias = {
