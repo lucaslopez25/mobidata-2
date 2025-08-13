@@ -12,7 +12,7 @@ def dados_metro(request):
     exportar_sql_csv_ativado = False
     selecionar_ano_ativado = False
 
-    # ======= Dados Anuais =======
+    ###################### DADOS ANUAIS
     dados_ano = HistoricoPassageirosTransportadosMetroAno.objects.all().order_by('ano')
     df_ano = pandas.DataFrame(list(dados_ano.values('ano', 'passageiros')))
 
@@ -29,7 +29,7 @@ def dados_metro(request):
     else:
         grafico_ano_html = None
 
-    # ======= Dados Mensais =======
+    ###################### DADOS MENSAIS
     dados_mes = HistoricoPassageirosTransportadosMetroMes.objects.all().order_by('ano', 'mes')
     df_mes = pandas.DataFrame(list(dados_mes.values('ano', 'mes', 'passageiros')))
 
