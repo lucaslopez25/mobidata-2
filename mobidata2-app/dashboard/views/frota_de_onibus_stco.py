@@ -8,7 +8,7 @@ import pandas # type: ignore
 import plotly.express as plotxp # type: ignore
 
 def frota_de_onibus_stco(request):
-    titulo_da_pagina = "Frota de Ônibus"
+    titulo_da_pagina = "Frota de Ônibus (STCO)"
     exportar_sql_csv_ativado = False
     selecionar_ano_ativado = False
 
