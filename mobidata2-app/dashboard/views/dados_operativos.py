@@ -10,7 +10,6 @@ import plotly.express as plotxp # type: ignore
 def dados_operativos(request):
     titulo_da_pagina = "Dados Operativos"
     exportar_sql_csv_ativado = False
-    selecionar_ano_ativado = False
 
     ###################### HistoricoPassageirosTransportados
 
@@ -103,7 +102,6 @@ def dados_operativos(request):
     return render(request, 'dash-operativo.html', {
         'titulo_da_pagina': titulo_da_pagina,
         'exportar_sql_csv_ativado': exportar_sql_csv_ativado,
-        'selecionar_ano_ativado': selecionar_ano_ativado,
         'grafico_hist_pax_transp': grafico_hist_pax_transp,
         'grafico_kmt_perc_transp': grafico_kmt_perc_transp,
         'grafico_historico_corredores': grafico_historico_corredores,

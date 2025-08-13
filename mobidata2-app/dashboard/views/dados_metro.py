@@ -10,7 +10,6 @@ import plotly.express as plotxp # type: ignore
 def dados_metro(request):
     titulo_da_pagina = "Dados do Metrô"
     exportar_sql_csv_ativado = False
-    selecionar_ano_ativado = False
 
     ###################### DADOS ANUAIS
     dados_ano = HistoricoPassageirosTransportadosMetroAno.objects.all().order_by('ano')
@@ -50,7 +49,6 @@ def dados_metro(request):
     return render(request, 'dash-metro.html', {
         'titulo_da_pagina': titulo_da_pagina,
         'exportar_sql_csv_ativado': exportar_sql_csv_ativado,
-        'selecionar_ano_ativado': selecionar_ano_ativado,
         'grafico_ano': grafico_ano_html,
         'grafico_mes': grafico_mes_html
     })

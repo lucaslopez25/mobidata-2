@@ -10,7 +10,6 @@ import plotly.express as plotxp # type: ignore
 def dados_taxis(request):
     titulo_da_pagina = "Frota de Táxis - Salvador (Histórico)"
     exportar_sql_csv_ativado = False
-    selecionar_ano_ativado = False
 
     ###################### FrotaDeTaxis - Histórico completo
 
@@ -106,7 +105,6 @@ def dados_taxis(request):
     return render(request, 'dash-taxis.html', {
         'titulo_da_pagina': titulo_da_pagina,
         'exportar_sql_csv_ativado': exportar_sql_csv_ativado,
-        'selecionar_ano_ativado': selecionar_ano_ativado,
         'grafico_frota_taxis': grafico_frota_taxis,
         'grafico_taxis_combustivel': grafico_taxis_combustivel,
         'grafico_idade_media_frota_taxis': grafico_idade_media_frota_taxis,
