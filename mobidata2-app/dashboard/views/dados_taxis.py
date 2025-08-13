@@ -7,7 +7,7 @@ from dashboard.models import *
 import pandas # type: ignore
 import plotly.express as plotxp # type: ignore
 
-def dados_taxis_historico(request):
+def dados_taxis(request):
     titulo_da_pagina = "Frota de Táxis - Salvador (Histórico)"
     exportar_sql_csv_ativado = False
     selecionar_ano_ativado = False

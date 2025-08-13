@@ -28,17 +28,6 @@
             {% endif %}
         </div>
         <div class="row">
-            {% if grafico_frota_total %}
-                <div class="grafico">
-                    {{ grafico_frota_total|safe }}
-                </div>
-            {% else %}
-                <div class="alert alert-warning">
-                    Nenhum dado disponível de Frota Total de Ônibus.
-                </div>
-            {% endif %}
-        </div>
-        <div class="row">
             {% if grafico_frota_operante %}
                 <div class="grafico">
                     {{ grafico_frota_operante|safe }}
@@ -47,6 +36,18 @@
             {% else %}
                 <div class="alert alert-warning">
                     Nenhum dado disponível de Frota Operante de Ônibus.
+                </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            {% if grafico_frota_total %}
+                <div class="grafico">
+                    {{ grafico_frota_total|safe }}
+                    <p style="font-size: x-small; margin-bottom: 0;">OBS.: Dados de 2021 não discriminam frota total por operadora.</p>
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Frota Total de Ônibus.
                 </div>
             {% endif %}
         </div>

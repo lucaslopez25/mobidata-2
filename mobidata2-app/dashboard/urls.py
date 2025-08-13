@@ -3,12 +3,9 @@ from . import views
 
 urlpatterns = [
     path('', views.landing, name='landing'),
-    path('frota_de_onibus_stco_historico', views.frota_de_onibus_stco_historico, name='frota_de_onibus_stco_historico'),
-    path('frota_de_onibus_stco_por_ano', views.frota_de_onibus_stco_por_ano, name='frota_de_onibus_stco_por_ano'),
-    path('dados_operativos_historico', views.dados_operativos_historico, name='dados_operativos_historico'),
-    path('dados_operativos_por_ano', views.dados_operativos_por_ano, name='dados_operativos_por_ano'),
-    path('dados_taxis_historico', views.dados_taxis_historico, name='dados_taxis_historico'),
-    path('dados_taxis_por_ano', views.dados_taxis_por_ano, name='dados_taxis_por_ano'),
+    path('frota_de_onibus_stco', views.frota_de_onibus_stco, name='frota_de_onibus_stco'),
+    path('dados_taxis', views.dados_taxis, name='dados_taxis'),
+    path('dados_operativos', views.dados_operativos, name='dados_operativos'),
     path('bicicletas', views.bicicletas, name='bicicletas'),
     path('exportar_csv', views.exportar_csv, name='exportar_csv'),
 ]
