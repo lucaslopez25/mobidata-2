@@ -6,13 +6,30 @@
     
     <div class="container">
         <div class="row">
-            {% if TODO %}
+            {% if grafico_indicadores_financeiros_stco %}
                 <div class="grafico">
-                    {{ TODO|safe }}
+                    {{ grafico_indicadores_financeiros_stco|safe }}
+                    <form method="get">
+                        <label>Filtrar por Ano:</label>
+                        <select name="ano_selecionado_indicador_financeiro" onchange="this.form.submit()">
+                            <option value="">--</option>
+                            {% for ano in lista_anos_indicador_financeiro %}
+                                <option value="{{ ano }}" {% if ano_selecionado_indicador_financeiro == ano|stringformat:"s" %}selected{% endif %}>{{ ano }}</option>
+                            {% endfor %}
+                        </select>
+
+                        <label>Filtrar por Concessionária:</label>
+                        <select name="concessionaria_selecionada_indicador_financeiro" onchange="this.form.submit()">
+                            <option value="">--</option>
+                            {% for c in lista_concessionarias_indicador_financeiro %}
+                                <option value="{{ c }}" {% if concessionaria_selecionada_indicador_financeiro == c %}selected{% endif %}>{{ c }}</option>
+                            {% endfor %}
+                        </select>
+                    </form>
                 </div>
             {% else %}
                 <div class="alert alert-warning">
-                    Nenhum dado disponível de TODO.
+                    Nenhum dado disponível de Indicadores Financeiros do STCO.
                 </div>
             {% endif %}
         </div>

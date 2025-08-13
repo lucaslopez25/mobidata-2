@@ -36,13 +36,13 @@
                             </h6>
                             <ul class="nav flex-column">
                                 <li class="nav-item"> 
-                                    <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'frota_de_onibus_stco' %}active{% endif %}" aria-current="page" href="{% url 'frota_de_onibus_stco' %}">Frota de Ônibus</a>
+                                    <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'frota_de_onibus_stco' %}active{% endif %}" aria-current="page" href="{% url 'frota_de_onibus_stco' %}">Frota de Ônibus (STCO)</a>
                                 </li>
                                 <li>
                                     <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'dados_operativos' %}active{% endif %}" aria-current="page" href="{% url 'dados_operativos' %}">Dados Operativos</a>
                                 </li>
                                 <li>
-                                    <p class="nav-link-deactivated d-flex align-items-center gap-2 active">Dados Financeiros</p>
+                                    <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'dados_financeiros' %}active{% endif %}" aria-current="page" href="{% url 'dados_financeiros' %}">Dados Financeiros</a>
                                 </li>
                                 <li>
                                     <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'dados_taxis' %}active{% endif %}" aria-current="page" href="{% url 'dados_taxis' %}">Táxis</a>

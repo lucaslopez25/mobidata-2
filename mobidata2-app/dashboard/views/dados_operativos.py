@@ -36,6 +36,7 @@ def dados_operativos(request):
     anos_disponiveis_historico_corredores = CorredoresDeOnibus.objects.values_list('ano', flat=True).distinct().order_by('ano')
 
     ano_selecionado_historico_corredores = request.GET.get('ano_historico_corredores')
+    
     if ano_selecionado_historico_corredores:
         ano_selecionado_historico_corredores = int(ano_selecionado_historico_corredores)
     else:

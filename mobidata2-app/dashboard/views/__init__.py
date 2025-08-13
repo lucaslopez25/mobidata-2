@@ -1,6 +1,6 @@
 from .landing import landing
 
-from ..geradores_de_graficos import gerar_grafico_linhas_simples_por_ano_mes
+from ..geradores_de_graficos import *
 
 from .dados_operativos import dados_operativos
 from .frota_de_onibus_stco import frota_de_onibus_stco
