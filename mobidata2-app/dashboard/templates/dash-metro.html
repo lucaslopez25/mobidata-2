@@ -9,14 +9,18 @@
             {% if grafico_ano %}
                 {{ grafico_ano|safe }}
             {% else %}
-                <p>Dados anuais não disponíveis.</p>
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Total Anual de Passageiros Transportados.
+                </div>
             {% endif %}
         </div>
         <div class="row">
-            {% if grafico_mes %}
-                {{ grafico_mes|safe }}
+            {% if grafico_dados_metro_ano_mes %}
+                {{ grafico_dados_metro_ano_mes|safe }}
             {% else %}
-                <p>Dados mensais não disponíveis.</p>
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Total Mensal de Passageiros Transportados.
+                </div>
             {% endif %}
         </div>
     </div>
