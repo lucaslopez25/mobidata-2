@@ -200,6 +200,7 @@ INSERT INTO tarifa_preco_stco (ano, valor, data_alteracao) VALUES
 ON CONFLICT DO NOTHING;
 
 CREATE TABLE dados_stco (
+    id SERIAL PRIMARY KEY,
     ano INT,
     passageiros_total BIGINT,
     passageiros_equivalente BIGINT,
@@ -231,14 +232,15 @@ DECLARE
     salario_minimo_ano NUMERIC(10,2);
     custo_por_km NUMERIC(15,2);
     percentual_tarifa_sm NUMERIC(10,2);
-    comparativo_40_tarifas TEXT;
+    qtd_passagens_compra_um_sm NUMERIC(10,2);
 BEGIN
     DROP TABLE IF EXISTS resultado_analise;
     CREATE TEMP TABLE resultado_analise (
         ano INT,
+        salario_minimo_ano NUMERIC(10,2),
         tarifa_sobre_sm NUMERIC(10,2),
         custo_operacional_por_km NUMERIC(15,2),
-        comparativo_40_tarifas TEXT
+        qtd_passagens_compra_um_sm NUMERIC(10,2)
     );
     
     FOR rec IN 
@@ -267,8 +269,8 @@ BEGIN
         ORDER BY sm.data_ajuste DESC
         LIMIT 1;
         
-        -- Calcular comparativo de 40 tarifas com salário mínimo
-        SELECT ((t.valor * 40 / sm.valor_salario) * 100)::NUMERIC(5,2) INTO comparativo_40_tarifas
+        -- Calcular total de passagens possíveis com 1 salário mínimo
+        SELECT FLOOR(sm.valor_salario / t.valor)::NUMERIC(10,2) INTO qtd_passagens_compra_um_sm
         FROM tarifa_preco_stco t
         JOIN salario_minimo sm ON t.ano = sm.ano
         WHERE t.ano = rec.ano
@@ -278,9 +280,10 @@ BEGIN
         -- Inserir resultados na tabela temporária
         INSERT INTO resultado_analise VALUES (
             rec.ano,
+            salario_minimo_ano,
             percentual_tarifa_sm,
             custo_por_km,
-            comparativo_40_tarifas
+            qtd_passagens_compra_um_sm
         );
     END LOOP;
 END;

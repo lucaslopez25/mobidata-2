@@ -33,6 +33,39 @@
                 </div>
             {% endif %}
         </div>
+        <div class="row">
+            {% if grafico_passageiros %}
+                <div class="grafico">
+                    {{ grafico_passageiros|safe }}
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Dados Operacionais do STCO - Passageiros.
+                </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            {% if grafico_quilometragem %}
+                <div class="grafico">
+                    {{ grafico_quilometragem|safe }}
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Dados Operacionais do STCO - Quilometragem.
+                </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            {% if grafico_analise_comparativa_stco %}
+                <div class="grafico">
+                    {{ grafico_analise_comparativa_stco|safe }}
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Análise Comparativa do STCO.
+                </div>
+            {% endif %}
+        </div>
     </div>
 </main>
 {% endblock %}

@@ -1,5 +1,7 @@
 import pandas # type: ignore
 import plotly.express as plotxp # type: ignore
+import plotly.graph_objects as plotgo # type: ignore
+from plotly.subplots import make_subplots # type: ignore
 
 def gerar_grafico_linhas_simples_por_ano_mes(model, yaxis_titulo, titulo_grafico, yaxis_modelname):
 
@@ -78,3 +80,76 @@ def gerar_grafico_indicador_financeiro(model, ano_selecionado, concessionaria_se
             }
     
     return None
+
+def gerar_graficos_dados_stco(model):
+
+    queryset = model.objects.order_by("ano") # O model deve ser DadosStco
+
+    if queryset.exists():
+        anos = [d.ano for d in queryset]
+        passageiros_total = [d.passageiros_total for d in queryset]
+        passageiros_equivalente = [d.passageiros_equivalente for d in queryset]
+        quilometragem_total = [float(d.quilometragem_total) if d.quilometragem_total else None for d in queryset]
+        kms_por_viagem = [float(d.kms_por_viagem) if d.kms_por_viagem else None for d in queryset]
+        passageiros_por_viagem = [float(d.passageiros_por_viagem) if d.passageiros_por_viagem else None for d in queryset]
+
+        grafico_passageiros = plotgo.Figure()
+
+        grafico_passageiros.add_trace(plotgo.Scatter(
+            x=anos, y=passageiros_total,
+            name="Passageiros Totais",
+            mode="lines+markers",
+            marker_color="blue"
+        ))
+
+        grafico_passageiros.add_trace(plotgo.Scatter(
+            x=anos, y=passageiros_equivalente,
+            name="Passageiros Equivalentes",
+            mode="lines+markers",
+            marker_color="green"
+        ))
+
+        grafico_passageiros.update_layout(
+            title="Dados Operacionais do STCO - Passageiros",
+            xaxis_title="Ano",
+            yaxis=dict(
+                title="Passageiros",
+                showgrid=True
+            ),
+            barmode="group",
+            template="plotly_white"
+        )
+
+        grafico_passageiros = grafico_passageiros.to_html(full_html=False)
+
+        grafico_quilometragem = plotgo.Figure()
+
+        grafico_quilometragem.add_trace(plotgo.Scatter(
+            x=anos, y=quilometragem_total,
+            name="Quilometragem Total (km)",
+            mode="lines+markers",
+            marker_color="orange"
+        ))
+
+        grafico_quilometragem.update_layout(
+            title="Dados Operacionais do STCO - Quilometragem",
+            xaxis_title="Ano",
+            yaxis=dict(
+                title="Quilômetros",
+                showgrid=True
+            ),
+            barmode="group",
+            template="plotly_white"
+        )
+
+        grafico_quilometragem = grafico_quilometragem.to_html(full_html=False)
+
+        return {
+            'grafico_passageiros': grafico_passageiros,
+            'grafico_quilometragem': grafico_quilometragem,
+        }
+    else:
+        return {
+            'grafico_passageiros': None,
+            'grafico_quilometragem': None,
+        }
