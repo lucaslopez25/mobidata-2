@@ -17,13 +17,35 @@
             {% endif %}
         </div>
         <div class="row">
-            {% if grafico_aquisicoes %}
+            {% if grafico_veiculos_novos_ano %}
                 <div class="grafico">
-                    {{ grafico_aquisicoes|safe }}
+                    {{ grafico_veiculos_novos_ano|safe }}
                 </div>
             {% else %}
                 <div class="alert alert-warning">
-                    Nenhum dado disponível de Aquisições por Mês.
+                    Nenhum dado disponível de [...].
+                </div>
+            {% endif %}
+        </div> 
+        <div class="row">
+            {% if grafico_aquisicoes_novos %}
+                <div class="grafico">
+                    {{ grafico_aquisicoes_novos|safe }}
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Aquisições por Mês (Novos).
+                </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            {% if grafico_aquisicoes_usados %}
+                <div class="grafico">
+                    {{ grafico_aquisicoes_usados|safe }}
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Aquisições por Mês (Usados).
                 </div>
             {% endif %}
         </div>

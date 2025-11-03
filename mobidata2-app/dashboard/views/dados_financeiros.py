@@ -61,6 +61,8 @@ def dados_financeiros(request):
     cursor.execute("SELECT ano, salario_minimo_ano, tarifa_sobre_sm, custo_operacional_por_km, qtd_passagens_compra_um_sm FROM resultado_analise ORDER BY ano;")
     rows = cursor.fetchall()
     cols = [col[0] for col in cursor.description]
+    cursor.close()
+    conexao_com_a_database.close()
 
     dataframe_analise_comparativa_stco = pandas.DataFrame(rows, columns=cols)
 
@@ -73,52 +75,67 @@ def dados_financeiros(request):
     #     labels={"ano": "Ano", "tarifa_sobre_sm": "% Tarifa / Salário Mínimo"},
     # )
 
-    grafico_analise_comparativa_stco = make_subplots(specs=[[{"secondary_y": True}]])
-    grafico_analise_comparativa_stco.add_trace(plotgo.Scatter(
-            x=dataframe_analise_comparativa_stco['ano'],
-            y=dataframe_analise_comparativa_stco['tarifa_sobre_sm'],
-            mode='lines+markers',
-            name='Tarifa/Salário Mínimo (%)',
-            line=dict(color='blue')
-        ),
-        secondary_y=False
+    ######### Gráfico salário mínimo e quantidade de passagens
+
+    grafico_salario_passagens = plotgo.Figure()
+    grafico_salario_passagens.add_trace(plotgo.Scatter(
+        x=dataframe_analise_comparativa_stco['ano'],
+        y=dataframe_analise_comparativa_stco['salario_minimo_ano'],
+        mode='lines+markers',
+        name='Salário Mínimo (R$)',
+        line=dict(color='orange')
+    ))
+    grafico_salario_passagens.add_trace(plotgo.Scatter(
+        x=dataframe_analise_comparativa_stco['ano'],
+        y=dataframe_analise_comparativa_stco['qtd_passagens_compra_um_sm'],
+        mode='lines+markers',
+        name='Qtd de Passagens com 1 SM',
+        line=dict(color='green')
+    ))
+    grafico_salario_passagens.update_layout(
+        title='Salário Mínimo e Quantidade de Passagens compráveis com um Salário Mínimo (baseado nos valores de passagens em reais por ano)',
+        xaxis_title='Ano',
+        yaxis_title='Valores (R$)',
+        template='plotly_white'
     )
 
-    grafico_analise_comparativa_stco.add_trace(plotgo.Scatter(
-            x=dataframe_analise_comparativa_stco['ano'],
-            y=dataframe_analise_comparativa_stco['qtd_passagens_compra_um_sm'],
-            mode='lines+markers',
-            name='Quantidade de Passagens que 1 Salário Mínimo consegue comprar (R$)',
-            line=dict(color='green')
-        ),
-        secondary_y=True
+    ######### Gráfico custo operacional
+
+    grafico_custo_operacional = plotgo.Figure()
+    grafico_custo_operacional.add_trace(plotgo.Scatter(
+        x=dataframe_analise_comparativa_stco['ano'],
+        y=dataframe_analise_comparativa_stco['custo_operacional_por_km'],
+        mode='lines+markers',
+        name='Custo Operacional por KM (R$)',
+        line=dict(color='red')
+    ))
+    grafico_custo_operacional.update_layout(
+        title='Custo operacional do STCO por quilômetro rodado (em reais)',
+        xaxis_title='Ano',
+        yaxis_title='R$',
+        template='plotly_white'
     )
 
-    grafico_analise_comparativa_stco.add_trace(plotgo.Scatter(
-            x=dataframe_analise_comparativa_stco['ano'],
-            y=dataframe_analise_comparativa_stco['custo_operacional_por_km'],
-            mode='lines+markers',
-            name='Custo Operacional do STCO/KM (R$)',
-            line=dict(color='red')
-        ),
-        secondary_y=True
+    ######### Gráfico tarifa como pct do salário mínimo
+
+    grafico_tarifa_percentual = plotgo.Figure()
+    grafico_tarifa_percentual.add_trace(plotgo.Scatter(
+        x=dataframe_analise_comparativa_stco['ano'],
+        y=dataframe_analise_comparativa_stco['tarifa_sobre_sm'],
+        mode='lines+markers',
+        name='Tarifa/Salário Mínimo (%)',
+        line=dict(color='blue')
+    ))
+    grafico_tarifa_percentual.update_layout(
+        title='Tarifa como Percentual do Salário Mínimo',
+        xaxis_title='Ano',
+        yaxis_title='Percentual (%)',
+        template='plotly_white'
     )
 
-    grafico_analise_comparativa_stco.add_trace(plotgo.Scatter(
-            x=dataframe_analise_comparativa_stco['ano'],
-            y=dataframe_analise_comparativa_stco['salario_minimo_ano'],
-            mode='lines+markers',
-            name='Salário Mínimo (R$)',
-            line=dict(color='orange')
-        ),
-        secondary_y=True
-    )
-
-    grafico_analise_comparativa_stco.update_layout(title='Análise Comparativa de dados STCO com dados econômicos', xaxis_title='Ano', template='plotly_white')
-    grafico_analise_comparativa_stco.update_yaxes(title_text='Percentual', secondary_y=False)
-    grafico_analise_comparativa_stco.update_yaxes(title_text='Reais (R$)', secondary_y=True)
-
-    grafico_analise_comparativa_stco = grafico_analise_comparativa_stco.to_html(full_html=False)
+    grafico_salario_passagens = grafico_salario_passagens.to_html(full_html=False)
+    grafico_custo_operacional = grafico_custo_operacional.to_html(full_html=False)
+    grafico_tarifa_percentual = grafico_tarifa_percentual.to_html(full_html=False)
 
     return render(request, 'dash-financeiro.html', {
         'titulo_da_pagina': titulo_da_pagina,
@@ -128,7 +145,9 @@ def dados_financeiros(request):
         'lista_concessionarias_indicador_financeiro': pacote_grafico_indicadores_financeiros_stco['lista_concessionarias'],
         'ano_selecionado_indicador_financeiro': ano_selecionado_indicador_financeiro,
         'concessionaria_selecionada_indicador_financeiro': concessionaria_selecionada_indicador_financeiro,
-        'grafico_analise_comparativa_stco': grafico_analise_comparativa_stco,
+        'grafico_salario_passagens': grafico_salario_passagens,
+        'grafico_custo_operacional': grafico_custo_operacional,
+        'grafico_tarifa_percentual': grafico_tarifa_percentual,
         'grafico_passageiros': pacote_dados_stco['grafico_passageiros'],
         'grafico_quilometragem': pacote_dados_stco['grafico_quilometragem'],
     })

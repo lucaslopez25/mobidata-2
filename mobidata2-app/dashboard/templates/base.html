@@ -35,7 +35,7 @@
                                 <span>Painéis</span>
                             </h6>
                             <ul class="nav flex-column">
-                                <li class="nav-item"> 
+                                <li> 
                                     <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'frota_de_onibus_stco' %}active{% endif %}" aria-current="page" href="{% url 'frota_de_onibus_stco' %}">Frota de Ônibus (STCO)</a>
                                 </li>
                                 <li>
@@ -50,8 +50,8 @@
                                 <li>
                                     <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'dados_metro' %}active{% endif %}" aria-current="page" href="{% url 'dados_metro' %}">Metrô</a>
                                 </li>
-                                <li class="nav-item"> 
-                                    <p class="nav-link-deactivated d-flex align-items-center gap-2 active">Aquaviário e Mob. Vertical</p>
+                                <li> 
+                                    <p class="nav-link d-flex align-items-center gap-2 active">Aquaviário e Mob. Vertical</p>
                                 </li>
                             </ul>
                         </div>
@@ -65,7 +65,7 @@
                                     <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="{% url 'bicicletas' %}">Bicicletas</a>
                                 </li>
                                 <li class="nav-item"> 
-                                    <p class="nav-link-deactivated d-flex align-items-center gap-2 active">Passarelas</p>
+                                    <p class="nav-link d-flex align-items-center gap-2 active">Passarelas</p>
                                 </li>
                             </ul>
                         </div>

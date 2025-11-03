@@ -1,13 +1,14 @@
 from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
+from plotly.subplots import make_subplots
 
 from dashboard.models import *
-from . import gerar_grafico_linhas_simples_por_ano_mes
+from . import gerar_grafico_linhas_simples_por_ano_mes, gerar_lista_de_anos_disponiveis_distinct
 
 import pandas # type: ignore
 import plotly.express as plotxp # type: ignore
-
+import plotly.graph_objects as plotgo
 
 def dados_operativos(request):
     titulo_da_pagina = "Dados Operativos"
@@ -31,50 +32,93 @@ def dados_operativos(request):
         'quilometragem'
     )
 
-    ###################### CorredoresDeOnibus
+    ###################### grafico_corredores_comparativo
 
-    anos_disponiveis_historico_corredores = CorredoresDeOnibus.objects.values_list('ano', flat=True).distinct().order_by('ano')
+    queryset = CorredoresDeOnibus.objects.all().order_by('ano')
+    df = pandas.DataFrame(list(queryset.values(
+        'ano',
+        'nome_corredor',
+        'qtd_onibus_por_hora',
+        'qtd_linhas_convencionais',
+        'extensao_em_kms'
+    )))
 
-    ano_selecionado_historico_corredores = request.GET.get('ano_historico_corredores')
-    
-    if ano_selecionado_historico_corredores:
-        ano_selecionado_historico_corredores = int(ano_selecionado_historico_corredores)
-    else:
-        ano_selecionado_historico_corredores = max(anos_disponiveis_historico_corredores) if anos_disponiveis_historico_corredores else None
+    if not df.empty:
+        df_agrupado = df.groupby('nome_corredor')
+        corredores = list(df_agrupado.groups.keys())
 
-    historico_corredores = CorredoresDeOnibus.objects.filter(ano=ano_selecionado_historico_corredores)
-
-    if historico_corredores.exists():
-        historico_corredores_dataframe = pandas.DataFrame(list(historico_corredores.values('nome_corredor', 'qtd_onibus_por_hora', 'extensao_em_kms', 'qtd_linhas_convencionais')))
-
-        labels_indicadores = {
-            'qtd_onibus_por_hora': 'Ônibus por Hora',
-            'extensao_em_kms': 'Extensão (km)',
-            'qtd_linhas_convencionais': 'Linhas Convencionais'
-        }
-
-        historico_corredores_dataframe_melt = historico_corredores_dataframe.melt(
-            id_vars=['nome_corredor'],
-            value_vars=['qtd_onibus_por_hora', 'extensao_em_kms', 'qtd_linhas_convencionais'],
-            var_name='Indicador',
-            value_name='Valor'
-        )
-        historico_corredores_dataframe_melt['Indicador'] = historico_corredores_dataframe_melt['Indicador'].map(labels_indicadores)
-
-        grafico_historico_corredores = plotxp.bar(
-            historico_corredores_dataframe_melt,
-            x='nome_corredor',
-            y='Valor',
-            color='Indicador',
-            barmode='group',
-            title=f'Corredores de Ônibus - {ano_selecionado_historico_corredores}',
-            labels={'nome_corredor': 'Corredor', 'Valor': 'Valor', 'Indicador': 'Indicador'}
+        fig = make_subplots(
+            rows=2, cols=1,
+            subplot_titles=("Ônibus por Hora", "Linhas Convencionais")
         )
 
-        grafico_historico_corredores.update_layout(yaxis_title='Valor', legend_title='Indicador')
-        grafico_historico_corredores = grafico_historico_corredores.to_html(full_html=False)
+        botoes = []
+
+        for i, corredor in enumerate(corredores):
+            df_c = df_agrupado.get_group(corredor).sort_values(by='ano')
+            extensao = df_c['extensao_em_kms'].iloc[0] if not df_c['extensao_em_kms'].isna().all() else 0
+
+            # Gráfico 1: ônibus por hora
+            fig.add_trace(
+                plotgo.Scatter(
+                    x=df_c['ano'],
+                    y=df_c['qtd_onibus_por_hora'],
+                    mode='lines+markers',
+                    name=f"{corredor} - Ônibus/Hora",
+                    visible=(i == 0)
+                ),
+                row=1, col=1
+            )
+
+            # Gráfico 2: linhas convencionais
+            fig.add_trace(
+                plotgo.Scatter(
+                    x=df_c['ano'],
+                    y=df_c['qtd_linhas_convencionais'],
+                    mode='lines+markers',
+                    name=f"{corredor} - Linhas Convencionais",
+                    visible=(i == 0)
+                ),
+                row=2, col=1
+            )
+
+            # Controle de visibilidade: 2 traces por corredor
+            visibilidade = [False] * (2 * len(corredores))
+            visibilidade[2*i] = True      # trace do ônibus/hora
+            visibilidade[2*i + 1] = True  # trace do linhas convencionais
+
+            botoes.append(dict(
+                label=corredor,
+                method="update",
+                args=[{"visible": visibilidade},
+                      {"title": f"Histórico do Corredor: {corredor} ({extensao} km)"}]
+            ))
+        
+            primeiro = corredores[0]
+            extensao_primeiro = df_agrupado.get_group(primeiro)['extensao_em_kms'].iloc[0]
+
+        # Layout e dropdown
+        fig.update_layout(
+            title=f"Histórico do Corredor: {primeiro} (Extensão: {extensao_primeiro:.1f} km)",
+            xaxis_title="Ano",
+            yaxis_title="Qtd Ônibus por Hora",
+            xaxis2_title="Ano",
+            yaxis2_title="Qtd Linhas Convencionais",
+            updatemenus=[{
+                "buttons": botoes,
+                "direction": "down",
+                "showactive": True,
+                "x": 0.2,
+                "xanchor": "center",
+                "y": 1.5,
+                "yanchor": "top"
+            }],
+            height=600
+        )
+
+        grafico_corredores_comparativo = fig.to_html(full_html=False)
     else:
-        grafico_historico_corredores = None
+        grafico_corredores_comparativo = None
 
     ###################### Render
 
@@ -83,7 +127,5 @@ def dados_operativos(request):
         'exportar_sql_csv_ativado': exportar_sql_csv_ativado,
         'grafico_hist_pax_transp': grafico_hist_pax_transp,
         'grafico_kmt_perc_transp': grafico_kmt_perc_transp,
-        'grafico_historico_corredores': grafico_historico_corredores,
-        'anos_disponiveis_historico_corredores': anos_disponiveis_historico_corredores,
-        'ano_selecionado_historico_corredores': ano_selecionado_historico_corredores,
+        'grafico_corredores_comparativo': grafico_corredores_comparativo,
     })

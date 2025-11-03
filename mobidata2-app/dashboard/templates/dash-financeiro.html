@@ -8,7 +8,6 @@
         <div class="row">
             {% if grafico_indicadores_financeiros_stco %}
                 <div class="grafico">
-                    {{ grafico_indicadores_financeiros_stco|safe }}
                     <form method="get">
                         <label>Filtrar por Ano:</label>
                         <select name="ano_selecionado_indicador_financeiro" onchange="this.form.submit()">
@@ -26,6 +25,7 @@
                             {% endfor %}
                         </select>
                     </form>
+                    {{ grafico_indicadores_financeiros_stco|safe }}
                 </div>
             {% else %}
                 <div class="alert alert-warning">
@@ -33,6 +33,7 @@
                 </div>
             {% endif %}
         </div>
+        <br><br>
         <div class="row">
             {% if grafico_passageiros %}
                 <div class="grafico">
@@ -56,13 +57,35 @@
             {% endif %}
         </div>
         <div class="row">
-            {% if grafico_analise_comparativa_stco %}
+            {% if grafico_salario_passagens %}
                 <div class="grafico">
-                    {{ grafico_analise_comparativa_stco|safe }}
+                    {{ grafico_salario_passagens|safe }}
                 </div>
             {% else %}
                 <div class="alert alert-warning">
-                    Nenhum dado disponível de Análise Comparativa do STCO.
+                    Nenhum dado disponível de Salário mínimo por quantidade de passagens compráveis com um Salário Mínimo.
+                </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            {% if grafico_custo_operacional %}
+                <div class="grafico">
+                    {{ grafico_custo_operacional|safe }}
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Custo operacional do STCO por quilômetro rodado (em reais).
+                </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            {% if grafico_tarifa_percentual %}
+                <div class="grafico">
+                    {{ grafico_tarifa_percentual|safe }}
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Tarifa como Percentual do Salário Mínimo.
                 </div>
             {% endif %}
         </div>

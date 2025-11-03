@@ -257,3 +257,11 @@ class TiposVeiculosServicoTaxis(models.Model):
     class Meta:
         managed = False
         db_table = 'tipos_veiculos_servico_taxis'
+
+class VeiculosNovosAdquiridosPorAno(models.Model):
+    ano = models.IntegerField(blank=True, null=True)
+    veiculos = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'veiculos_novos_adquiridos_por_ano'

@@ -6,21 +6,13 @@
 
     <div class="container">
         <div class="row">
-            {% if grafico_historico_corredores %}
+            {% if grafico_corredores_comparativo %}
                 <div class="grafico">
-                    {{ grafico_historico_corredores|safe }}
-                    <form method="get" id="anoHistCorredoresForm">
-                        <label for="ano_historico_corredores">Selecione o Ano:</label>
-                        <select name="ano_historico_corredores" id="ano_historico_corredores" onchange="document.getElementById('anoHistCorredoresForm').submit()">
-                            {% for ano_historico_corredores in anos_disponiveis_historico_corredores %}
-                                <option value="{{ ano_historico_corredores }}" {% if ano_historico_corredores == ano_selecionado_historico_corredores %}selected{% endif %}>{{ ano_historico_corredores }}</option>
-                            {% endfor %}
-                        </select>
-                    </form>
+                    {{ grafico_corredores_comparativo|safe }}
                 </div>
             {% else %}
                 <div class="alert alert-warning">
-                    Nenhum dado disponível de Corredores de Ônibus.
+                    Nenhum dado disponível de Comparativo de Corredores de Ônibus.
                 </div>
             {% endif %}
         </div>
