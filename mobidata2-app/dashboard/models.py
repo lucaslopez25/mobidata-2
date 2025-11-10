@@ -21,6 +21,18 @@ class AquisicoesDeOnibusPorMes(models.Model):
         db_table = 'aquisicoes_de_onibus_por_mes'
 
 
+class ArCondicionadoStco(models.Model):
+    ano = models.IntegerField()
+    id_concessionaria = models.ForeignKey('Concessionarias', models.DO_NOTHING, db_column='id_concessionaria', blank=True, null=True)
+    qtd_frota_total = models.IntegerField(blank=True, null=True)
+    qtd_frota_com_ar_condicionado = models.IntegerField(blank=True, null=True)
+    pct_frota_com_ar_condicionado = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'ar_condicionado_stco'
+
+
 class Concessionarias(models.Model):
     id_concessionaria = models.CharField(primary_key=True, max_length=10)
     nome_concessionaria = models.CharField(max_length=60, blank=True, null=True)
@@ -61,6 +73,20 @@ class DadosStco(models.Model):
     class Meta:
         managed = False
         db_table = 'dados_stco'
+
+
+class DemandaPaxPorPagamento(models.Model):
+    ano = models.IntegerField(blank=True, null=True)
+    mes = models.IntegerField(blank=True, null=True)
+    tipo_pagamento = models.CharField(max_length=50, blank=True, null=True)
+    demanda = models.BigIntegerField(blank=True, null=True)
+    demanda_int_metro = models.BigIntegerField(blank=True, null=True)
+    demanda_int_stec = models.BigIntegerField(blank=True, null=True)
+    demanda_int_brt = models.BigIntegerField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'demanda_pax_por_pagamento'
 
 
 class DistribuicaoTaxisPorTipoDeServico(models.Model):
@@ -257,6 +283,7 @@ class TiposVeiculosServicoTaxis(models.Model):
     class Meta:
         managed = False
         db_table = 'tipos_veiculos_servico_taxis'
+
 
 class VeiculosNovosAdquiridosPorAno(models.Model):
     ano = models.IntegerField(blank=True, null=True)

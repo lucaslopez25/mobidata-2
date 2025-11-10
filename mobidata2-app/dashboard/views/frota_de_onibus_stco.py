@@ -174,6 +174,123 @@ def frota_de_onibus_stco(request):
         )
         grafico_veiculos_novos_ano = grafico_veiculos_novos_ano.to_html(full_html=False)
 
+    ###################### ar_condicionado_stco
+
+    ar_cond = ArCondicionadoStco.objects.all().order_by('ano')
+
+    grafico_ar_cond_pct = None
+    grafico_ar_cond_abs = None
+
+    if ar_cond.exists():
+        df_ar = pandas.DataFrame(list(ar_cond.values(
+            'ano', 'id_concessionaria', 'qtd_frota_total', 
+            'qtd_frota_com_ar_condicionado', 'pct_frota_com_ar_condicionado'
+        )))
+
+        # Gráfico 1: Percentual da frota com Ar Condicionado (Linha)
+        grafico_ar_cond_pct = plotxp.line(
+            df_ar,
+            x='ano',
+            y='pct_frota_com_ar_condicionado',
+            color='id_concessionaria',
+            markers=True,
+            title='Percentual da Frota com Ar Condicionado por Ano',
+            labels={
+                'id_concessionaria': 'Concessionária',
+                'ano': 'Ano',
+                'pct_frota_com_ar_condicionado': 'Percentual com Ar (%)',
+            },
+            color_discrete_map=cores_concessionarias
+        )
+        grafico_ar_cond_pct.update_layout(
+            xaxis=dict(tickmode='array', tickvals=df_ar['ano'].unique()),
+            xaxis_title='Ano', 
+            yaxis_title='Percentual (%)'
+        )
+        grafico_ar_cond_pct = grafico_ar_cond_pct.to_html(full_html=False)
+
+        # Gráfico 2: Quantidade absoluta da frota com Ar Condicionado (Barra)
+        grafico_ar_cond_abs = plotxp.bar(
+            df_ar,
+            x='ano',
+            y='qtd_frota_com_ar_condicionado',
+            color='id_concessionaria',
+            barmode='stack',
+            title='Frota com Ar Condicionado por Ano (Absoluto)',
+            labels={
+                'id_concessionaria': 'Concessionária',
+                'ano': 'Ano',
+                'qtd_frota_com_ar_condicionado': 'Quantidade com Ar',
+            },
+            color_discrete_map=cores_concessionarias
+        )
+        grafico_ar_cond_abs.update_layout(
+            xaxis=dict(tickmode='array', tickvals=df_ar['ano'].unique()),
+            xaxis_title='Ano', 
+            yaxis_title='Quantidade de Veículos'
+        )
+        grafico_ar_cond_abs = grafico_ar_cond_abs.to_html(full_html=False)
+
+    ###################### demanda_pax_por_pagamento
+
+    demanda_pax = DemandaPaxPorPagamento.objects.all().order_by('ano', 'mes')
+
+    grafico_demanda_pagamento = None
+    grafico_demanda_integracao = None
+
+    if demanda_pax.exists():
+        df_demanda = pandas.DataFrame(list(demanda_pax.values(
+            'ano', 'mes', 'tipo_pagamento', 'demanda', 
+            'demanda_int_metro', 'demanda_int_stec', 'demanda_int_brt'
+        )))
+        df_demanda['mes'] = df_demanda['mes'].apply(lambda x: f"{x:02d}")
+        df_demanda['ano_mes'] = df_demanda['ano'].astype(str) + '-' + df_demanda['mes']
+
+        # Gráfico 1: Demanda (coluna 'demanda') por Tipo de Pagamento
+        grafico_demanda_pagamento = plotxp.bar(
+            df_demanda,
+            x='ano_mes',
+            y='demanda',
+            color='tipo_pagamento',
+            barmode='stack',
+            title='Demanda de Passageiros por Tipo de Pagamento',
+            labels={
+                'tipo_pagamento': 'Tipo de Pagamento',
+                'ano_mes': 'Ano-Mês',
+                'demanda': 'Demanda de Passageiros',
+            },
+        )
+        grafico_demanda_pagamento.update_layout(xaxis_title='Ano-Mês', yaxis_title='Demanda')
+        grafico_demanda_pagamento = grafico_demanda_pagamento.to_html(full_html=False)
+
+        # Gráfico 2: Demanda Total e Integrações (somando todos tipos de pagamento)
+        df_demanda_grouped = df_demanda.groupby('ano_mes')[[
+            'demanda', 'demanda_int_metro', 'demanda_int_stec', 'demanda_int_brt'
+        ]].sum().reset_index()
+        
+        # 'Melt' para formato longo, ideal para stacked bar
+        df_demanda_melted = df_demanda_grouped.melt(
+            id_vars='ano_mes', 
+            var_name='tipo_demanda', 
+            value_name='quantidade'
+        )
+        
+        grafico_demanda_integracao = plotxp.bar(
+            df_demanda_melted,
+            x='ano_mes',
+            y='quantidade',
+            color='tipo_demanda',
+            barmode='stack',
+            title='Demanda Total e Integrações por Mês',
+            labels={
+                'tipo_demanda': 'Tipo de Demanda',
+                'ano_mes': 'Ano-Mês',
+                'quantidade': 'Quantidade de Passageiros',
+            },
+        )
+        grafico_demanda_integracao.update_layout(xaxis_title='Ano-Mês', yaxis_title='Demanda Total')
+        grafico_demanda_integracao = grafico_demanda_integracao.to_html(full_html=False)
+
     ###################### RENDER
 
     return render(request, 'dash-frota-stco.html', {
@@ -185,4 +302,10 @@ def frota_de_onibus_stco(request):
         'grafico_frota_total': grafico_frota_total,
         'grafico_frota_operante': grafico_frota_operante,
         'grafico_veiculos_novos_ano': grafico_veiculos_novos_ano,
+
+        #teste
+        'grafico_demanda_pagamento': grafico_demanda_pagamento,
+        'grafico_demanda_integracao': grafico_demanda_integracao,
+        'grafico_ar_cond_pct': grafico_ar_cond_pct,
+        'grafico_ar_cond_abs': grafico_ar_cond_abs,
     })

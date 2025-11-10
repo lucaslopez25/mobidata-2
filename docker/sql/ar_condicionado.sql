@@ -17,7 +17,7 @@ INSERT INTO ar_condicionado_stco(ano, id_concessionaria, qtd_frota_total, qtd_fr
 -- TOTAL OT TRANS 2024
 (2024, 'SPE2', 1076, 356, 33.08),
 -- TOTAL BRT 2024
-(2024, 'BRT', 52, 52, 100.00)
+(2024, 'BRT1', 52, 52, 100.00)
 ON CONFLICT DO NOTHING;
 
 INSERT INTO ar_condicionado_stco(ano, id_concessionaria, qtd_frota_total, qtd_frota_com_ar_condicionado, pct_frota_com_ar_condicionado) VALUES
@@ -30,14 +30,18 @@ INSERT INTO ar_condicionado_stco(ano, id_concessionaria, qtd_frota_total, qtd_fr
 -- TOTAL OT TRANS 2023
 (2023, 'SPE2', 1099, 282, 25.66),
 -- TOTAL BRT 2023
-(2023, 'BRT', 44, 44, 100.00)
+(2023, 'BRT1', 44, 44, 100.00)
 ON CONFLICT DO NOTHING;
 
 INSERT INTO ar_condicionado_stco(ano, id_concessionaria, qtd_frota_total, qtd_frota_com_ar_condicionado, pct_frota_com_ar_condicionado) VALUES
 -- COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/22 (PG 25 ANUARIO 2022) VS. FROTA COM AR (PG 36 ANUARIO 2022)
 -- TOTAL STCO 2022
 -- Veículos c/ ar total stco: 194 ott + 154 plat = 348
-
-TOTAL 1789
-OTT 1044
-PLAT 745
+(2022, 'STCO', 1789, 348),
+-- TOTAL PLATAFORMA 2022
+(2022, 'SPE3', 745, 154),
+-- TOTAL OT TRANS 2022
+(2022, 'SPE2', 1044, 194),
+-- TOTAL BRT 2022
+(2022, 'BRT1', 35, 35, 100.00)
+ON CONFLICT DO NOTHING;
