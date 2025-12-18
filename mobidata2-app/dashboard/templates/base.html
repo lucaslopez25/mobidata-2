@@ -24,6 +24,10 @@
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -36,24 +40,17 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
-                    <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Frota de Ônibus
+                    <li class="nav-item dropdown">
+                            <a class="mobidata-link-top-navbar nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Frota de Ônibus (STCO)
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                <p>STCO</p>
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <p>STEC</p>
+                                <a class="dropdown-item" href="{% url 'frota_de_onibus_stco' %}">Dados Gerais</a>
+                                <a class="dropdown-item" href="{% url 'stco_climatizacao_frota' %}">Climatização da Frota</a>
+                                <!-- <div class="dropdown-divider"></div> -->
                                 <a class="dropdown-item" href="#">Something else here</a>
                             </div>
-                        </li> -->
-                    <li class="nav-item">
-                        <a class="mobidata-link-top-navbar nav-link" href="{% url 'frota_de_onibus_stco' %}">Frota de
-                            Ônibus</a>
-                    </li>
+                        </li>
                     <li class="nav-item">
                         <a class="mobidata-link-top-navbar nav-link" href="{% url 'dados_operativos' %}">Dados
                             Operativos</a>

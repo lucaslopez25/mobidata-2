@@ -10,7 +10,7 @@
                     {{ grafico_corredores_comparativo|safe }}
                 </div>
                 <div>
-                    <a href="{% url 'exportar_csv' 'corredores' %}" class="btn btn-outline-success btn-sm">
+                    <a href="{% url 'exportar_csv' 'dop_corredores' %}" class="btn btn-outline-success btn-sm">
                         <i class="fas fa-download"></i> Exportar Dados (CSV)
                     </a>
                 </div>
@@ -26,7 +26,7 @@
                     {{ grafico_hist_pax_transp|safe }}
                 </div>
                 <div>
-                    <a href="{% url 'exportar_csv' 'passageiros' %}" class="btn btn-outline-success btn-sm">
+                    <a href="{% url 'exportar_csv' 'dop_passageiros' %}" class="btn btn-outline-success btn-sm">
                         <i class="fas fa-download"></i> Exportar Dados (CSV)
                     </a>
                 </div>
@@ -42,7 +42,7 @@
                     {{ grafico_kmt_perc_transp|safe }}
                 </div>
                 <div>
-                    <a href="{% url 'exportar_csv' 'quilometragem' %}" class="btn btn-outline-success btn-sm">
+                    <a href="{% url 'exportar_csv' 'dop_quilometragem' %}" class="btn btn-outline-success btn-sm">
                         <i class="fas fa-download"></i> Exportar Dados (CSV)
                     </a>
                 </div>

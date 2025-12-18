@@ -174,63 +174,6 @@ def frota_de_onibus_stco(request):
         )
         grafico_veiculos_novos_ano = grafico_veiculos_novos_ano.to_html(full_html=False)
 
-    ###################### ar_condicionado_stco
-
-    ar_cond = ArCondicionadoStco.objects.all().order_by('ano')
-
-    grafico_ar_cond_pct = None
-    grafico_ar_cond_abs = None
-
-    if ar_cond.exists():
-        df_ar = pandas.DataFrame(list(ar_cond.values(
-            'ano', 'id_concessionaria', 'qtd_frota_total', 
-            'qtd_frota_com_ar_condicionado', 'pct_frota_com_ar_condicionado'
-        )))
-
-        # Gráfico 1: Percentual da frota com Ar Condicionado (Linha)
-        grafico_ar_cond_pct = plotxp.line(
-            df_ar,
-            x='ano',
-            y='pct_frota_com_ar_condicionado',
-            color='id_concessionaria',
-            markers=True,
-            title='Percentual da Frota com Ar Condicionado por Ano',
-            labels={
-                'id_concessionaria': 'Concessionária',
-                'ano': 'Ano',
-                'pct_frota_com_ar_condicionado': 'Percentual com Ar (%)',
-            },
-            color_discrete_map=cores_concessionarias
-        )
-        grafico_ar_cond_pct.update_layout(
-            xaxis=dict(tickmode='array', tickvals=df_ar['ano'].unique()),
-            xaxis_title='Ano', 
-            yaxis_title='Percentual (%)'
-        )
-        grafico_ar_cond_pct = grafico_ar_cond_pct.to_html(full_html=False)
-
-        # Gráfico 2: Quantidade absoluta da frota com Ar Condicionado (Barra)
-        grafico_ar_cond_abs = plotxp.bar(
-            df_ar,
-            x='ano',
-            y='qtd_frota_com_ar_condicionado',
-            color='id_concessionaria',
-            barmode='stack',
-            title='Frota com Ar Condicionado por Ano (Absoluto)',
-            labels={
-                'id_concessionaria': 'Concessionária',
-                'ano': 'Ano',
-                'qtd_frota_com_ar_condicionado': 'Quantidade com Ar',
-            },
-            color_discrete_map=cores_concessionarias
-        )
-        grafico_ar_cond_abs.update_layout(
-            xaxis=dict(tickmode='array', tickvals=df_ar['ano'].unique()),
-            xaxis_title='Ano', 
-            yaxis_title='Quantidade de Veículos'
-        )
-        grafico_ar_cond_abs = grafico_ar_cond_abs.to_html(full_html=False)
-
     ###################### demanda_pax_por_pagamento
 
     demanda_pax = DemandaPaxPorPagamento.objects.all().order_by('ano', 'mes')
@@ -295,7 +238,6 @@ def frota_de_onibus_stco(request):
 
     return render(request, 'dash-frota-stco.html', {
         'titulo_da_pagina': titulo_da_pagina,
-        'exportar_sql_csv_ativado': exportar_sql_csv_ativado,
         'grafico_historico': grafico_historico,
         'grafico_aquisicoes_novos': grafico_aquisicoes_novos,
         'grafico_aquisicoes_usados': grafico_aquisicoes_usados,
@@ -306,6 +248,4 @@ def frota_de_onibus_stco(request):
         #teste
         'grafico_demanda_pagamento': grafico_demanda_pagamento,
         'grafico_demanda_integracao': grafico_demanda_integracao,
-        'grafico_ar_cond_pct': grafico_ar_cond_pct,
-        'grafico_ar_cond_abs': grafico_ar_cond_abs,
     })

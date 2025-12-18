@@ -37,7 +37,6 @@ INSERT INTO demanda_pax_por_pagamento(ano, mes, tipo_pagamento, demanda, demanda
 (2024, 10, 'BILHETE AVULSO', 5842609, 4050556, 178409, 105655),
 (2024, 11, 'BILHETE AVULSO', 5362639, 3740567, 159249, 94823),
 (2024, 12, 'BILHETE AVULSO', 5484382, 3737806, 164394, 94556)
-ON CONFLICT DO NOTHING;
 
 -- Dados de MEIA PASSAGEM - 2024
 
@@ -47,7 +46,7 @@ ON CONFLICT DO NOTHING;
 
 ON CONFLICT DO NOTHING;
 
-INSERT INTO demanda_pax_por_pagamento(ano, mes, tipo_pagamento, demanda, demanda_int_metro, demanda_int_stec, demanda_int_brt) VALUES
+-- INSERT INTO demanda_pax_por_pagamento(ano, mes, tipo_pagamento, demanda, demanda_int_metro, demanda_int_stec, demanda_int_brt) VALUES
 -- Dados de VALE-TRANSPORTE - 2023 REVISADO MANUALMENTE
 
 

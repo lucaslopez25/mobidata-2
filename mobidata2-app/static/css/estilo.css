@@ -1,6 +1,12 @@
+body {
+    --bs-body-font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif;
+    font-weight: 580;
+}
+
 .mobidata-link-top-navbar {
     color: #102656 !important; 
-    font-weight: 500 !important;
+    font-weight: 680 !important;
     font-size: large !important;
 }
 

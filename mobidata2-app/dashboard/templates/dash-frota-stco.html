@@ -9,6 +9,11 @@
                 <div class="grafico">
                     {{ grafico_historico|safe }}
                 </div>
+                <div>
+                    <a href="{% url 'exportar_csv' 'fdo_stco_idade_media_frota' %}" class="btn btn-outline-success btn-sm">
+                        <i class="fas fa-download"></i> Exportar Dados (CSV)
+                    </a>
+                </div>
             {% else %}
                 <div class="alert alert-warning">
                     Nenhum dado disponível de Idade Média da Frota.
@@ -73,30 +78,6 @@
             {% endif %}
         </div>
         <!--TESTE TESTE TESTE-->
-        <div class="row">
-            {% if grafico_ar_cond_pct %}
-                <div class="grafico">
-                    {{ grafico_ar_cond_pct|safe }}
-                    <p style="font-size: x-small; margin-bottom: 0;">Teste teste teste teste teste</p>
-                </div>
-            {% else %}
-                <div class="alert alert-warning">
-                    Nenhum dado disponível de TESTE.
-                </div>
-            {% endif %}
-        </div>
-        <div class="row">
-            {% if grafico_ar_cond_abs %}
-                <div class="grafico">
-                    {{ grafico_ar_cond_abs|safe }}
-                    <p style="font-size: x-small; margin-bottom: 0;">Teste teste teste teste teste</p>
-                </div>
-            {% else %}
-                <div class="alert alert-warning">
-                    Nenhum dado disponível de TESTE.
-                </div>
-            {% endif %}
-        </div>
         <div class="row">
             {% if grafico_demanda_pagamento %}
                 <div class="grafico">

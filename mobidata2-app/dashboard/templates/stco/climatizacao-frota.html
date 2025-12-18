@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+    <div class="container">
+        {% include 'toolbar.html' %}
+        <div class="row">
+            {% if grafico_ar_cond_pct %}
+                <div class="grafico">
+                    {{ grafico_ar_cond_pct|safe }}
+                    <p style="font-size: x-small; margin-bottom: 0;">Teste teste teste teste teste</p>
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de TESTE.
+                </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            {% if grafico_ar_cond_abs %}
+                <div class="grafico">
+                    {{ grafico_ar_cond_abs|safe }}
+                    <p style="font-size: x-small; margin-bottom: 0;">Teste teste teste teste teste</p>
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de TESTE.
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}
