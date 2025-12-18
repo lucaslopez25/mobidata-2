@@ -9,5 +9,5 @@ urlpatterns = [
     path('dados_financeiros', views.dados_financeiros, name='dados_financeiros'),
     path('dados_metro', views.dados_metro, name='dados_metro'),
     path('bicicletas', views.bicicletas, name='bicicletas'),
-    path('exportar_csv', views.exportar_csv, name='exportar_csv'),
+    path('exportar_csv/<str:tipo>/', views.exportar_dados_csv, name='exportar_csv'),
 ]

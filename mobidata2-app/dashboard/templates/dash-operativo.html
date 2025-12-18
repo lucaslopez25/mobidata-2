@@ -9,6 +9,11 @@
                 <div class="grafico">
                     {{ grafico_corredores_comparativo|safe }}
                 </div>
+                <div>
+                    <a href="{% url 'exportar_csv' 'corredores' %}" class="btn btn-outline-success btn-sm">
+                        <i class="fas fa-download"></i> Exportar Dados (CSV)
+                    </a>
+                </div>
             {% else %}
                 <div class="alert alert-warning">
                     Nenhum dado disponível de Comparativo de Corredores de Ônibus.
@@ -19,6 +24,11 @@
             {% if grafico_hist_pax_transp %}
                 <div class="grafico">
                     {{ grafico_hist_pax_transp|safe }}
+                </div>
+                <div>
+                    <a href="{% url 'exportar_csv' 'passageiros' %}" class="btn btn-outline-success btn-sm">
+                        <i class="fas fa-download"></i> Exportar Dados (CSV)
+                    </a>
                 </div>
             {% else %}
                 <div class="alert alert-warning">
@@ -31,13 +41,18 @@
                 <div class="grafico">
                     {{ grafico_kmt_perc_transp|safe }}
                 </div>
+                <div>
+                    <a href="{% url 'exportar_csv' 'quilometragem' %}" class="btn btn-outline-success btn-sm">
+                        <i class="fas fa-download"></i> Exportar Dados (CSV)
+                    </a>
+                </div>
             {% else %}
                 <div class="alert alert-warning">
                     Nenhum dado disponível de Histórico de Quilometragem Percorrida.
                 </div>
             {% endif %}
         </div>
-        <p>Observações: (1) Valores arredondados    (2) BRT incluido a partir de Setembro/2022</p>
+        <p style="padding-top: 8px; padding-bottom: 8px;">Observações: (1) Valores arredondados    (2) BRT incluido a partir de Setembro/2022</p>
     </div>
 </main>
 {% endblock %}
