@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="{% static 'img/logo-mobidata-sm.png' %}" type="image/png">
+
+        <title>MOBIDATA 2.0</title>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+        <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="{% url 'landing' %}"><img style="height: 60px;" src="{% static 'img/logo-mobidata-lg.png' %}"></a>
+            </nav>
+
+            <div class="row">
+                <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
+                    <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+                        <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
+                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-1 text-body-secondary text-uppercase">
+                                <span>Painéis</span>
+                            </h6>
+                            <ul class="nav flex-column">
+                                <li> 
+                                    <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'frota_de_onibus_stco' %}active{% endif %}" aria-current="page" href="{% url 'frota_de_onibus_stco' %}">Frota de Ônibus (STCO)</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'dados_operativos' %}active{% endif %}" aria-current="page" href="{% url 'dados_operativos' %}">Dados Operativos</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'dados_financeiros' %}active{% endif %}" aria-current="page" href="{% url 'dados_financeiros' %}">Dados Financeiros</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'dados_taxis' %}active{% endif %}" aria-current="page" href="{% url 'dados_taxis' %}">Táxis</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link d-flex align-items-center gap-2 {% if request.path == 'dados_metro' %}active{% endif %}" aria-current="page" href="{% url 'dados_metro' %}">Metrô</a>
+                                </li>
+                                <li> 
+                                    <p class="nav-link d-flex align-items-center gap-2 active">Aquaviário e Mob. Vertical</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="offcanvas-body d-md-flex flex-column p-0 overflow-y-auto">
+                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-1 text-body-secondary text-uppercase">
+                                <span>Visão Geral</span>
+                            </h6>
+                            <ul class="nav flex-column">
+                                <li class="nav-item"> 
+                                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="{% url 'bicicletas' %}">Bicicletas</a>
+                                </li>
+                                <li class="nav-item"> 
+                                    <p class="nav-link d-flex align-items-center gap-2 active">Passarelas</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-2 border-top">
+            <div class="col-md-4 d-flex align-items-center" style="padding-left: 30px;">
+                <img style="height: 30px; margin: 5px;" src="{% static 'img/Bandeira_da_Bahia.png' %}">
+                <img style="height: 30px; margin: 5px;" src="{% static 'img/Flag_of_Brazil.png' %}">
+                <span class="mb-3 mb-md-0 text-body-secondary">Mobidata 2.0 2025</span> 
+            </div> 
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3">
+                    <img style="height: 50px; padding-right: 30px;" src="{% static 'img/MARCA_IFBA_HORIZONTAL_completa_CMYK_IFBA.png' %}">
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>

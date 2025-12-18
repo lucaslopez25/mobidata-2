@@ -2,10 +2,9 @@
 {% load static %}
 
 {% block content %}
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    {% include 'toolbar.html' %}
-
+<main>
     <div class="container">
+        {% include 'toolbar.html' %}
         <div class="row">
             {% if grafico_frota_taxis %}
                 <div class="grafico">
