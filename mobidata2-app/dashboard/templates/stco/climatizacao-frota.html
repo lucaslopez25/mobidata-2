@@ -4,30 +4,39 @@
 <main>
     <div class="container">
         {% include 'toolbar.html' %}
+        <div>
+            <a href="{% url 'exportar_csv' 'fdo_stco_ar_condicionado_frota' %}" class="btn btn-outline-success btn-sm">
+                <i class="fas fa-download"></i> Exportar Dados (CSV)
+            </a>
+        </div>
         <div class="row">
-            {% if grafico_ar_cond_pct %}
-                <div class="grafico">
-                    {{ grafico_ar_cond_pct|safe }}
-                    <p style="font-size: x-small; margin-bottom: 0;">Teste teste teste teste teste</p>
-                </div>
+            {% if fig_total %}
+            <div class="grafico">
+                {{ fig_total|safe }}
+            </div>
             {% else %}
-                <div class="alert alert-warning">
-                    Nenhum dado disponível de TESTE.
-                </div>
+            <div class="alert alert-warning">
+                Nenhum dado disponível de TESTE.
+            </div>
             {% endif %}
         </div>
         <div class="row">
-            {% if grafico_ar_cond_abs %}
-                <div class="grafico">
-                    {{ grafico_ar_cond_abs|safe }}
-                    <p style="font-size: x-small; margin-bottom: 0;">Teste teste teste teste teste</p>
-                </div>
+            {% if fig_comp %}
+            <div class="grafico">
+                {{ fig_comp|safe }}
+            </div>
             {% else %}
-                <div class="alert alert-warning">
-                    Nenhum dado disponível de TESTE.
-                </div>
+            <div class="alert alert-warning">
+                Nenhum dado disponível de TESTE.
+            </div>
             {% endif %}
         </div>
+        <p style="font-size: x-small; margin-bottom: 0;">
+            COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/24 (PG 27 ANUARIO 2024) VS. FROTA COM AR (PG 46 ANUARIO 2024)<br>
+            COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/23 (PG 28 ANUARIO 2023) VS. FROTA COM AR (PG 47 ANUARIO 2023)<br>
+            COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/22 (PG 25 ANUARIO 2022) VS. FROTA COM AR (PG 36 ANUARIO 2022)<br>
+            COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/21 (PG 21 ANUARIO 2021) VS. FROTA COM AR (PG 32 ANUARIO 2021)<br>
+        </p>
     </div>
 </main>
 {% endblock %}

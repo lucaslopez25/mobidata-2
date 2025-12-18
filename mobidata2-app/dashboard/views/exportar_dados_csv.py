@@ -28,73 +28,31 @@ AVAILABLE_MODELS_FOR_EXPORT = {
         'filename': 'historico_idade_media_frota.csv',
         'fields': ['ano', 'mes', 'idade_media'],
     },
-}
-
-
-IGNORE_LIST = {
-    'AquisicoesDeOnibusPorMes': {
-        'nome_arquivo': 'aquisicoes_onibus_mensal',
-        'titulo': 'Aquisições de Ônibus (Novos e Usados)',
-        'colunas': {
-            'ano': 'Ano',
-            'mes': 'Mês',
-            'id_concessionaria': 'Concessionária',
-            'qtd_onibus': 'Quantidade de Ônibus',
-            'novo_ou_usado': 'Veículo Novo (Sim/Não)',
-        }
+    'fdo_stco_veiculos_novos_por_ano': {
+        'model': VeiculosNovosAdquiridosPorAno,
+        'filename': 'veiculos_novos_adquiridos_por_ano.csv',
+        'fields': ['ano', 'veiculos'],
     },
-    'FrotaTotal': {
-        'nome_arquivo': 'frota_total_onibus',
-        'titulo': 'Frota Total de Ônibus por Concessionária',
-        'colunas': {
-            'ano': 'Ano',
-            'mes': 'Mês',
-            'id_concessionaria': 'Concessionária',
-            'qtd_total_de_onibus': 'Quantidade Total',
-        }
+    'fdo_stco_frota_operante': {
+        'model': FrotaOperante,
+        'filename': 'stco_frota_operante.csv',
+        'fields': ['ano', 'mes', 'id_concessionaria', 'qtd_operante_de_onibus'],
     },
-    'FrotaOperante': {
-        'nome_arquivo': 'frota_operante_onibus',
-        'titulo': 'Frota Operante de Ônibus por Concessionária',
-        'colunas': {
-            'ano': 'Ano',
-            'mes': 'Mês',
-            'id_concessionaria': 'Concessionária',
-            'qtd_operante_de_onibus': 'Quantidade Operante',
-        }
+    'fdo_stco_frota_total': {
+        'model': FrotaTotal,
+        'filename': 'stco_frota_total.csv',
+        'fields': ['ano', 'mes', 'id_concessionaria', 'qtd_total_de_onibus'],
     },
-    'VeiculosNovosAdquiridosPorAno': {
-        'nome_arquivo': 'veiculos_novos_por_ano',
-        'titulo': 'Veículos Novos Adquiridos por Ano',
-        'colunas': {
-            'ano': 'Ano',
-            'veiculos': 'Total de Veículos Novos',
-        }
+    'fdo_stco_aquisicoes_onibus_por_mes': {
+        'model': AquisicoesDeOnibusPorMes,
+        'filename': 'stco_aquisicoes_onibus_por_mes_novos_e_usados.csv',
+        'fields': ['ano', 'mes', 'id_concessionaria', 'qtd_onibus', 'novo_ou_usado'],
     },
-    'ArCondicionadoStco': {
-        'nome_arquivo': 'frota_ar_condicionado',
-        'titulo': 'Evolução da Frota com Ar Condicionado',
-        'colunas': {
-            'ano': 'Ano',
-            'id_concessionaria': 'Concessionária',
-            'qtd_frota_total': 'Frota Total',
-            'qtd_frota_com_ar_condicionado': 'Qtd. com Ar Condicionado',
-            'pct_frota_com_ar_condicionado': 'Percentual com Ar (%)',
-        }
+    'fdo_stco_ar_condicionado_frota': {
+        'model': ArCondicionadoStco,
+        'filename': 'dados_de_climatizacao_na_frota.csv',
+        'fields': ['ano', 'id_concessionaria', 'qtd_frota_total', 'qtd_frota_com_ar_condicionado', 'pct_frota_com_ar_condicionado'],
     },
-    'DemandaPaxPorPagamento': {
-        'nome_arquivo': 'demanda_passageiros_pagamento',
-        'titulo': 'Demanda de Passageiros e Integrações',
-        'colunas': {
-            'ano': 'Ano',
-            'mes': 'Mês',
-            'tipo_pagamento': 'Tipo de Pagamento',
-            'demanda': 'Demanda Principal',
-            'demanda_int_metro': 'Integração Metrô',
-            'demanda_int_stec': 'Integração STEC',
-            'demanda_int_brt': 'Integração BRT',
-        }
-    }
 }
 
 def exportar_dados_csv(request, tipo):

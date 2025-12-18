@@ -25,9 +25,14 @@
                 <div class="grafico">
                     {{ grafico_veiculos_novos_ano|safe }}
                 </div>
+                <div>
+                    <a href="{% url 'exportar_csv' 'fdo_stco_veiculos_novos_por_ano' %}" class="btn btn-outline-success btn-sm">
+                        <i class="fas fa-download"></i> Exportar Dados (CSV)
+                    </a>
+                </div>
             {% else %}
                 <div class="alert alert-warning">
-                    Nenhum dado disponível de [...].
+                    Nenhum dado disponível de Veículos Novos Adquiridos por Ano.
                 </div>
             {% endif %}
         </div> 
@@ -35,6 +40,11 @@
             {% if grafico_aquisicoes_novos %}
                 <div class="grafico">
                     {{ grafico_aquisicoes_novos|safe }}
+                </div>
+                <div>
+                    <a href="{% url 'exportar_csv' 'fdo_stco_aquisicoes_onibus_por_mes' %}" class="btn btn-outline-success btn-sm">
+                        <i class="fas fa-download"></i> Exportar Dados (CSV)
+                    </a>
                 </div>
             {% else %}
                 <div class="alert alert-warning">
@@ -46,6 +56,11 @@
             {% if grafico_aquisicoes_usados %}
                 <div class="grafico">
                     {{ grafico_aquisicoes_usados|safe }}
+                </div>
+                <div>
+                    <a href="{% url 'exportar_csv' 'fdo_stco_aquisicoes_onibus_por_mes' %}" class="btn btn-outline-success btn-sm">
+                        <i class="fas fa-download"></i> Exportar Dados (CSV)
+                    </a>
                 </div>
             {% else %}
                 <div class="alert alert-warning">
@@ -59,6 +74,11 @@
                     {{ grafico_frota_operante|safe }}
                     <p style="font-size: x-small; margin-bottom: 0;">OBS.: Frota média nos dias úteis.</p>
                 </div>
+                <div>
+                    <a href="{% url 'exportar_csv' 'fdo_stco_frota_operante' %}" class="btn btn-outline-success btn-sm">
+                        <i class="fas fa-download"></i> Exportar Dados (CSV)
+                    </a>
+                </div>
             {% else %}
                 <div class="alert alert-warning">
                     Nenhum dado disponível de Frota Operante de Ônibus.
@@ -70,6 +90,11 @@
                 <div class="grafico">
                     {{ grafico_frota_total|safe }}
                     <p style="font-size: x-small; margin-bottom: 0;">OBS.: Dados de 2021 não discriminam frota total por operadora.</p>
+                </div>
+                <div>
+                    <a href="{% url 'exportar_csv' 'fdo_stco_frota_total' %}" class="btn btn-outline-success btn-sm">
+                        <i class="fas fa-download"></i> Exportar Dados (CSV)
+                    </a>
                 </div>
             {% else %}
                 <div class="alert alert-warning">

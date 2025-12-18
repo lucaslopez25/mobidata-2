@@ -35,6 +35,7 @@ ON CONFLICT DO NOTHING;
 
 INSERT INTO ar_condicionado_stco(ano, id_concessionaria, qtd_frota_total, qtd_frota_com_ar_condicionado, pct_frota_com_ar_condicionado) VALUES
 -- COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/22 (PG 25 ANUARIO 2022) VS. FROTA COM AR (PG 36 ANUARIO 2022)
+
 -- TOTAL STCO 2022
 -- Veículos c/ ar total stco: 194 ott + 154 plat = 348
 (2022, 'STCO', 1789, 348, 19.45),
@@ -44,4 +45,18 @@ INSERT INTO ar_condicionado_stco(ano, id_concessionaria, qtd_frota_total, qtd_fr
 (2022, 'SPE2', 1044, 194, 18.58),
 -- TOTAL BRT 2022
 (2022, 'BRT1', 35, 35, 100.00)
+ON CONFLICT DO NOTHING;
+
+INSERT INTO ar_condicionado_stco(ano, id_concessionaria, qtd_frota_total, qtd_frota_com_ar_condicionado, pct_frota_com_ar_condicionado) VALUES
+-- COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/21 (PG 21 ANUARIO 2021) VS. FROTA COM AR (PG 32 ANUARIO 2021)
+-- A frota total do STCO em dezembro de 2021 é de 1776, pg. 21 anuário
+
+-- TOTAL STCO 2021
+-- Veículos c/ ar total stco: 157 ott + 117 plat = 274
+(2021, 'STCO', 1776, 274, 15.43),
+-- TOTAL PLATAFORMA 2021
+(2021, 'SPE3', 683, 117, 17.13),
+-- TOTAL OT TRANS 2021
+(2021, 'SPE2', 928, 157, 16.92)
+-- OBS: O BRT NÃO EXISTIA EM 2021
 ON CONFLICT DO NOTHING;
