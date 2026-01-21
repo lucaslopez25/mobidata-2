@@ -6,9 +6,9 @@ CREATE TABLE IF NOT EXISTS comparativo_frota_stco (
     percentual_operante_total NUMERIC(5,2)
 );
 
-INSERT INTO comparativo_frota_stco
-(ano, frota_operante, frota_total, idade_media, percentual_operante_total)
-VALUES
+INSERT INTO comparativo_frota_stco(ano, frota_operante, frota_total, idade_media, percentual_operante_total) VALUES
+-- ANUÁRIO 2024
+-- pg. 50 de 122
 (2012, 2479, 2811, 4.96, 88.00),
 (2013, 2431, 2839, 4.64, 86.00),
 (2014, 2401, 2863, 4.54, 84.00),

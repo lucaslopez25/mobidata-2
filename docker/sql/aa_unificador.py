@@ -16,6 +16,7 @@ def generate_unifile():
 
         with open(RESULTFILENAME, 'w', encoding='utf-8') as f:
             f.write(''.join(filelist))
+            f.write('\n')
     except Exception as e:
         print("Error", str(e))
 
