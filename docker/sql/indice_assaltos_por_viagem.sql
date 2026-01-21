@@ -1,11 +1,11 @@
-CREATE TABLE IF NOT EXISTS indice_assaltos_por_viagem (
+CREATE TABLE IF NOT EXISTS indice_assaltos_por_viagem(
     id_indice_assaltos_por_viagem SERIAL PRIMARY KEY,
     ano INTEGER,
     mes INTEGER,
     indice NUMERIC(4,2)
 );
 
-INSERT INTO indice_assaltos_por_viagem (ano, mes, indice) VALUES
+INSERT INTO indice_assaltos_por_viagem(ano, mes, indice) VALUES
 -- FONTE: INTEGRA - OPERADORES
 -- 2020
 (2020, 1, 0.37),
