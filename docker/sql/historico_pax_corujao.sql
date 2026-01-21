@@ -1,21 +1,21 @@
-CREATE TABLE IF NOT EXISTS historico_pax_corujao(
-    id SERIAL PRIMARY KEY,
-    ano INTEGER,
-    mes INTEGER,
-    qtd_passageiros FLOAT
-);
+-- CREATE TABLE IF NOT EXISTS historico_pax_corujao(
+--     id SERIAL PRIMARY KEY,
+--     ano INTEGER,
+--     mes INTEGER,
+--     qtd_passageiros FLOAT
+-- );
 
 
 -- página 16 anuário 2016
-(2016, 1, ),
-(2016, 2, ),
-(2016, 3, ),
-(2016, 4, ),
-(2016, 5, ),
-(2016, 6, ),
-(2016, 7, ),
-(2016, 8, ),
-(2016, 9, ),
-(2016, 10, ),
-(2016, 11, ),
-(2016, 12, ),
+-- (2016, 1, ),
+-- (2016, 2, ),
+-- (2016, 3, ),
+-- (2016, 4, ),
+-- (2016, 5, ),
+-- (2016, 6, ),
+-- (2016, 7, ),
+-- (2016, 8, ),
+-- (2016, 9, ),
+-- (2016, 10, ),
+-- (2016, 11, ),
+-- (2016, 12, ),
