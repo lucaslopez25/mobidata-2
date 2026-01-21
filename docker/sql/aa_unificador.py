@@ -11,12 +11,13 @@ def generate_unifile():
         for file in Path(place).glob("*.sql"):
             with open(file, 'r', encoding='utf-8') as f:
                 filelist.append(f.read())
+                filelist.append('\n\n')
 
         #print(filelist)
 
         with open(RESULTFILENAME, 'w', encoding='utf-8') as f:
             f.write(''.join(filelist))
-            f.write('\n')
+
     except Exception as e:
         print("Error", str(e))
 
