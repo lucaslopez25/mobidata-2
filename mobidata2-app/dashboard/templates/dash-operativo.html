@@ -53,6 +53,30 @@
             {% endif %}
         </div>
         <p style="padding-top: 8px; padding-bottom: 8px;">Observações: (1) Valores arredondados    (2) BRT incluido a partir de Setembro/2022</p>
+        <div class="row">
+            {% if grafico_demanda_pagamento %}
+                <div class="grafico">
+                    {{ grafico_demanda_pagamento|safe }}
+                    <p style="font-size: x-small; margin-bottom: 0;">OBS.: Gratuidade controlada por cartão</p>
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Demanda de Passageiros por Tipo de Pagamento.
+                </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            {% if grafico_demanda_integracao %}
+                <div class="grafico">
+                    {{ grafico_demanda_integracao|safe }}
+                    <!-- <p style="font-size: x-small; margin-bottom: 0;">Teste teste teste teste teste</p> -->
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Demanda Total e Integrações por Mês.
+                </div>
+            {% endif %}
+        </div>
     </div>
 </main>
 {% endblock %}
