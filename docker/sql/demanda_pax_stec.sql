@@ -8,6 +8,7 @@ CREATE TABLE demanda_pax_stec(
 );
 
 INSERT INTO demanda_pax_stec(ano, mes, pax_total, pax_equivalente, percentual_comparativo_equivalente_total) VALUES
+-- Página 98 de 122
 (2024, 1, 1757495, 1074250, 61.00),
 (2024, 2, 1616859, 971696, 60.00),
 (2024, 3, 1789193, 1048976, 59.00),
