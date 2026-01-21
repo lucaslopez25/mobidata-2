@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS historico_linhas_regulares(
     qtd_linhas FLOAT
 );
 
-INSERT INTO historico_linhas_regulares (ano, mes, qtd_linhas) VALUES
+INSERT INTO historico_linhas_regulares(ano, mes, qtd_linhas) VALUES
 -- página 14 anuário 2024
 -- NÃO INCLUI LINHAS BRT
 -- não aparece destacado por mês
