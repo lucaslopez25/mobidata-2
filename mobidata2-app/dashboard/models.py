@@ -33,6 +33,18 @@ class ArCondicionadoStco(models.Model):
         db_table = 'ar_condicionado_stco'
 
 
+class ComparativoFrotaStco(models.Model):
+    ano = models.IntegerField(primary_key=True)
+    frota_operante = models.IntegerField(blank=True, null=True)
+    frota_total = models.IntegerField(blank=True, null=True)
+    idade_media = models.DecimalField(max_digits=4, decimal_places=2, blank=True, null=True)
+    percentual_operante_total = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'comparativo_frota_stco'
+
+
 class Concessionarias(models.Model):
     id_concessionaria = models.CharField(primary_key=True, max_length=10)
     nome_concessionaria = models.CharField(max_length=60, blank=True, null=True)
@@ -87,6 +99,18 @@ class DemandaPaxPorPagamento(models.Model):
     class Meta:
         managed = False
         db_table = 'demanda_pax_por_pagamento'
+
+
+class DemandaPaxStec(models.Model):
+    ano = models.IntegerField(blank=True, null=True)
+    mes = models.IntegerField(blank=True, null=True)
+    pax_total = models.BigIntegerField(blank=True, null=True)
+    pax_equivalente = models.BigIntegerField(blank=True, null=True)
+    percentual_comparativo_equivalente_total = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'demanda_pax_stec'
 
 
 class DistribuicaoTaxisPorTipoDeServico(models.Model):
@@ -148,6 +172,25 @@ class HistoricoIdadeMediaFrota(models.Model):
     class Meta:
         managed = False
         db_table = 'historico_idade_media_frota'
+
+
+class HistoricoLinhasRegulares(models.Model):
+    ano = models.IntegerField(blank=True, null=True)
+    mes = models.IntegerField(blank=True, null=True)
+    qtd_linhas = models.FloatField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'historico_linhas_regulares'
+
+
+class HistoricoLinhasStec(models.Model):
+    ano = models.IntegerField(blank=True, null=True)
+    qtd_linhas = models.FloatField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'historico_linhas_stec'
 
 
 class HistoricoPassageirosTransportados(models.Model):
@@ -225,6 +268,17 @@ class IndicadoresFinanceirosStco(models.Model):
         db_table = 'indicadores_financeiros_stco'
         unique_together = (('id_concessionaria', 'tipo_conta', 'ano'),)
         db_table_comment = 'Armazena os indicadores financeiros do Sistema de Transporte Coletivo por Ônibus (STCO)'
+
+
+class IndiceAssaltosPorViagem(models.Model):
+    id_indice_assaltos_por_viagem = models.AutoField(primary_key=True)
+    ano = models.IntegerField(blank=True, null=True)
+    mes = models.IntegerField(blank=True, null=True)
+    indice = models.DecimalField(max_digits=4, decimal_places=2, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'indice_assaltos_por_viagem'
 
 
 class SalarioMinimo(models.Model):
