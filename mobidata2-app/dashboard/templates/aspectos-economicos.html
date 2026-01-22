@@ -25,6 +25,11 @@
                         </select>
                     </form>
                     {{ grafico_indicadores_financeiros_stco|safe }}
+                    <div>
+                        <a href="{% url 'exportar_csv' 'ae_indicadores_financeiros_stco' %}" class="btn btn-outline-success btn-sm">
+                            <i class="fas fa-download"></i> Exportar Dados (CSV)
+                        </a>
+                    </div>
                 </div>
             {% else %}
                 <div class="alert alert-warning">

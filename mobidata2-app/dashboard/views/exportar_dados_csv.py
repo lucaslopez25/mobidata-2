@@ -68,6 +68,16 @@ AVAILABLE_MODELS_FOR_EXPORT = {
         'filename': 'comparativo_frota_stco.csv',
         'fields': ['ano', 'frota_operante', 'frota_total', 'idade_media', 'percentual_operante_total'],
     },
+    'ae_indicadores_financeiros_stco': {
+        'model': IndicadoresFinanceirosStco,
+        'filename': 'indicadores_financeiros_stco.csv',
+        'fields': ['ano', 'id_concessionaria', 'tipo_conta', 'valor', 'unidade_medida', 'fonte', 'observacoes'],
+    },
+    'ae_indicadores_financeiros_stco': {
+        'model': IndicadoresFinanceirosStco,
+        'filename': 'indicadores_financeiros_stco.csv',
+        'fields': ['ano', 'id_concessionaria', 'tipo_conta', 'valor', 'unidade_medida', 'fonte', 'observacoes'],
+    },
 }
 
 def exportar_dados_csv(request, tipo):
