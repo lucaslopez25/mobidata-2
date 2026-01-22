@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>  
+    <div class="container">
+        {% include 'toolbar.html' %}
+        <div class="row">
+            {% if grafico_indice_assaltos %}
+                <div class="grafico">
+                    {{ grafico_indice_assaltos|safe }}
+                </div>
+                <p style="font-size: small; margin-bottom: 0;">
+                    <b>ÍNDICE DE ASSALTOS POR VIAGEM:</b> Indicador cujo objetivo é fazer a relação entre o nº de assaltos ocorridos e as viagens realizadas (1000 viagens/mês), no transporte coletivo por ônibus urbano durante o mês.<br>
+                </p>
+                <div>
+                    <a href="{% url 'exportar_csv' 'indicador_indice_de_assaltos' %}" class="btn btn-outline-success btn-sm">
+                        <i class="fas fa-download"></i> Exportar Dados (CSV)
+                    </a>
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Índice de Assaltos por Viagem.
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -12,5 +12,6 @@ urlpatterns = [
     path('aspectos_economicos', views.aspectos_economicos, name='aspectos_economicos'),
     path('dados_metro', views.dados_metro, name='dados_metro'),
     path('bicicletas', views.bicicletas, name='bicicletas'),
+    path('indicadores_desempenho', views.indicadores_desempenho, name='indicadores_desempenho'),
     path('exportar_csv/<str:tipo>/', views.exportar_dados_csv, name='exportar_csv'),
 ]

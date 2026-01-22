@@ -82,7 +82,12 @@ AVAILABLE_MODELS_FOR_EXPORT = {
         'model': DemandaPaxStec,
         'filename': 'demanda_passageiros_stec.csv',
         'fields': ['ano', 'mes', 'pax_total', 'pax_equivalente', 'percentual_comparativo_equivalente_total'],
-    } 
+    },
+    'indicador_indice_de_assaltos': {
+        'model': IndiceAssaltosPorViagem,
+        'filename': 'indice_de_assaltos.csv',
+        'fields': ['ano', 'mes', 'indice'],
+    },
 }
 
 def exportar_dados_csv(request, tipo):

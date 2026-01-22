@@ -12,4 +12,6 @@ from .bicicletas import bicicletas
 from .aspectos_economicos import aspectos_economicos
 from .climatizacao_frota import climatizacao_frota
 
+from .indicadores_desempenho import indicadores_desempenho
+
 from .exportar_dados_csv import exportar_dados_csv
