@@ -28,6 +28,11 @@ AVAILABLE_MODELS_FOR_EXPORT = {
         'filename': 'historico_quantidade_de_linhas.csv',
         'fields': ['ano', 'mes', 'qtd_linhas'],
     },
+    'dop_demanda_pax_pagamento': {
+        'model': DemandaPaxPorPagamento,
+        'filename': 'demanda_pax_pagamento.csv',
+        'fields': ['ano', 'mes', 'tipo_pagamento', 'demanda', 'demanda_int_metro', 'demanda_int_stec', 'demanda_int_brt'],
+    },
     'fdo_stco_idade_media_frota': {
         'model': HistoricoIdadeMediaFrota,
         'filename': 'historico_idade_media_frota.csv',
