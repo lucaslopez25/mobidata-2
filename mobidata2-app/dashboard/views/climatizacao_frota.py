@@ -8,7 +8,7 @@ import pandas # type: ignore
 import plotly.graph_objects as go
 
 def climatizacao_frota(request):
-    titulo_da_pagina = "Climatização da Frota (STCO)"
+    titulo_da_pagina = "Climatização da Frota (STCO/Integra)"
 
     dados_qs = ArCondicionadoStco.objects.all().order_by('ano')
     df = pandas.DataFrame(list(dados_qs.values('ano', 'id_concessionaria', 'pct_frota_com_ar_condicionado')))
@@ -28,7 +28,7 @@ def climatizacao_frota(request):
     ))
 
     fig_total.update_layout(
-        title="Evolução Climatização: Total do Sistema (STCO)",
+        title="Percentual da Climatização Total da Frota de Ônibus por Ano",
         xaxis=dict(title="Percentual (%)", range=[0, 100]),
         yaxis=dict(title="Ano", automargin=True), # Corrigido aqui
         height=450,
@@ -36,6 +36,7 @@ def climatizacao_frota(request):
     )
 
     ###################### GRAFICO POR CONSORCIO
+
     nomes_map = {'SPE2': 'OT Trans', 'SPE3': 'Plataforma'}
     cores_map = {'SPE2': '#26ae00', 'SPE3': '#ffc600'}
     
@@ -56,7 +57,7 @@ def climatizacao_frota(request):
             ))
 
     fig_comp.update_layout(
-        title="Perspectiva por Operadora (2021-2024)",
+        title="Percentual da Climatização da Frota por Consórcio Operador",
         xaxis=dict(title="Percentual (%)", range=[0, 100]),
         yaxis=dict(title="Ano", automargin=True),
         barmode='group',
