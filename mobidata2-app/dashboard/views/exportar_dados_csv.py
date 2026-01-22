@@ -78,6 +78,11 @@ AVAILABLE_MODELS_FOR_EXPORT = {
         'filename': 'indicadores_financeiros_stco.csv',
         'fields': ['ano', 'id_concessionaria', 'tipo_conta', 'valor', 'unidade_medida', 'fonte', 'observacoes'],
     },
+    'dopstec_demanda_pax_stec': {
+        'model': DemandaPaxStec,
+        'filename': 'demanda_passageiros_stec.csv',
+        'fields': ['ano', 'mes', 'pax_total', 'pax_equivalente', 'percentual_comparativo_equivalente_total'],
+    } 
 }
 
 def exportar_dados_csv(request, tipo):
