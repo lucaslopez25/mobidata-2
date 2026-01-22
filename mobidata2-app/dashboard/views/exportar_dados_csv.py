@@ -23,6 +23,11 @@ AVAILABLE_MODELS_FOR_EXPORT = {
         'filename': 'corredores_de_onibus.csv',
         'fields': ['ano', 'nome_corredor', 'qtd_onibus_por_hora', 'extensao_em_kms'],
     },
+    'dop_historico_de_linhas': {
+        'model': HistoricoLinhasRegulares,
+        'filename': 'historico_quantidade_de_linhas.csv',
+        'fields': ['ano', 'mes', 'qtd_linhas'],
+    },
     'fdo_stco_idade_media_frota': {
         'model': HistoricoIdadeMediaFrota,
         'filename': 'historico_idade_media_frota.csv',
