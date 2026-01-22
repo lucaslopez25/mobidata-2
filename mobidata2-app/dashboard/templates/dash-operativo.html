@@ -41,6 +41,10 @@
                 <div class="grafico">
                     {{ grafico_kmt_perc_transp|safe }}
                 </div>
+                <p style="font-size: small; margin-bottom: 0;">
+                    OBS 1.: Valores arredondados<br>
+                    OBS 2.: BRT incluido a partir de Setembro/2022
+                </p>
                 <div>
                     <a href="{% url 'exportar_csv' 'dop_quilometragem' %}" class="btn btn-outline-success btn-sm">
                         <i class="fas fa-download"></i> Exportar Dados (CSV)
@@ -52,7 +56,30 @@
                 </div>
             {% endif %}
         </div>
-        <p style="padding-top: 8px; padding-bottom: 8px;">Observações: (1) Valores arredondados    (2) BRT incluido a partir de Setembro/2022</p>
+        <div class="row">
+            {% if grafico_historico_linhas_regulares %}
+                <div class="grafico">
+                    {{ grafico_historico_linhas_regulares|safe }}
+                    <p style="font-size: small; margin-bottom: 0;">
+                        OBS 1.: A partir do Anuário de Transportes Urbanos de Salvador de 2020, não há mais dados separados por mês, é
+                        feito um apanhado correspondente a média anual, exceto para o ano de 2020, no qual o apanhado foi referente ao
+                        mês de janeiro.<br>
+                        OBS 2.: A partir do Anuário de Transportes Urbanos de Salvador de 2023, o total de linhas não inclui as linhas
+                        correspondentes ao sistema BRT, que é tratado de forma separada no(s) documento(s).<br>
+                        OBS 3.: Dados de 2017 estão em falta.
+                    </p>
+                    <div>
+                        <a href="{% url 'exportar_csv' 'dop_historico_de_linhas' %}" class="btn btn-outline-success btn-sm">
+                            <i class="fas fa-download"></i> Exportar Dados (CSV)
+                        </a>
+                    </div>
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Demanda Total e Integrações por Mês.
+                </div>
+            {% endif %}
+        </div>
         <div class="row">
             {% if grafico_demanda_pagamento %}
                 <div class="grafico">
