@@ -63,6 +63,11 @@ AVAILABLE_MODELS_FOR_EXPORT = {
         'filename': 'dados_de_climatizacao_na_frota.csv',
         'fields': ['ano', 'id_concessionaria', 'qtd_frota_total', 'qtd_frota_com_ar_condicionado', 'pct_frota_com_ar_condicionado'],
     },
+    'fdo_comparativo_frota_stco': {
+        'model': ComparativoFrotaStco,
+        'filename': 'comparativo_frota_stco.csv',
+        'fields': ['ano', 'frota_operante', 'frota_total', 'idade_media', 'percentual_operante_total'],
+    },
 }
 
 def exportar_dados_csv(request, tipo):

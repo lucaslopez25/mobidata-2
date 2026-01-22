@@ -69,10 +69,28 @@
             {% endif %}
         </div>
         <div class="row">
+            {% if grafico_comparativo_frota %}
+                <div class="grafico">
+                    {{ grafico_comparativo_frota|safe }}
+                </div>
+                <div>
+                    <a href="{% url 'exportar_csv' 'fdo_comparativo_frota_stco' %}" class="btn btn-outline-success btn-sm">
+                        <i class="fas fa-download"></i> Exportar Dados (CSV)
+                    </a>
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    Nenhum dado disponível de Frota Operante de Ônibus.
+                </div>
+            {% endif %}
+        </div>
+        <div class="row">
             {% if grafico_frota_operante %}
                 <div class="grafico">
                     {{ grafico_frota_operante|safe }}
-                    <p style="font-size: x-small; margin-bottom: 0;">OBS.: Frota média nos dias úteis.</p>
+                    <p style="font-size: small; margin-bottom: 0;">
+                        OBS.: Frota média nos dias úteis.
+                    </p>
                 </div>
                 <div>
                     <a href="{% url 'exportar_csv' 'fdo_stco_frota_operante' %}" class="btn btn-outline-success btn-sm">
@@ -89,7 +107,9 @@
             {% if grafico_frota_total %}
                 <div class="grafico">
                     {{ grafico_frota_total|safe }}
-                    <p style="font-size: x-small; margin-bottom: 0;">OBS.: Dados de 2021 não discriminam frota total por operadora.</p>
+                    <p style="font-size: small; margin-bottom: 0;">
+                        OBS.: Dados de 2021 não discriminam frota total por operadora.
+                    </p>
                 </div>
                 <div>
                     <a href="{% url 'exportar_csv' 'fdo_stco_frota_total' %}" class="btn btn-outline-success btn-sm">

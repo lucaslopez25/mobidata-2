@@ -109,7 +109,7 @@ def frota_de_onibus_stco(request):
             x='ano_mes', 
             y='qtd_total_de_onibus', 
             color='id_concessionaria', 
-            title='Frota total de ônibus',
+            title='Frota Total de Ônibus por Concessionária',
             labels={
                 'id_concessionaria': 'Concessionária', 
                 'ano_mes': 'Ano-Mês', 
@@ -136,7 +136,7 @@ def frota_de_onibus_stco(request):
             x='ano_mes', 
             y='qtd_operante_de_onibus', 
             color='id_concessionaria', 
-            title='Frota operante de ônibus',
+            title='Frota Operante de Ônibus por Concessionária',
             labels={
                 'id_concessionaria': 'Concessionária', 
                 'ano_mes': 'Ano-Mês', 
@@ -174,6 +174,51 @@ def frota_de_onibus_stco(request):
         )
         grafico_veiculos_novos_ano = grafico_veiculos_novos_ano.to_html(full_html=False)
 
+    ###################### ComparativoFrotaStco
+
+    comparativo_frota_stco = ComparativoFrotaStco.objects.all().order_by('ano')
+
+    if comparativo_frota_stco.exists():
+        df_comp = pandas.DataFrame(list(comparativo_frota_stco.values('ano', 'frota_operante', 'frota_total')))
+
+        df_melted = df_comp.melt(
+            id_vars=['ano'], 
+            value_vars=['frota_operante', 'frota_total'],
+            var_name='tipo_frota', 
+            value_name='quantidade'
+        )
+
+        labels_map = {
+            'frota_operante': 'Frota Operante',
+            'frota_total': 'Frota Total'
+        }
+        df_melted['tipo_frota'] = df_melted['tipo_frota'].map(labels_map)
+
+        grafico_comparativo_frota = plotxp.line(
+            df_melted,
+            x='ano',
+            y='quantidade',
+            color='tipo_frota',
+            markers=True,
+            title='Comparativo de Frota Operante e Total',
+            color_discrete_map={
+                'Frota Operante': '#636EFA',
+                'Frota Total': '#EF553B'
+            }
+        )
+
+        grafico_comparativo_frota.update_layout(
+            xaxis_title='Ano',
+            yaxis_title='Quantidade de Ônibus',
+            legend_title='Legenda',
+            xaxis=dict(tickmode='linear'),
+            hovermode="x unified"
+        )
+        
+        grafico_comparativo_frota = grafico_comparativo_frota.to_html(full_html=False)
+    else:
+        grafico_comparativo_frota = None
+
     ###################### RENDER
 
     return render(request, 'dash-frota-stco.html', {
@@ -184,4 +229,6 @@ def frota_de_onibus_stco(request):
         'grafico_frota_total': grafico_frota_total,
         'grafico_frota_operante': grafico_frota_operante,
         'grafico_veiculos_novos_ano': grafico_veiculos_novos_ano,
+
+        'grafico_comparativo_frota': grafico_comparativo_frota,
     })
