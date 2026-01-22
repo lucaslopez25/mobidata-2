@@ -13,8 +13,8 @@ import plotly.express as plotxp # type: ignore
 import plotly.graph_objects as plotgo # type: ignore
 from plotly.subplots import make_subplots # type: ignore
 
-def dados_financeiros(request):
-    titulo_da_pagina = "Dados Financeiros"
+def aspectos_economicos(request):
+    titulo_da_pagina = "Aspectos Econômicos"
     exportar_sql_csv_ativado = False
 
     ###################### IndicadoresFinanceirosStco
@@ -137,7 +137,7 @@ def dados_financeiros(request):
     grafico_custo_operacional = grafico_custo_operacional.to_html(full_html=False)
     grafico_tarifa_percentual = grafico_tarifa_percentual.to_html(full_html=False)
 
-    return render(request, 'dash-financeiro.html', {
+    return render(request, 'aspectos-economicos.html', {
         'titulo_da_pagina': titulo_da_pagina,
         'exportar_sql_csv_ativado': exportar_sql_csv_ativado,
         'grafico_indicadores_financeiros_stco': pacote_grafico_indicadores_financeiros_stco['model_grafico'],

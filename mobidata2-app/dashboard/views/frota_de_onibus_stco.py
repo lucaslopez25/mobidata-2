@@ -9,7 +9,6 @@ import plotly.express as plotxp # type: ignore
 
 def frota_de_onibus_stco(request):
     titulo_da_pagina = "Frota de Ônibus (STCO)"
-    exportar_sql_csv_ativado = False
 
     cores_concessionarias = {
         'SPE1': '#1631cc', #Salvador Norte
@@ -221,7 +220,7 @@ def frota_de_onibus_stco(request):
 
     ###################### RENDER
 
-    return render(request, 'dash-frota-stco.html', {
+    return render(request, 'stco/frota-stco-geral.html', {
         'titulo_da_pagina': titulo_da_pagina,
         'grafico_historico': grafico_historico,
         'grafico_aquisicoes_novos': grafico_aquisicoes_novos,

@@ -10,8 +10,8 @@ import pandas # type: ignore
 import plotly.express as plotxp # type: ignore
 import plotly.graph_objects as plotgo
 
-def dados_operativos(request):
-    titulo_da_pagina = "Dados Operativos"
+def dados_operacionais_stco(request):
+    titulo_da_pagina = "Dados Operacionais (STCO)"
     exportar_sql_csv_ativado = False
 
     ###################### HistoricoPassageirosTransportados
@@ -213,7 +213,7 @@ def dados_operativos(request):
 
     ###################### Render
 
-    return render(request, 'dash-operativo.html', {
+    return render(request, 'stco/dados-operacionais.html', {
         'titulo_da_pagina': titulo_da_pagina,
         'exportar_sql_csv_ativado': exportar_sql_csv_ativado,
         'grafico_hist_pax_transp': grafico_hist_pax_transp,
