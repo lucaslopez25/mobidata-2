@@ -7,33 +7,9 @@ from dashboard.models import *
 import pandas # type: ignore
 import plotly.graph_objects as go
 
-def climatizacao_frota(request):
-    titulo_da_pagina = "Climatização da Frota (STCO/Integra)"
-
+def get_climatizacao_frota_por_consorcio():
     dados_qs = ArCondicionadoStco.objects.all().order_by('ano')
     df = pandas.DataFrame(list(dados_qs.values('ano', 'id_concessionaria', 'pct_frota_com_ar_condicionado')))
-
-    ###################### GRAFICO TOTAL SISTEMA
-    df_stco = df[df['id_concessionaria'] == 'STCO']
-    
-    fig_total = go.Figure()
-    fig_total.add_trace(go.Bar(
-        y=df_stco['ano'].astype(str),
-        x=df_stco['pct_frota_com_ar_condicionado'],
-        orientation='h',
-        text=df_stco['pct_frota_com_ar_condicionado'].apply(lambda x: f"{x}%"),
-        textposition='auto',
-        marker_color='#2c3e50',
-        name='Total STCO'
-    ))
-
-    fig_total.update_layout(
-        title="Percentual da Climatização Total da Frota de Ônibus por Ano",
-        xaxis=dict(title="Percentual (%)", range=[0, 100]),
-        yaxis=dict(title="Ano", automargin=True), # Corrigido aqui
-        height=450,
-        template="plotly_white"
-    )
 
     ###################### GRAFICO POR CONSORCIO
 
@@ -57,7 +33,7 @@ def climatizacao_frota(request):
             ))
 
     fig_comp.update_layout(
-        title="Percentual da Climatização da Frota por Consórcio Operador",
+        title="Percentual da Climatização Frota por Consórcio Operador de Ônibus por Ano",
         xaxis=dict(title="Percentual (%)", range=[0, 100]),
         yaxis=dict(title="Ano", automargin=True),
         barmode='group',
@@ -66,11 +42,4 @@ def climatizacao_frota(request):
         template="plotly_white"
     )
 
-    print("IDs encontrados no banco:", df['id_concessionaria'].unique())
-
-    return render(request, 'stco/climatizacao-frota.html', {
-        'titulo_da_pagina': titulo_da_pagina,
-        
-        'fig_total': fig_total.to_html(full_html=False),
-        'fig_comp': fig_comp.to_html(full_html=False),
-    })
+    return fig_comp

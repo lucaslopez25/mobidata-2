@@ -1,0 +1,7 @@
+from .climatizacao_frota_total import get_climatizacao_frota_total
+from .climatizacao_frota_por_consorcio import get_climatizacao_frota_por_consorcio
+
+from .metro_pax_transportados_por_ano import get_metro_pax_transportados_por_ano
+from .metro_pax_transportados_por_mes import get_metro_pax_transportados_por_mes
+
+from .assaltos_por_viagem import get_assaltos_por_viagem

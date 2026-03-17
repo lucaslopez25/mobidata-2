@@ -1,0 +1,170 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
+
+    <title>Mobidata 2.0</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav" data-bs-offset="120">
+    <nav class="navbar navbar-expand-lg sticky-top"
+        style="background-color: #E6D4B9; box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3);">
+        <div class="container-xxl flex-wrap flex-lg-nowrap">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img class="logo-navbar d-inline-block align-top" src="{% static 'img/logo-mobidata2-horizontal.png' %}">
+            </a>
+        </div>
+    </nav>
+
+    <div id="wrapper" class="container-xxl">
+        <div class="row">
+            <aside class="col-md-3 col-lg-2">
+                <nav id="sidebar-nav" class="sticky-top" style="top: 100px;">
+                    <ul class="nav flex-column small">
+                        <li class="nav-item">
+                            <a class="nav-link py-1" href="#renovacao-da-frota">Renovação da Frota</a>
+                            <a class="nav-link py-1" href="#climatizacao-da-frota">Climatização da Frota</a>
+                            <a class="nav-link py-1" href="#metro">Metrô</a>
+                            <a class="nav-link py-1" href="#seguranca-publica">Segurança Pública e Mobilidade</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="col-md-9 col-lg-10 ps-md-5">
+                <section id="climatizacao-da-frota" class="py-4">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                        <h1>Climatização da Frota</h1>
+                    </div>
+                    <div class="row">
+                        {% if grafico_climatizacao_frota_total %}
+                        <div class="grafico">
+                            {{ grafico_climatizacao_frota_total|safe }}
+                        </div>
+                        {% else %}
+                        <div class="alert alert-warning">
+                            Nenhum dado disponível de grafico_climatizacao_frota_total.
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="row">
+                        {% if grafico_climatizacao_frota_por_consorcio %}
+                        <div class="grafico">
+                            {{ grafico_climatizacao_frota_por_consorcio|safe }}
+                        </div>
+                        {% else %}
+                        <div class="alert alert-warning">
+                            Nenhum dado disponível de grafico_climatizacao_frota_por_consorcio.
+                        </div>
+                        {% endif %}
+                    </div>
+                    <p style="font-size: small; margin-bottom: 0;">
+                        COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/24 (PG 27 ANUARIO 2024) VS. FROTA COM AR (PG 46 ANUARIO
+                        2024)<br>
+                        COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/23 (PG 28 ANUARIO 2023) VS. FROTA COM AR (PG 47 ANUARIO
+                        2023)<br>
+                        COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/22 (PG 25 ANUARIO 2022) VS. FROTA COM AR (PG 36 ANUARIO
+                        2022)<br>
+                        COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/21 (PG 21 ANUARIO 2021) VS. FROTA COM AR (PG 32 ANUARIO
+                        2021)<br>
+                    </p>
+                    <div>
+                        <a href="{% url 'exportar_csv' 'fdo_stco_ar_condicionado_frota' %}" class="btn btn-outline-success btn-sm">
+                            <i class="fas fa-download"></i> Exportar Dados (CSV)
+                        </a>
+                    </div>
+                </section>
+                <section id="metro" class="py-4">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                        <h1>Metrô</h1>
+                    </div>
+                    <div class="row">
+                        {% if grafico_metro_pax_transportados_por_ano %}
+                            <div class="grafico">
+                                {{ grafico_metro_pax_transportados_por_ano|safe }}
+                            </div>
+                        {% else %}
+                        <div class="alert alert-warning">
+                            Nenhum dado disponível de grafico_metro_pax_transportados_por_ano.
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="row">
+                        {% if grafico_metro_pax_transportados_por_mes %}
+                            <div class="grafico">
+                                {{ grafico_metro_pax_transportados_por_mes|safe }}
+                            </div>
+                        {% else %}
+                        <div class="alert alert-warning">
+                            Nenhum dado disponível de grafico_metro_pax_transportados_por_mes.
+                        </div>
+                        {% endif %}
+                    </div>
+                </section>
+                <section id="seguranca-publica" class="py-4">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                        <h1>Segurança Pública e Mobilidade</h1>
+                    </div>
+                    <div class="row">
+                        {% if grafico_assaltos_por_viagem %}
+                            <div class="grafico">
+                                {{ grafico_assaltos_por_viagem|safe }}
+                            </div>
+                            <p style="font-size: small; margin-bottom: 0;">
+                                <b>ÍNDICE DE ASSALTOS POR VIAGEM:</b> Indicador cujo objetivo é fazer a relação entre o nº de assaltos ocorridos e as viagens realizadas (1000 viagens/mês), no transporte coletivo por ônibus urbano durante o mês.<br>
+                            </p>
+                            <div>
+                                <a href="{% url 'exportar_csv' 'indicador_indice_de_assaltos' %}" class="btn btn-outline-success btn-sm">
+                                    <i class="fas fa-download"></i> Exportar Dados (CSV)
+                                </a>
+                            </div>
+                        {% else %}
+                            <div class="alert alert-warning">
+                                Nenhum dado disponível de grafico_assaltos_por_viagem.
+                            </div>
+                        {% endif %}
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top"
+        style="background-color: #E6D4B9;">
+        <div class="col-md-4 d-flex align-items-center" style="padding-left: 30px;">
+            <span class="mb-3 mb-md-0 text-body-secondary">Mobidata 2.0 2025-2026</span>
+            <img style="height: 15px; margin-left: 5px;" src="{% static 'img/Bandeira_de_Salvador.png' %}">
+            <img style="height: 15px; margin-left: 2px;" src="{% static 'img/Bandeira_da_Bahia.png' %}">
+            <img style="height: 15px; margin-left: 2px;" src="{% static 'img/Flag_of_Brazil.png' %}">
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3">
+                <img style="height: 50px; padding-right: 30px;"
+                    src="{% static 'img/logo-obmob.png' %}">
+            </li>
+            <li class="ms-3">
+                <img style="height: 50px; padding-right: 30px;"
+                    src="{% static 'img/MARCA_IFBA_HORIZONTAL_completa_CMYK_IFBA.png' %}">
+            </li>
+        </ul>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    </footer>
+</body>

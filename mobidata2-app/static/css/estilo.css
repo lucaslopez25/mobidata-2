@@ -1,7 +1,13 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px; /* Evita que o título fique sob a navbar fixa */
+}
+
 body {
     --bs-body-font-family: "Inter", sans-serif;
     font-family: "Inter", sans-serif;
     font-weight: 580;
+    background-color:#FFF9EF;
 }
 
 .mobidata-link-top-navbar {
@@ -11,11 +17,32 @@ body {
 }
 
 #wrapper {
-    /* padding-top: 120px; */
-    background-color:#FFF9EF;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .grafico {
     padding-top: 8px;
     padding-bottom: 8px;
+}
+
+.logo-navbar {
+    height: clamp(35px, 4vh, 60px); 
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+#sidebar-nav .nav-link.active {
+    font-weight: bold;
+    color: #8b7355 !important;
+    border-left: 2px solid #8b7355;
+}
+
+#sidebar-nav .nav-link {
+    color: #495057;
+    transition: all 0.2s ease;
+}
+
+#sidebar-nav .nav-link:hover {
+    background-color: rgba(139, 115, 85, 0.1);
 }

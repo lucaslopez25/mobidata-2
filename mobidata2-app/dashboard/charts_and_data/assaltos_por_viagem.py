@@ -7,9 +7,7 @@ from dashboard.models import *
 import pandas # type: ignore
 import plotly.express as plotxp # type: ignore
 
-def indicadores_desempenho(request):
-    titulo_da_pagina = "Indicadores de Desempenho"
-
+def get_assaltos_por_viagem():
     ###################### IndiceAssaltosPorViagem
 
     indice_assaltos = IndiceAssaltosPorViagem.objects.all().order_by('ano', 'mes')
@@ -40,15 +38,7 @@ def indicadores_desempenho(request):
         )
         
         grafico_indice_assaltos.update_traces(line_color='#d9534f')
-
-        grafico_indice_assaltos = grafico_indice_assaltos.to_html(full_html=False)
     else:
         grafico_indice_assaltos = None
 
-    ###################### RENDER
-
-    return render(request, 'indicadores-desempenho.html', {
-        'titulo_da_pagina': titulo_da_pagina,
-
-        'grafico_indice_assaltos': grafico_indice_assaltos,
-    })
+    return grafico_indice_assaltos
