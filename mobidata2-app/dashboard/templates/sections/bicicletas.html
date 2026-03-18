@@ -1,33 +1,37 @@
-{% extends 'base.html' %}
 {% load static %}
+<section id="bicicletas" class="py-4">
 
-{% block content %}
-<main>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+        <h2>Rede Cicloviária</h2>
+    </div>
+
+    <div class="row">
+        <div class="col text-center">
+            <div class="card">
+                <h1 class="card-title" style="padding-top: 16px;">650</h1>
+                <p class="texto-pequeno-bicis">Bicicletas de aluguel (TemBici/BikeItaú)</p>
+            </div>
+        </div>
+        <div class="col text-center">
+            <div class="card">
+                <h1 class="card-title" style="padding-top: 16px;">62</h1>
+                <p class="texto-pequeno-bicis">Estações de aluguel (TemBici/BikeItaú)</p>
+            </div>
+        </div>
+        <div class="col text-center">
+            <div class="card">
+                <h1 class="card-title" style="padding-top: 16px;">300km</h1>
+                <p class="texto-pequeno-bicis">Ciclovias/Ciclofaixas/Ciclorrotas</p>
+            </div>
+        </div>
+    </div>
+
     <div class="container" style="padding-bottom: 20px;">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
             <h1>Bicicletas em Salvador</h1>
         </div>
 
-        <div class="row">
-            <div class="col text-center">
-                <div class="card">
-                    <h1 class="card-title" style="padding-top: 16px;">650</h1>
-                    <p class="texto-pequeno-bicis">Bicicletas de aluguel (TemBici/BikeItaú)</p>
-                </div>
-            </div>
-            <div class="col text-center">
-                <div class="card">
-                    <h1 class="card-title" style="padding-top: 16px;">62</h1>
-                    <p class="texto-pequeno-bicis">Estações de aluguel (TemBici/BikeItaú)</p>
-                </div>
-            </div>
-            <div class="col text-center">
-                <div class="card">
-                    <h1 class="card-title" style="padding-top: 16px;">300km</h1>
-                    <p class="texto-pequeno-bicis">Ciclovias/Ciclofaixas/Ciclorrotas</p>
-                </div>
-            </div>
-        </div>
+        
     </div>
 
     <div class="container">
@@ -59,5 +63,5 @@
     </div>
 
     <script src="{% static 'js/bicis_map.js' %}"></script>
-</main>
-{% endblock %}
+
+</section>

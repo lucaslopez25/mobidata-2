@@ -5,7 +5,6 @@ urlpatterns = [
     # Legacy
     path('dados_taxis', views.dados_taxis, name='dados_taxis'),
     path('aspectos_economicos', views.aspectos_economicos, name='aspectos_economicos'),
-    path('bicicletas', views.bicicletas, name='bicicletas'),
 
     # Atualizado
     path('', views.home, name='home'),
