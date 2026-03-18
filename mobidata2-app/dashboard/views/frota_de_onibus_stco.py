@@ -43,56 +43,56 @@ def frota_de_onibus_stco(request):
 
     ###################### AQUISIÇÕES DE ÔNIBUS
 
-    aquisicoes = AquisicoesDeOnibusPorMes.objects.all().order_by('ano', 'mes')
+    # aquisicoes = AquisicoesDeOnibusPorMes.objects.all().order_by('ano', 'mes')
 
-    grafico_aquisicoes_novos = None
-    grafico_aquisicoes_usados = None
+    # grafico_aquisicoes_novos = None
+    # grafico_aquisicoes_usados = None
 
-    if aquisicoes.exists():
-        aquisicoes_dataframe = pandas.DataFrame(list(aquisicoes.values('ano', 'mes', 'id_concessionaria', 'qtd_onibus', 'novo_ou_usado')))
-        aquisicoes_dataframe['mes'] = aquisicoes_dataframe['mes'].apply(lambda x: f"{x:02d}")
-        aquisicoes_dataframe['ano_mes'] = aquisicoes_dataframe['ano'].astype(str) + '-' + aquisicoes_dataframe['mes']
+    # if aquisicoes.exists():
+    #     aquisicoes_dataframe = pandas.DataFrame(list(aquisicoes.values('ano', 'mes', 'id_concessionaria', 'qtd_onibus', 'novo_ou_usado')))
+    #     aquisicoes_dataframe['mes'] = aquisicoes_dataframe['mes'].apply(lambda x: f"{x:02d}")
+    #     aquisicoes_dataframe['ano_mes'] = aquisicoes_dataframe['ano'].astype(str) + '-' + aquisicoes_dataframe['mes']
 
-        # Filtra o DataFrame para obter apenas veículos NOVOS
-        aquisicoes_novos_dataframe = aquisicoes_dataframe[aquisicoes_dataframe['novo_ou_usado'] == True]
+    #     # Filtra o DataFrame para obter apenas veículos NOVOS
+    #     aquisicoes_novos_dataframe = aquisicoes_dataframe[aquisicoes_dataframe['novo_ou_usado'] == True]
 
-        if not aquisicoes_novos_dataframe.empty:
-            grafico_aquisicoes_novos = plotxp.bar(
-                aquisicoes_novos_dataframe,
-                x='ano_mes',
-                y='qtd_onibus',
-                color='id_concessionaria',
-                barmode='stack',
-                title='Aquisições de ônibus novos por mês',
-                labels={
-                    'id_concessionaria': 'Concessionária',
-                    'ano_mes': 'Ano-Mês',
-                    'qtd_onibus': 'Quantidade de Ônibus Novos',
-                },
-                color_discrete_map=cores_concessionarias
-            )
-            grafico_aquisicoes_novos.update_layout(xaxis_title='Ano-Mês', yaxis_title='Quantidade de ônibus adquiridos')
-            grafico_aquisicoes_novos = grafico_aquisicoes_novos.to_html(full_html=False)
+    #     if not aquisicoes_novos_dataframe.empty:
+    #         grafico_aquisicoes_novos = plotxp.bar(
+    #             aquisicoes_novos_dataframe,
+    #             x='ano_mes',
+    #             y='qtd_onibus',
+    #             color='id_concessionaria',
+    #             barmode='stack',
+    #             title='Aquisições de ônibus novos por mês',
+    #             labels={
+    #                 'id_concessionaria': 'Concessionária',
+    #                 'ano_mes': 'Ano-Mês',
+    #                 'qtd_onibus': 'Quantidade de Ônibus Novos',
+    #             },
+    #             color_discrete_map=cores_concessionarias
+    #         )
+    #         grafico_aquisicoes_novos.update_layout(xaxis_title='Ano-Mês', yaxis_title='Quantidade de ônibus adquiridos')
+    #         grafico_aquisicoes_novos = grafico_aquisicoes_novos.to_html(full_html=False)
 
-        aquisicoes_velhos_dataframe = aquisicoes_dataframe[aquisicoes_dataframe['novo_ou_usado'] == False]
+    #     aquisicoes_velhos_dataframe = aquisicoes_dataframe[aquisicoes_dataframe['novo_ou_usado'] == False]
 
-        if not aquisicoes_velhos_dataframe.empty:
-            grafico_aquisicoes_usados = plotxp.bar(
-                aquisicoes_velhos_dataframe,
-                x='ano_mes',
-                y='qtd_onibus',
-                color='id_concessionaria',
-                barmode='stack',
-                title='Aquisições de ônibus usados por mês',
-                labels={
-                    'id_concessionaria': 'Concessionária',
-                    'ano_mes': 'Ano-Mês',
-                    'qtd_onibus': 'Quantidade de Ônibus Usados',
-                },
-                color_discrete_map=cores_concessionarias
-            )
-            grafico_aquisicoes_usados.update_layout(xaxis_title='Ano-Mês', yaxis_title='Quantidade de ônibus adquiridos')
-            grafico_aquisicoes_usados = grafico_aquisicoes_usados.to_html(full_html=False)
+    #     if not aquisicoes_velhos_dataframe.empty:
+    #         grafico_aquisicoes_usados = plotxp.bar(
+    #             aquisicoes_velhos_dataframe,
+    #             x='ano_mes',
+    #             y='qtd_onibus',
+    #             color='id_concessionaria',
+    #             barmode='stack',
+    #             title='Aquisições de ônibus usados por mês',
+    #             labels={
+    #                 'id_concessionaria': 'Concessionária',
+    #                 'ano_mes': 'Ano-Mês',
+    #                 'qtd_onibus': 'Quantidade de Ônibus Usados',
+    #             },
+    #             color_discrete_map=cores_concessionarias
+    #         )
+    #         grafico_aquisicoes_usados.update_layout(xaxis_title='Ano-Mês', yaxis_title='Quantidade de ônibus adquiridos')
+    #         grafico_aquisicoes_usados = grafico_aquisicoes_usados.to_html(full_html=False)
 
     ###################### FROTA TOTAL
 
@@ -222,8 +222,8 @@ def frota_de_onibus_stco(request):
 
     return render(request, 'stco/frota-stco-geral.html', {
         'grafico_historico': grafico_historico,
-        'grafico_aquisicoes_novos': grafico_aquisicoes_novos,
-        'grafico_aquisicoes_usados': grafico_aquisicoes_usados,
+        # 'grafico_aquisicoes_novos': grafico_aquisicoes_novos,
+        # 'grafico_aquisicoes_usados': grafico_aquisicoes_usados,
         'grafico_frota_total': grafico_frota_total,
         'grafico_frota_operante': grafico_frota_operante,
         # 'grafico_veiculos_novos_ano': grafico_veiculos_novos_ano,

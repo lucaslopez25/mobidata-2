@@ -46,6 +46,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link py-1 ps-4" href="#renovacao-da-frota">Renovação da Frota</a>
+                            <a class="nav-link py-1 ps-4" href="#tamanho-da-frota">Tamanho da Frota</a>
                             <a class="nav-link py-1 ps-4" href="#oferta-onibus">Oferta de Linhas e Ônibus</a>
                             <a class="nav-link py-1 ps-4" href="#passageiros">Passageiros</a>
                             <a class="nav-link py-1 ps-4" href="#climatizacao-da-frota">Climatização da Frota</a>
@@ -89,6 +90,43 @@
                             Nenhum dado disponível de grafico_aquisicoes_onibus_novos_por_ano.
                         </div>
                         {% endif %}
+                    </div>
+                    <div class="row">
+                        {% if grafico_aquisicoes_onibus_novos_por_mes %}
+                        <div class="grafico">
+                            {{ grafico_aquisicoes_onibus_novos_por_mes|safe }}
+                        </div>
+                        <div>
+                            <a href="{% url 'exportar_csv' 'fdo_stco_aquisicoes_onibus_por_mes' %}" class="btn btn-outline-success btn-sm">
+                                <i class="fas fa-download"></i> Exportar Dados (CSV)
+                            </a>
+                        </div>
+                        {% else %}
+                        <div class="alert alert-warning">
+                            Nenhum dado disponível de grafico_aquisicoes_onibus_novos_por_mes.
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="row">
+                        {% if grafico_aquisicoes_onibus_usados_por_mes %}
+                        <div class="grafico">
+                            {{ grafico_aquisicoes_onibus_usados_por_mes|safe }}
+                        </div>
+                        <div>
+                            <a href="{% url 'exportar_csv' 'fdo_stco_aquisicoes_onibus_por_mes' %}" class="btn btn-outline-success btn-sm">
+                                <i class="fas fa-download"></i> Exportar Dados (CSV)
+                            </a>
+                        </div>
+                        {% else %}
+                        <div class="alert alert-warning">
+                            Nenhum dado disponível de grafico_aquisicoes_onibus_usados_por_mes.
+                        </div>
+                        {% endif %}
+                    </div>
+                </section>
+                <section id="tamanho-da-frota" class="py-4">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                        <h2>Tamanho da Frota</h2>
                     </div>
                 </section>
                 <section id="climatizacao-da-frota" class="py-4">

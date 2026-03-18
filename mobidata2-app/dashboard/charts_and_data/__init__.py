@@ -1,6 +1,8 @@
 ### Ônibus Municipal
 # Renovação da Frota
 from .aquisicoes_onibus_novos_por_ano import get_grafico_aquisicoes_onibus_novos_por_ano
+from .aquisicoes_onibus_novos_por_mes import get_aquisicoes_onibus_novos_por_mes
+from .aquisicoes_onibus_usados_por_mes import get_aquisicoes_onibus_usados_por_mes
 # Climatização da Frota
 from .climatizacao_frota_total import get_climatizacao_frota_total
 from .climatizacao_frota_por_consorcio import get_climatizacao_frota_por_consorcio
