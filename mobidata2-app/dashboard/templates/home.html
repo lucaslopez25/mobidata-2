@@ -39,19 +39,61 @@
             <aside class="col-md-3 col-lg-2">
                 <nav id="sidebar-nav" class="sticky-top" style="top: 100px;">
                     <ul class="nav flex-column small">
+                        <li class="nav-item mt-3 mb-1">
+                            <span class="text-uppercase fw-bold text-muted" style="font-size: 0.75rem; padding: 0 1rem;">
+                                Ônibus Municipal
+                            </span>
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link py-1" href="#renovacao-da-frota">Renovação da Frota</a>
-                            <a class="nav-link py-1" href="#climatizacao-da-frota">Climatização da Frota</a>
-                            <a class="nav-link py-1" href="#metro">Metrô</a>
-                            <a class="nav-link py-1" href="#seguranca-publica">Segurança Pública e Mobilidade</a>
+                            <a class="nav-link py-1 ps-4" href="#renovacao-da-frota">Renovação da Frota</a>
+                            <a class="nav-link py-1 ps-4" href="#oferta-onibus">Oferta de Linhas e Ônibus</a>
+                            <a class="nav-link py-1 ps-4" href="#passageiros">Passageiros</a>
+                            <a class="nav-link py-1 ps-4" href="#climatizacao-da-frota">Climatização da Frota</a>
+                        </li>
+                        <li class="nav-item mt-3 mb-1">
+                            <span class="text-uppercase fw-bold text-muted" style="font-size: 0.75rem; padding: 0 1rem;">
+                                Metrô
+                            </span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-1 ps-4" href="#passageiros-metro">Passageiros</a>
+                        </li>
+                        <li class="nav-item mt-3 mb-1">
+                            <span class="text-uppercase fw-bold text-muted" style="font-size: 0.75rem; padding: 0 1rem;">
+                                Indicadores
+                            </span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-1 ps-4" href="#seguranca-publica">Segurança Pública e Mobilidade</a>
                         </li>
                     </ul>
                 </nav>
             </aside>
             <main class="col-md-9 col-lg-10 ps-md-5">
+                <section id="renovacao-da-frota" class="py-4">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                        <h2>Renovação da Frota</h2>
+                    </div>
+                    <div class="row">
+                        {% if grafico_aquisicoes_onibus_novos_por_ano %}
+                        <div class="grafico">
+                            {{ grafico_aquisicoes_onibus_novos_por_ano|safe }}
+                        </div>
+                        <div>
+                            <a href="{% url 'exportar_csv' 'fdo_stco_veiculos_novos_por_ano' %}" class="btn btn-outline-success btn-sm">
+                                <i class="fas fa-download"></i> Exportar Dados (CSV)
+                            </a>
+                        </div>
+                        {% else %}
+                        <div class="alert alert-warning">
+                            Nenhum dado disponível de grafico_aquisicoes_onibus_novos_por_ano.
+                        </div>
+                        {% endif %}
+                    </div>
+                </section>
                 <section id="climatizacao-da-frota" class="py-4">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-                        <h1>Climatização da Frota</h1>
+                        <h2>Climatização da Frota</h2>
                     </div>
                     <div class="row">
                         {% if grafico_climatizacao_frota_total %}
@@ -91,9 +133,12 @@
                         </a>
                     </div>
                 </section>
-                <section id="metro" class="py-4">
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                <section id="passageiros-metro" class="py-4">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-2 pb-2">
                         <h1>Metrô</h1>
+                    </div>
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                        <h2>Passageiros</h2>
                     </div>
                     <div class="row">
                         {% if grafico_metro_pax_transportados_por_ano %}
@@ -119,8 +164,11 @@
                     </div>
                 </section>
                 <section id="seguranca-publica" class="py-4">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-2 pb-2">
+                        <h1>Indicadores</h1>
+                    </div>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-                        <h1>Segurança Pública e Mobilidade</h1>
+                        <h2>Segurança Pública e Mobilidade</h2>
                     </div>
                     <div class="row">
                         {% if grafico_assaltos_por_viagem %}

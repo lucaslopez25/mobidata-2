@@ -148,30 +148,30 @@ def frota_de_onibus_stco(request):
     else:
         grafico_frota_operante = None
 
-    ###################### veiculos_novos_adquiridos_por_ano
+    # ###################### veiculos_novos_adquiridos_por_ano
 
-    grafico_veiculos_novos_ano = None
-    veiculos_novos_ano = VeiculosNovosAdquiridosPorAno.objects.all().order_by('ano')
+    # grafico_veiculos_novos_ano = None
+    # veiculos_novos_ano = VeiculosNovosAdquiridosPorAno.objects.all().order_by('ano')
 
-    if veiculos_novos_ano.exists():
-        df_veiculos_novos_ano = pandas.DataFrame(list(veiculos_novos_ano.values('ano', 'veiculos')))
+    # if veiculos_novos_ano.exists():
+    #     df_veiculos_novos_ano = pandas.DataFrame(list(veiculos_novos_ano.values('ano', 'veiculos')))
 
-        grafico_veiculos_novos_ano = plotxp.bar(
-            df_veiculos_novos_ano,
-            x='ano',
-            y='veiculos',
-            title='Veículos novos adquiridos por ano',
-            labels={
-                'ano': 'Ano',
-                'veiculos': 'Quantidade de Veículos Novos',
-            },
-        )
-        grafico_veiculos_novos_ano.update_layout(
-            xaxis=dict(tickmode='array', tickvals=df_veiculos_novos_ano['ano']),
-            xaxis_title='Ano', 
-            yaxis_title='Quantidade'
-        )
-        grafico_veiculos_novos_ano = grafico_veiculos_novos_ano.to_html(full_html=False)
+    #     grafico_veiculos_novos_ano = plotxp.bar(
+    #         df_veiculos_novos_ano,
+    #         x='ano',
+    #         y='veiculos',
+    #         title='Veículos novos adquiridos por ano',
+    #         labels={
+    #             'ano': 'Ano',
+    #             'veiculos': 'Quantidade de Veículos Novos',
+    #         },
+    #     )
+    #     grafico_veiculos_novos_ano.update_layout(
+    #         xaxis=dict(tickmode='array', tickvals=df_veiculos_novos_ano['ano']),
+    #         xaxis_title='Ano', 
+    #         yaxis_title='Quantidade'
+    #     )
+    #     grafico_veiculos_novos_ano = grafico_veiculos_novos_ano.to_html(full_html=False)
 
     ###################### ComparativoFrotaStco
 
@@ -221,13 +221,12 @@ def frota_de_onibus_stco(request):
     ###################### RENDER
 
     return render(request, 'stco/frota-stco-geral.html', {
-        'titulo_da_pagina': titulo_da_pagina,
         'grafico_historico': grafico_historico,
         'grafico_aquisicoes_novos': grafico_aquisicoes_novos,
         'grafico_aquisicoes_usados': grafico_aquisicoes_usados,
         'grafico_frota_total': grafico_frota_total,
         'grafico_frota_operante': grafico_frota_operante,
-        'grafico_veiculos_novos_ano': grafico_veiculos_novos_ano,
+        # 'grafico_veiculos_novos_ano': grafico_veiculos_novos_ano,
 
         'grafico_comparativo_frota': grafico_comparativo_frota,
     })

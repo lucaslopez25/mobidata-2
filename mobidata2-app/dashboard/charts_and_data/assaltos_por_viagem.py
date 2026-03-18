@@ -1,8 +1,4 @@
-from django.shortcuts import render
-from django.template import loader
-from django.http import HttpResponse
-
-from dashboard.models import *
+from dashboard.models import IndiceAssaltosPorViagem
 
 import pandas # type: ignore
 import plotly.express as plotxp # type: ignore

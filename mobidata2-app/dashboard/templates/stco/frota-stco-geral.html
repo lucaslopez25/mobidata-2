@@ -3,7 +3,6 @@
 {% block content %}
 <main>  
     <div class="container">
-        {% include 'toolbar.html' %}
         <div class="row">
             {% if grafico_historico %}
                 <div class="grafico">
@@ -20,7 +19,7 @@
                 </div>
             {% endif %}
         </div>
-        <div class="row">
+        <!-- <div class="row">
             {% if grafico_veiculos_novos_ano %}
                 <div class="grafico">
                     {{ grafico_veiculos_novos_ano|safe }}
@@ -35,7 +34,7 @@
                     Nenhum dado disponível de Veículos Novos Adquiridos por Ano.
                 </div>
             {% endif %}
-        </div> 
+        </div>  -->
         <div class="row">
             {% if grafico_aquisicoes_novos %}
                 <div class="grafico">
