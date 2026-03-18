@@ -1,17 +1,9 @@
-from django.shortcuts import render
-from django.template import loader
-from django.http import HttpResponse
-from plotly.subplots import make_subplots
-
-from dashboard.models import *
-from . import gerar_grafico_linhas_simples_por_ano_mes, gerar_lista_de_anos_disponiveis_distinct
+from dashboard.models import DemandaPaxStec
 
 import pandas # type: ignore
 import plotly.express as plotxp # type: ignore
-import plotly.graph_objects as plotgo
 
-def dados_operacionais_stec(request):
-    titulo_da_pagina = "Dados Operacionais (STEC)"
+def get_demanda_pax_stec():
 
     ###################### DemandaPaxStec
 
@@ -35,7 +27,7 @@ def dados_operacionais_stec(request):
             'pax_equivalente': 'Passageiros Equivalentes'
         })
 
-        grafico_demanda_pax_stec = plotxp.line(
+        grafico = plotxp.line(
             df_stec_melted,
             x='ano_mes',
             y='quantidade',
@@ -45,21 +37,14 @@ def dados_operacionais_stec(request):
             labels={'ano_mes': 'Período', 'quantidade': 'Nº de Passageiros', 'tipo_passageiro': 'Tipo'}
         )
 
-        grafico_demanda_pax_stec.update_layout(
+        grafico.update_layout(
             xaxis_title='Ano-Mês',
             yaxis_title='Quantidade de Passageiros',
             hovermode="x unified",
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
         )
         
-        grafico_demanda_pax_stec = grafico_demanda_pax_stec.to_html(full_html=False)
     else:
-        grafico_demanda_pax_stec = None
+        grafico = None
 
-    ###################### Render
-
-    return render(request, 'stec/dados-operacionais.html', {
-        'titulo_da_pagina': titulo_da_pagina,
-
-        'grafico_demanda_pax_stec': grafico_demanda_pax_stec,
-    })
+    return grafico

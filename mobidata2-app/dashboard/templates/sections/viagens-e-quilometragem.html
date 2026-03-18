@@ -1,0 +1,30 @@
+<section id="viagens-e-quilometragem" class="py-4">
+
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+        <h2>Oferta de Viagens e Quilometragem</h2>
+    </div>
+
+    <div class="row">
+        {% if grafico_historico_km_percorridos %}
+        <div class="grafico">
+            {{ grafico_historico_km_percorridos|safe }}
+            <p style="font-size: small; margin-bottom: 0;">
+                <b>OBS.:</b> Valores arredondados
+            </p>
+            <p style="font-size: small; margin-bottom: 0;">
+                <b>OBS.:</b> BRT incluido a partir de Setembro/2022
+            </p>
+        </div>
+        <div>
+            <a href="{% url 'exportar_csv' 'dop_quilometragem' %}" class="btn btn-outline-success btn-sm">
+                <i class="fas fa-download"></i> Exportar Dados (CSV)
+            </a>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_historico_km_percorridos.
+        </div>
+        {% endif %}
+    </div>
+
+</section>

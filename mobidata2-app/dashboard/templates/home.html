@@ -9,7 +9,7 @@
 
     <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
 
-    <title>Mobidata 2.0</title>
+    <title>Painel MobidataSSA</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -25,12 +25,30 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#sidebar-nav" data-bs-offset="140">
-    <nav class="navbar navbar-expand-lg sticky-top"
-        style="background-color: #E6D4B9; box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3);">
-        <div class="container-xxl flex-wrap flex-lg-nowrap">
-            <a class="navbar-brand" href="{% url 'home' %}">
-                <img class="logo-navbar d-inline-block align-top" src="{% static 'img/logo-mobidata2-horizontal.png' %}">
-            </a>
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #E6D4B9; box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3);">
+        <div class="container-xxl">
+        
+            <div class="d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img class="logo-navbar d-inline-block align-top" src="{% static 'img/logo-mobidata2-horizontal.png' %}"
+                        alt="Mobidata">
+                </a>
+            </div>
+        
+            <div class="d-flex align-items-center gap-3">
+                <a href="https://www.obmobsalvador.org/" target="_blank" class="text-decoration-none">
+                    <img src="{% static 'img/logo-obmob-sm.png' %}" alt="Observatório da Mobilidade de Salvador"
+                        style="height: 30px; width: auto; transition: transform 0.2s;">
+                </a>
+        
+                <div class="vr d-none d-sm-block" style="height: 20px; opacity: 0.2;"></div>
+        
+                <a href="https://github.com/lucaslopez25/mobidata-2" target="_blank" class="text-decoration-none">
+                    <img src="{% static 'img/logo-github-sm.png' %}" alt="Repositório aberto do projeto"
+                        style="height: 30px; width: auto; transition: transform 0.2s;">
+                </a>
+            </div>
+        
         </div>
     </nav>
 
@@ -47,8 +65,9 @@
                         <li class="nav-item">
                             <a class="nav-link py-1 ps-4" href="#renovacao-da-frota">Idade e Renovação da Frota</a>
                             <a class="nav-link py-1 ps-4" href="#tamanho-da-frota">Tamanho da Frota</a>
-                            <a class="nav-link py-1 ps-4" href="#oferta-onibus">Oferta de Linhas e Ônibus</a>
-                            <a class="nav-link py-1 ps-4" href="#passageiros">Passageiros</a>
+                            <a class="nav-link py-1 ps-4" href="#oferta-de-onibus">Oferta de Linhas e Ônibus</a>
+                            <a class="nav-link py-1 ps-4" href="#passageiros-stco">Passageiros</a>
+                            <a class="nav-link py-1 ps-4" href="#viagens-e-quilometragem">Oferta de Viagens e Quilometragem</a>
                             <a class="nav-link py-1 ps-4" href="#climatizacao-da-frota">Climatização da Frota</a>
                         </li>
                         <li class="nav-item mt-3 mb-1">
@@ -58,6 +77,14 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link py-1 ps-4" href="#passageiros-metro">Passageiros</a>
+                        </li>
+                        <li class="nav-item mt-3 mb-1">
+                            <span class="text-uppercase fw-bold text-muted" style="font-size: 0.75rem; padding: 0 1rem;">
+                                STEC
+                            </span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-1 ps-4" href="#passageiros-stec">Passageiros</a>
                         </li>
                         <li class="nav-item mt-3 mb-1">
                             <span class="text-uppercase fw-bold text-muted" style="font-size: 0.75rem; padding: 0 1rem;">
@@ -72,295 +99,35 @@
             </aside>
             <main class="col-md-9 col-lg-10 ps-md-5">
 
-                <section id="renovacao-da-frota" class="py-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                    <h1>Ônibus Municipal</h1>
+                </div>
 
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-                        <h2>Idade e Renovação da Frota</h2>
-                    </div>
+                {% include 'sections/renovacao-da-frota.html' %}
+                {% include 'sections/tamanho-da-frota.html' %}
+                {% include 'sections/oferta-de-onibus.html' %}
+                {% include 'sections/passageiros-stco.html' %}
+                {% include 'sections/viagens-e-quilometragem.html' %}
+                {% include 'sections/climatizacao-da-frota.html' %}
 
-                    <div class="row">
-                        {% if grafico_historico_idade_media_da_frota %}
-                        <div class="grafico">
-                            {{ grafico_historico_idade_media_da_frota|safe }}
-                        </div>
-                        <div>
-                            <a href="{% url 'exportar_csv' 'fdo_stco_idade_media_frota' %}" class="btn btn-outline-success btn-sm">
-                                <i class="fas fa-download"></i> Exportar Dados (CSV)
-                            </a>
-                        </div>
-                        {% else %}
-                        <div class="alert alert-warning">
-                            Nenhum dado disponível de grafico_historico_idade_media_da_frota.
-                        </div>
-                        {% endif %}
-                    </div>
-                    <div class="row">
-                        {% if grafico_aquisicoes_onibus_novos_por_ano %}
-                        <div class="grafico">
-                            {{ grafico_aquisicoes_onibus_novos_por_ano|safe }}
-                        </div>
-                        <div>
-                            <a href="{% url 'exportar_csv' 'fdo_stco_veiculos_novos_por_ano' %}" class="btn btn-outline-success btn-sm">
-                                <i class="fas fa-download"></i> Exportar Dados (CSV)
-                            </a>
-                        </div>
-                        {% else %}
-                        <div class="alert alert-warning">
-                            Nenhum dado disponível de grafico_aquisicoes_onibus_novos_por_ano.
-                        </div>
-                        {% endif %}
-                    </div>
-                    <div class="row">
-                        {% if grafico_aquisicoes_onibus_novos_por_mes %}
-                        <div class="grafico">
-                            {{ grafico_aquisicoes_onibus_novos_por_mes|safe }}
-                        </div>
-                        <div>
-                            <a href="{% url 'exportar_csv' 'fdo_stco_aquisicoes_onibus_por_mes' %}" class="btn btn-outline-success btn-sm">
-                                <i class="fas fa-download"></i> Exportar Dados (CSV)
-                            </a>
-                        </div>
-                        {% else %}
-                        <div class="alert alert-warning">
-                            Nenhum dado disponível de grafico_aquisicoes_onibus_novos_por_mes.
-                        </div>
-                        {% endif %}
-                    </div>
-                    <div class="row">
-                        {% if grafico_aquisicoes_onibus_usados_por_mes %}
-                        <div class="grafico">
-                            {{ grafico_aquisicoes_onibus_usados_por_mes|safe }}
-                        </div>
-                        <div>
-                            <a href="{% url 'exportar_csv' 'fdo_stco_aquisicoes_onibus_por_mes' %}" class="btn btn-outline-success btn-sm">
-                                <i class="fas fa-download"></i> Exportar Dados (CSV)
-                            </a>
-                        </div>
-                        {% else %}
-                        <div class="alert alert-warning">
-                            Nenhum dado disponível de grafico_aquisicoes_onibus_usados_por_mes.
-                        </div>
-                        {% endif %}
-                    </div>
-                </section>
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-2 pb-2">
+                    <h1>Metrô</h1>
+                </div>
 
-                <section id="tamanho-da-frota" class="py-4">
+                {% include 'sections/passageiros-metro.html' %}
 
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-                        <h2>Tamanho da Frota</h2>
-                    </div>
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-2 pb-2">
+                    <h1>STEC</h1>
+                </div>
 
-                    <div class="row">
-                        {% if grafico_comparativo_frota_operante_frota_total %}
-                        <div class="grafico">
-                            {{ grafico_comparativo_frota_operante_frota_total|safe }}
-                            <p style="font-size: small; margin-bottom: 0;">
-                                <b>OBS.:</b> Frota Operante indica <b>a média</b> dos ônibus que estão circulando nas ruas <b>nos dias úteis</b>. (Ver item 2.1.17 no Anuário de Transportes Urbanos de Salvador de 2024)
-                            </p>
-                            <p style="font-size: small; margin-bottom: 0;">
-                                <b>OBS.:</b> Frota Total indica todos os ônibus cadastrados pelos Consórcios Operadores na SEMOB (Secretaria Municipal de Mobilidade de Salvador)
-                            </p>
-                        </div>
-                        <div>
-                            <a href="{% url 'exportar_csv' 'fdo_comparativo_frota_stco' %}" class="btn btn-outline-success btn-sm">
-                                <i class="fas fa-download"></i> Exportar Dados (CSV)
-                            </a>
-                        </div>
-                        {% else %}
-                        <div class="alert alert-warning">
-                            Nenhum dado disponível de grafico_comparativo_frota_operante_frota_total.
-                        </div>
-                        {% endif %}
-                    </div>
-                    <div class="row">
-                        {% if grafico_frota_operante %}
-                        <div class="grafico">
-                            {{ grafico_frota_operante|safe }}
-                            <p style="font-size: small; margin-bottom: 0;">
-                                <b>OBS.:</b> Frota Operante indica <b>a média</b> dos ônibus que estão circulando nas ruas <b>nos dias úteis</b>. (Ver item 2.1.17 no Anuário de Transportes Urbanos de Salvador 2024)
-                            </p>
-                        </div>
-                        <div>
-                            <a href="{% url 'exportar_csv' 'fdo_stco_frota_operante' %}" class="btn btn-outline-success btn-sm">
-                                <i class="fas fa-download"></i> Exportar Dados (CSV)
-                            </a>
-                        </div>
-                        {% else %}
-                        <div class="alert alert-warning">
-                            Nenhum dado disponível de Frota Operante de Ônibus.
-                        </div>
-                        {% endif %}
-                    </div>
-                    <div class="row">
-                        {% if grafico_frota_total %}
-                        <div class="grafico">
-                            {{ grafico_frota_total|safe }}
-                            <p style="font-size: small; margin-bottom: 0;">
-                                <b>OBS.:</b> Frota Total indica todos os ônibus cadastrados pelos Consórcios Operadores na SEMOB (Secretaria Municipal de Mobilidade de Salvador)
-                            </p>
-                            <p style="font-size: small; margin-bottom: 0;">
-                                <b>OBS.:</b> No Anuário de Transportes Urbanos de Salvador de 2021 não houve separação da frota total por Consórcio Operador.
-                            </p>
-                        </div>
-                        <div>
-                            <a href="{% url 'exportar_csv' 'fdo_stco_frota_total' %}" class="btn btn-outline-success btn-sm">
-                                <i class="fas fa-download"></i> Exportar Dados (CSV)
-                            </a>
-                        </div>
-                        {% else %}
-                        <div class="alert alert-warning">
-                            Nenhum dado disponível de Frota Total de Ônibus.
-                        </div>
-                        {% endif %}
-                    </div>
-                </section>
+                {% include 'sections/passageiros-stec.html' %}
 
-                <section id="oferta-onibus" class="py-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-2 pb-2">
+                    <h1>Indicadores</h1>
+                </div>
 
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-                        <h2>Oferta de Linhas e Ônibus</h2>
-                    </div>
+                {% include 'sections/seguranca-publica.html' %}
 
-                    <div class="row">
-                        {% if grafico_historico_linhas_regulares %}
-                            <div class="grafico">
-                                {{ grafico_historico_linhas_regulares|safe }}
-                                <p style="font-size: small; margin-bottom: 0;">
-                                    <b>OBS.:</b> A partir do Anuário de Transportes Urbanos de Salvador de 2020, não há mais dados separados por mês, é feito um apanhado correspondente a média anual (representado no mês de dezembro para os anos 2021-2024), exceto para o ano de 2020, no qual o apanhado foi referente ao mês de janeiro
-                                </p>
-                                <p style="font-size: small; margin-bottom: 0;">
-                                    <b>OBS.:</b> A partir do Anuário de Transportes Urbanos de Salvador de 2023, o total de linhas não inclui as linhas
-                                    correspondentes ao sistema BRT, que é tratado de forma separada no(s) documento(s)
-                                </p>
-                                <p style="font-size: small; margin-bottom: 0;">
-                                    <b>OBS.:</b> Dados de 2017 estão em falta
-                                </p>
-                                <div>
-                                    <a href="{% url 'exportar_csv' 'dop_historico_de_linhas' %}" class="btn btn-outline-success btn-sm">
-                                        <i class="fas fa-download"></i> Exportar Dados (CSV)
-                                    </a>
-                                </div>
-                            </div>
-                        {% else %}
-                            <div class="alert alert-warning">
-                                Nenhum dado disponível de Demanda Total e Integrações por Mês.
-                            </div>
-                        {% endif %}
-                    </div>
-
-                </section>
-
-                <section id="climatizacao-da-frota" class="py-4">
-
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-                        <h2>Climatização da Frota</h2>
-                    </div>
-
-                    <div class="row">
-                        {% if grafico_climatizacao_frota_total %}
-                        <div class="grafico">
-                            {{ grafico_climatizacao_frota_total|safe }}
-                        </div>
-                        {% else %}
-                        <div class="alert alert-warning">
-                            Nenhum dado disponível de grafico_climatizacao_frota_total.
-                        </div>
-                        {% endif %}
-                    </div>
-                    <div class="row">
-                        {% if grafico_climatizacao_frota_por_consorcio %}
-                        <div class="grafico">
-                            {{ grafico_climatizacao_frota_por_consorcio|safe }}
-                        </div>
-                        {% else %}
-                        <div class="alert alert-warning">
-                            Nenhum dado disponível de grafico_climatizacao_frota_por_consorcio.
-                        </div>
-                        {% endif %}
-                    </div>
-                    <p style="font-size: small; margin-bottom: 0;">
-                        COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/24 (PG 27 ANUARIO 2024) VS. FROTA COM AR (PG 46 ANUARIO
-                        2024)<br>
-                        COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/23 (PG 28 ANUARIO 2023) VS. FROTA COM AR (PG 47 ANUARIO
-                        2023)<br>
-                        COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/22 (PG 25 ANUARIO 2022) VS. FROTA COM AR (PG 36 ANUARIO
-                        2022)<br>
-                        COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/21 (PG 21 ANUARIO 2021) VS. FROTA COM AR (PG 32 ANUARIO
-                        2021)<br>
-                    </p>
-                    <div>
-                        <a href="{% url 'exportar_csv' 'fdo_stco_ar_condicionado_frota' %}" class="btn btn-outline-success btn-sm">
-                            <i class="fas fa-download"></i> Exportar Dados (CSV)
-                        </a>
-                    </div>
-                </section>
-                <section id="passageiros-metro" class="py-4">
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-2 pb-2">
-                        <h1>Metrô</h1>
-                    </div>
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-                        <h2>Passageiros</h2>
-                    </div>
-                    <div class="row">
-                        {% if grafico_metro_pax_transportados_por_ano %}
-                            <div class="grafico">
-                                {{ grafico_metro_pax_transportados_por_ano|safe }}
-                            </div>
-                        {% else %}
-                        <div class="alert alert-warning">
-                            Nenhum dado disponível de grafico_metro_pax_transportados_por_ano.
-                        </div>
-                        {% endif %}
-                    </div>
-                    <div>
-                        <a href="{% url 'exportar_csv' 'metro_pax_transportados_ano' %}" class="btn btn-outline-success btn-sm">
-                            <i class="fas fa-download"></i> Exportar Dados (CSV)
-                        </a>
-                    </div>
-                    <div class="row">
-                        {% if grafico_metro_pax_transportados_por_mes %}
-                            <div class="grafico">
-                                {{ grafico_metro_pax_transportados_por_mes|safe }}
-                            </div>
-                        {% else %}
-                        <div class="alert alert-warning">
-                            Nenhum dado disponível de grafico_metro_pax_transportados_por_mes.
-                        </div>
-                        {% endif %}
-                    </div>
-                    <div>
-                        <a href="{% url 'exportar_csv' 'metro_pax_transportados_mes' %}" class="btn btn-outline-success btn-sm">
-                            <i class="fas fa-download"></i> Exportar Dados (CSV)
-                        </a>
-                    </div>
-                </section>
-                <section id="seguranca-publica" class="py-4">
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-2 pb-2">
-                        <h1>Indicadores</h1>
-                    </div>
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-                        <h2>Segurança Pública e Mobilidade</h2>
-                    </div>
-                    <div class="row">
-                        {% if grafico_assaltos_por_viagem %}
-                            <div class="grafico">
-                                {{ grafico_assaltos_por_viagem|safe }}
-                            </div>
-                            <p style="font-size: small; margin-bottom: 0;">
-                                <b>ÍNDICE DE ASSALTOS POR VIAGEM:</b> Indicador cujo objetivo é fazer a relação entre o nº de assaltos ocorridos e as viagens realizadas (1000 viagens/mês), no transporte coletivo por ônibus urbano durante o mês.<br>
-                            </p>
-                            <div>
-                                <a href="{% url 'exportar_csv' 'indicador_indice_de_assaltos' %}" class="btn btn-outline-success btn-sm">
-                                    <i class="fas fa-download"></i> Exportar Dados (CSV)
-                                </a>
-                            </div>
-                        {% else %}
-                            <div class="alert alert-warning">
-                                Nenhum dado disponível de grafico_assaltos_por_viagem.
-                            </div>
-                        {% endif %}
-                    </div>
-                </section>
             </main>
         </div>
     </div>
@@ -368,7 +135,7 @@
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top"
         style="background-color: #E6D4B9;">
         <div class="col-md-4 d-flex align-items-center" style="padding-left: 30px;">
-            <span class="mb-3 mb-md-0 text-body-secondary">Mobidata 2.0 2025-2026</span>
+            <span class="mb-3 mb-md-0 text-body-secondary">Mobidata 2.0 | 2025-2026</span>
             <img style="height: 15px; margin-left: 5px;" src="{% static 'img/Bandeira_de_Salvador.png' %}">
             <img style="height: 15px; margin-left: 2px;" src="{% static 'img/Bandeira_da_Bahia.png' %}">
             <img style="height: 15px; margin-left: 2px;" src="{% static 'img/Flag_of_Brazil.png' %}">
@@ -376,11 +143,11 @@
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
             <li class="ms-3">
                 <img style="height: 50px; padding-right: 30px;"
-                    src="{% static 'img/logo-obmob.png' %}">
+                    src="{% static 'img/MARCA_IFBA_HORIZONTAL_completa_CMYK_IFBA.png' %}">
             </li>
             <li class="ms-3">
                 <img style="height: 50px; padding-right: 30px;"
-                    src="{% static 'img/MARCA_IFBA_HORIZONTAL_completa_CMYK_IFBA.png' %}">
+                    src="{% static 'img/logo-obmob.png' %}">
             </li>
         </ul>
 

@@ -1,0 +1,28 @@
+<section id="seguranca-publica" class="py-4">
+
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+        <h2>Segurança Pública e Mobilidade</h2>
+    </div>
+
+    <div class="row">
+        {% if grafico_assaltos_por_viagem %}
+        <div class="grafico">
+            {{ grafico_assaltos_por_viagem|safe }}
+        </div>
+        <p style="font-size: small; margin-bottom: 0;">
+            <b>OBS.:</b> Indicador cujo objetivo é fazer a relação entre o nº de assaltos ocorridos e as viagens
+            realizadas (1000 viagens/mês), no transporte coletivo por ônibus urbano durante o mês.<br>
+        </p>
+        <div>
+            <a href="{% url 'exportar_csv' 'indicador_indice_de_assaltos' %}" class="btn btn-outline-success btn-sm">
+                <i class="fas fa-download"></i> Exportar Dados (CSV)
+            </a>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_assaltos_por_viagem.
+        </div>
+        {% endif %}
+    </div>
+
+</section>

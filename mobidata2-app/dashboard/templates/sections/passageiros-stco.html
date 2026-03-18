@@ -1,0 +1,57 @@
+<section id="passageiros-stco" class="py-4">
+
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+        <h2>Passageiros</h2>
+    </div>
+
+    <div class="row">
+        {% if grafico_historico_pax_transportados %}
+        <div class="grafico">
+            {{ grafico_historico_pax_transportados|safe }}
+        </div>
+        <div>
+            <a href="{% url 'exportar_csv' 'dop_passageiros' %}" class="btn btn-outline-success btn-sm">
+                <i class="fas fa-download"></i> Exportar Dados (CSV)
+            </a>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_historico_pax_transportados.
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="row">
+        {% if grafico_demanda_pax_pagamento %}
+        <div class="grafico">
+            {{ grafico_demanda_pax_pagamento|safe }}
+            <p style="font-size: small; margin-bottom: 0;">
+                <b>OBS.:</b> Gratuidade controlada por cartão
+            </p>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_demanda_pax_pagamento.
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="row">
+        {% if grafico_demanda_pax_integracao %}
+        <div class="grafico">
+            {{ grafico_demanda_pax_integracao|safe }}
+            <div>
+                <br>
+                <a href="{% url 'exportar_csv' 'dop_demanda_pax_pagamento' %}" class="btn btn-outline-success btn-sm">
+                    <i class="fas fa-download"></i> Exportar Dados (CSV)
+                </a>
+            </div>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_demanda_pax_integracao.
+        </div>
+        {% endif %}
+    </div>
+
+</section>

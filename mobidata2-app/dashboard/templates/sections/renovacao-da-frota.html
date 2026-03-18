@@ -1,0 +1,77 @@
+<section id="renovacao-da-frota" class="py-4">
+
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+        <h2>Idade e Renovação da Frota</h2>
+    </div>
+
+    <div class="row">
+        {% if grafico_historico_idade_media_da_frota %}
+        <div class="grafico">
+            {{ grafico_historico_idade_media_da_frota|safe }}
+        </div>
+        <div>
+            <a href="{% url 'exportar_csv' 'fdo_stco_idade_media_frota' %}" class="btn btn-outline-success btn-sm">
+                <i class="fas fa-download"></i> Exportar Dados (CSV)
+            </a>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_historico_idade_media_da_frota.
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="row">
+        {% if grafico_aquisicoes_onibus_novos_por_ano %}
+        <div class="grafico">
+            {{ grafico_aquisicoes_onibus_novos_por_ano|safe }}
+        </div>
+        <div>
+            <a href="{% url 'exportar_csv' 'fdo_stco_veiculos_novos_por_ano' %}" class="btn btn-outline-success btn-sm">
+                <i class="fas fa-download"></i> Exportar Dados (CSV)
+            </a>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_aquisicoes_onibus_novos_por_ano.
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="row">
+        {% if grafico_aquisicoes_onibus_novos_por_mes %}
+        <div class="grafico">
+            {{ grafico_aquisicoes_onibus_novos_por_mes|safe }}
+        </div>
+        <div>
+            <a href="{% url 'exportar_csv' 'fdo_stco_aquisicoes_onibus_por_mes' %}"
+                class="btn btn-outline-success btn-sm">
+                <i class="fas fa-download"></i> Exportar Dados (CSV)
+            </a>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_aquisicoes_onibus_novos_por_mes.
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="row">
+        {% if grafico_aquisicoes_onibus_usados_por_mes %}
+        <div class="grafico">
+            {{ grafico_aquisicoes_onibus_usados_por_mes|safe }}
+        </div>
+        <div>
+            <a href="{% url 'exportar_csv' 'fdo_stco_aquisicoes_onibus_por_mes' %}"
+                class="btn btn-outline-success btn-sm">
+                <i class="fas fa-download"></i> Exportar Dados (CSV)
+            </a>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_aquisicoes_onibus_usados_por_mes.
+        </div>
+        {% endif %}
+    </div>
+
+</section>

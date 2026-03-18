@@ -1,0 +1,78 @@
+<section id="tamanho-da-frota" class="py-4">
+
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+        <h2>Tamanho da Frota</h2>
+    </div>
+
+    <div class="row">
+        {% if grafico_comparativo_frota_operante_frota_total %}
+        <div class="grafico">
+            {{ grafico_comparativo_frota_operante_frota_total|safe }}
+            <p style="font-size: small; margin-bottom: 0;">
+                <b>OBS.:</b> Frota Operante indica <b>a média</b> dos ônibus que estão circulando nas ruas <b>nos dias
+                    úteis</b>. (Ver item 2.1.17 no Anuário de Transportes Urbanos de Salvador de 2024)
+            </p>
+            <p style="font-size: small; margin-bottom: 0;">
+                <b>OBS.:</b> Frota Total indica todos os ônibus cadastrados pelos Consórcios Operadores na SEMOB
+                (Secretaria Municipal de Mobilidade de Salvador)
+            </p>
+        </div>
+        <div>
+            <a href="{% url 'exportar_csv' 'fdo_comparativo_frota_stco' %}" class="btn btn-outline-success btn-sm">
+                <i class="fas fa-download"></i> Exportar Dados (CSV)
+            </a>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_comparativo_frota_operante_frota_total.
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="row">
+        {% if grafico_frota_operante %}
+        <div class="grafico">
+            {{ grafico_frota_operante|safe }}
+            <p style="font-size: small; margin-bottom: 0;">
+                <b>OBS.:</b> Frota Operante indica <b>a média</b> dos ônibus que estão circulando nas ruas <b>nos dias
+                    úteis</b>. (Ver item 2.1.17 no Anuário de Transportes Urbanos de Salvador 2024)
+            </p>
+        </div>
+        <div>
+            <a href="{% url 'exportar_csv' 'fdo_stco_frota_operante' %}" class="btn btn-outline-success btn-sm">
+                <i class="fas fa-download"></i> Exportar Dados (CSV)
+            </a>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de Frota Operante de Ônibus.
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="row">
+        {% if grafico_frota_total %}
+        <div class="grafico">
+            {{ grafico_frota_total|safe }}
+            <p style="font-size: small; margin-bottom: 0;">
+                <b>OBS.:</b> Frota Total indica todos os ônibus cadastrados pelos Consórcios Operadores na SEMOB
+                (Secretaria Municipal de Mobilidade de Salvador)
+            </p>
+            <p style="font-size: small; margin-bottom: 0;">
+                <b>OBS.:</b> No Anuário de Transportes Urbanos de Salvador de 2021 não houve separação da frota total
+                por Consórcio Operador.
+            </p>
+        </div>
+        <div>
+            <a href="{% url 'exportar_csv' 'fdo_stco_frota_total' %}" class="btn btn-outline-success btn-sm">
+                <i class="fas fa-download"></i> Exportar Dados (CSV)
+            </a>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de Frota Total de Ônibus.
+        </div>
+        {% endif %}
+    </div>
+
+</section>

@@ -1,0 +1,54 @@
+<section id="oferta-de-onibus" class="py-4">
+
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+        <h2>Oferta de Linhas e Ônibus</h2>
+    </div>
+
+    <div class="row">
+        {% if grafico_historico_linhas_regulares %}
+        <div class="grafico">
+            {{ grafico_historico_linhas_regulares|safe }}
+            <p style="font-size: small; margin-bottom: 0;">
+                <b>OBS.:</b> A partir do Anuário de Transportes Urbanos de Salvador de 2020, não há mais dados separados
+                por mês, é feito um apanhado correspondente a média anual (representado no mês de dezembro para os anos
+                2021-2024), exceto para o ano de 2020, no qual o apanhado foi referente ao mês de janeiro
+            </p>
+            <p style="font-size: small; margin-bottom: 0;">
+                <b>OBS.:</b> A partir do Anuário de Transportes Urbanos de Salvador de 2023, o total de linhas não
+                inclui as linhas
+                correspondentes ao sistema BRT, que é tratado de forma separada no(s) documento(s)
+            </p>
+            <p style="font-size: small; margin-bottom: 0;">
+                <b>OBS.:</b> Dados de 2017 estão em falta
+            </p>
+            <div>
+                <a href="{% url 'exportar_csv' 'dop_historico_de_linhas' %}" class="btn btn-outline-success btn-sm">
+                    <i class="fas fa-download"></i> Exportar Dados (CSV)
+                </a>
+            </div>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_historico_linhas_regulares.
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="row">
+        {% if grafico_comparativo_corredores_de_onibus %}
+        <div class="grafico">
+            {{ grafico_comparativo_corredores_de_onibus|safe }}
+        </div>
+        <div>
+            <a href="{% url 'exportar_csv' 'dop_corredores' %}" class="btn btn-outline-success btn-sm">
+                <i class="fas fa-download"></i> Exportar Dados (CSV)
+            </a>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_comparativo_corredores_de_onibus.
+        </div>
+        {% endif %}
+    </div>
+
+</section>

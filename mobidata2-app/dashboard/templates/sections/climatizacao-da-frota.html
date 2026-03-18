@@ -1,0 +1,45 @@
+<section id="climatizacao-da-frota" class="py-4">
+
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+        <h2>Climatização da Frota</h2>
+    </div>
+
+    <div class="row">
+        {% if grafico_climatizacao_frota_total %}
+        <div class="grafico">
+            {{ grafico_climatizacao_frota_total|safe }}
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_climatizacao_frota_total.
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="row">
+        {% if grafico_climatizacao_frota_por_consorcio %}
+        <div class="grafico">
+            {{ grafico_climatizacao_frota_por_consorcio|safe }}
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_climatizacao_frota_por_consorcio.
+        </div>
+        {% endif %}
+    </div>
+    <p style="font-size: small; margin-bottom: 0;">
+        COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/24 (PG 27 ANUARIO 2024) VS. FROTA COM AR (PG 46 ANUARIO
+        2024)<br>
+        COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/23 (PG 28 ANUARIO 2023) VS. FROTA COM AR (PG 47 ANUARIO
+        2023)<br>
+        COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/22 (PG 25 ANUARIO 2022) VS. FROTA COM AR (PG 36 ANUARIO
+        2022)<br>
+        COMPARAÇÃO USANDO VALORES DA FROTA TOTAL dez/21 (PG 21 ANUARIO 2021) VS. FROTA COM AR (PG 32 ANUARIO
+        2021)<br>
+    </p>
+    <div>
+        <a href="{% url 'exportar_csv' 'fdo_stco_ar_condicionado_frota' %}" class="btn btn-outline-success btn-sm">
+            <i class="fas fa-download"></i> Exportar Dados (CSV)
+        </a>
+    </div>
+</section>

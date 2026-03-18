@@ -1,0 +1,29 @@
+<section id="passageiros-stec" class="py-4">
+
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+        <h2>Passageiros</h2>
+    </div>
+
+    <div class="row">
+        {% if grafico_demanda_pax_stec %}
+        <div class="grafico">
+            {{ grafico_demanda_pax_stec|safe }}
+        </div>
+        <p style="font-size: small; margin-bottom: 0;">
+            <b>OBS.:</b> PASSAGEIROS EQUIVALENTES – Somatório dos passageiros transportados com a ponderação
+            correspondente às tarifas dos diferentes serviços, descontos ou à isenção de pagamento, em relação à tarifa
+            predominante.
+        </p>
+        <div>
+            <a href="{% url 'exportar_csv' 'dopstec_demanda_pax_stec' %}" class="btn btn-outline-success btn-sm">
+                <i class="fas fa-download"></i> Exportar Dados (CSV)
+            </a>
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de Demanda de Passageiros do STEC.
+        </div>
+        {% endif %}
+    </div>
+
+</section>

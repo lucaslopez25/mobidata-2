@@ -1,0 +1,43 @@
+<section id="passageiros-metro" class="py-4">
+
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+        <h2>Passageiros</h2>
+    </div>
+
+    <div class="row">
+        {% if grafico_metro_pax_transportados_por_ano %}
+        <div class="grafico">
+            {{ grafico_metro_pax_transportados_por_ano|safe }}
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_metro_pax_transportados_por_ano.
+        </div>
+        {% endif %}
+    </div>
+
+    <div>
+        <a href="{% url 'exportar_csv' 'metro_pax_transportados_ano' %}" class="btn btn-outline-success btn-sm">
+            <i class="fas fa-download"></i> Exportar Dados (CSV)
+        </a>
+    </div>
+
+    <div class="row">
+        {% if grafico_metro_pax_transportados_por_mes %}
+        <div class="grafico">
+            {{ grafico_metro_pax_transportados_por_mes|safe }}
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_metro_pax_transportados_por_mes.
+        </div>
+        {% endif %}
+    </div>
+
+    <div>
+        <a href="{% url 'exportar_csv' 'metro_pax_transportados_mes' %}" class="btn btn-outline-success btn-sm">
+            <i class="fas fa-download"></i> Exportar Dados (CSV)
+        </a>
+    </div>
+
+</section>
