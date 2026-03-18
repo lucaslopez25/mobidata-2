@@ -88,6 +88,16 @@ AVAILABLE_MODELS_FOR_EXPORT = {
         'filename': 'indice_de_assaltos.csv',
         'fields': ['ano', 'mes', 'indice'],
     },
+    'metro_pax_transportados_ano': {
+        'model': HistoricoPassageirosTransportadosMetroAno,
+        'filename': 'passageiros_metro_ano.csv',
+        'fields': ['ano', 'passageiros'],
+    },
+    'metro_pax_transportados_mes': {
+        'model': HistoricoPassageirosTransportadosMetroMes,
+        'filename': 'passageiros_metro_mes.csv',
+        'fields': ['ano', 'mes', 'passageiros'],
+    },
 }
 
 def exportar_dados_csv(request, tipo):

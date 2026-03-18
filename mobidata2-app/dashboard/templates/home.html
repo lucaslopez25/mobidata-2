@@ -151,6 +151,11 @@
                         </div>
                         {% endif %}
                     </div>
+                    <div>
+                        <a href="{% url 'exportar_csv' 'metro_pax_transportados_ano' %}" class="btn btn-outline-success btn-sm">
+                            <i class="fas fa-download"></i> Exportar Dados (CSV)
+                        </a>
+                    </div>
                     <div class="row">
                         {% if grafico_metro_pax_transportados_por_mes %}
                             <div class="grafico">
@@ -161,6 +166,11 @@
                             Nenhum dado disponível de grafico_metro_pax_transportados_por_mes.
                         </div>
                         {% endif %}
+                    </div>
+                    <div>
+                        <a href="{% url 'exportar_csv' 'metro_pax_transportados_mes' %}" class="btn btn-outline-success btn-sm">
+                            <i class="fas fa-download"></i> Exportar Dados (CSV)
+                        </a>
                     </div>
                 </section>
                 <section id="seguranca-publica" class="py-4">
