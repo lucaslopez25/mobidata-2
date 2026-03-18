@@ -8,51 +8,57 @@
     <div class="row">
         <div class="col text-center">
             <div class="card">
-                <h1 class="card-title" style="padding-top: 16px;">650</h1>
+                <h1 class="card-title">650</h1>
                 <p class="texto-pequeno-bicis">Bicicletas de aluguel (TemBici/BikeItaú)</p>
             </div>
         </div>
         <div class="col text-center">
             <div class="card">
-                <h1 class="card-title" style="padding-top: 16px;">62</h1>
+                <h1 class="card-title">62</h1>
                 <p class="texto-pequeno-bicis">Estações de aluguel (TemBici/BikeItaú)</p>
             </div>
         </div>
         <div class="col text-center">
             <div class="card">
-                <h1 class="card-title" style="padding-top: 16px;">300km</h1>
+                <h1 class="card-title">300km</h1>
                 <p class="texto-pequeno-bicis">Ciclovias/Ciclofaixas/Ciclorrotas</p>
             </div>
         </div>
     </div>
 
-    <div class="container" style="padding-bottom: 20px;">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-            <h1>Bicicletas em Salvador</h1>
-        </div>
-
-        
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+        <h3>Estações de aluguel de bicicletas em Salvador</h3>
     </div>
 
-    <div class="container">
-        <h3>Estações de aluguel de bicicletas em Salvador</h3>
-        <br>
+    <div class="row">
         <div id="map1" style="width: 100%; height: 600px;"></div>
-        <p>
+        <p style="font-size: small; margin-bottom: 0;">
             De acordo com os metadados do arquivo, esse mapa data de Março de 2024. Porém, o 
             <a href="https://www.google.com/maps/d/u/0/viewer?hl=pt-BR&mid=16PEDi5VRNlQcA09xIJ7PiMKV3NOcQAw&ll=-12.997963999999996%2C-38.4483816&z=13">mapa personalizado do Google Maps</a>
             que serve de fonte indica que a última atualização foi feita em 06 de Maio de 2025. <br>
-            De onde foi extraído esse mapa? <a href="https://salvadorvaidebike.salvador.ba.gov.br/">Clique aqui</a>.
+            De onde foi extraído esse mapa? <a href="https://salvadorvaidebike.salvador.ba.gov.br/">Clique aqui</a>
         </p>
     </div>
 
-    <div class="container">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+        <h3>Mapa Cicloviário de Salvador</h3>
+    </div>
+
+    <div class="row">
+        <iframe src="https://ciclomapa.org.br/?lat=-12.9822000&lng=-38.4813000&z=12.00" title="Mapa Cicloviário de Salvador" width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <p style="font-size: small; margin-bottom: 0;">
+            Fonte: <a href="https://ciclomapa.app/">Plataforma CICLOMAPA</a> - União de Ciclistas do Brasil (UCB) e
+            Instituto de Políticas de Transporte e Desenvolvimento (ITDP) Brasil
+        </p>
+    </div>
+
+    <!-- <div class="container">
         <h3>Ciclovias, ciclofaixas e ciclorrotas em Salvador</h3>
         <br>
         <div id="map2" style="width: 100%; height: 600px;"></div>
-    </div>
+    </div> -->
 
-    <div class="container">
+    <!-- <div class="container">
         <h3>Infraestrutura Cicloviária (Transalvador + Movimento Salvador Vai de Bike)</h3>
         <br>
         <div id="map3" style="width: 100%; height: 600px;"></div>
@@ -60,7 +66,7 @@
             Sistema Cicloviário; Estações Bike Salvador; Bicicletários - Publicado em 26 de Janeiro de 2019 por TRANSALVADOR e Movimento Salvador Vai de Bike (MSVB). Veja a 
             <a href="https://transonline.salvador.ba.gov.br/conteudo/index.php/ciclovia/listarCiclovias#">fonte</a>.
         </p>
-    </div>
+    </div> -->
 
     <script src="{% static 'js/bicis_map.js' %}"></script>
 
