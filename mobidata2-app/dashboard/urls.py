@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     path('landing', views.landing, name='landing'),
-    path('stco/frota_de_onibus', views.frota_de_onibus_stco, name='stco_frota_de_onibus'),
+    # path('stco/frota_de_onibus', views.frota_de_onibus_stco, name='stco_frota_de_onibus'),
     # path('stec/frota_de_onibus', views.frota_de_onibus_stec, name='stec_frota_de_onibus'),
     # path('stco/climatizacao_frota', views.climatizacao_frota, name='stco_climatizacao_frota'),
     path('dados_taxis', views.dados_taxis, name='dados_taxis'),

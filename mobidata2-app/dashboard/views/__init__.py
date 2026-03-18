@@ -4,7 +4,7 @@ from ..geradores_de_graficos import *
 
 from .dados_operacionais_stco import dados_operacionais_stco
 from .dados_operacionais_stec import dados_operacionais_stec
-from .frota_de_onibus_stco import frota_de_onibus_stco
+# from .frota_de_onibus_stco import frota_de_onibus_stco
 
 from .dados_taxis import dados_taxis
 # from .dados_metro import dados_metro
