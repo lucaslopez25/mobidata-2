@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="https://painel.mobidatassa.cloud/static/img/favicon.png" type="image/png">
+    <title>MobidataSSA</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #E6D4B9;
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .card-link:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            background-color: #FFF9EF;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center g-4">
+            
+            <div class="col-md-5 col-lg-4">
+                <a href="http://live.mobidatassa.cloud/" class="card-link d-block">
+                    <div class="card shadow-sm h-100">
+                        <div class="icon-box"><img class="img-fluid" src="https://painel.mobidatassa.cloud/static/img/logo-mobidata2-vertical-desambiguacao-azul.png"></div>
+                        <h2 class="h4 fw-bold">Ir para Mobidata Live</h2>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-5 col-lg-4">
+                <a href="http://painel.mobidatassa.cloud/" class="card-link d-block">
+                    <div class="card shadow-sm h-100">
+                        <div class="icon-box"><img class="img-fluid" src="https://painel.mobidatassa.cloud/static/img/logo-mobidata2-vertical-desambiguacao-laranja.png"></div>
+                        <h2 class="h4 fw-bold">Ir para Painel Mobidata</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
