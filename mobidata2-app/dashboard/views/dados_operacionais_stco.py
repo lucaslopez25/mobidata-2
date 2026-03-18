@@ -179,37 +179,6 @@ def dados_operacionais_stco(request):
         )
         grafico_demanda_integracao.update_layout(xaxis_title='Ano-Mês', yaxis_title='Demanda Total')
         grafico_demanda_integracao = grafico_demanda_integracao.to_html(full_html=False)
-    
-    ###################### HistoricoLinhasRegulares
-
-    historico_linhas_regulares = HistoricoLinhasRegulares.objects.all().order_by('ano', 'mes')
-
-    if historico_linhas_regulares.exists():
-        df_linhas = pandas.DataFrame(list(historico_linhas_regulares.values('ano', 'mes', 'qtd_linhas')))
-        
-        df_linhas['mes_str'] = df_linhas['mes'].apply(lambda x: f"{x:02d}")
-        df_linhas['ano_mes'] = df_linhas['ano'].astype(str) + '-' + df_linhas['mes_str']
-
-        grafico_historico_linhas_regulares = plotxp.line(
-            df_linhas, 
-            x='ano_mes', 
-            y='qtd_linhas', 
-            markers=True, 
-            title='Histórico da Quantidade de Linhas Regulares',
-            labels={
-                'ano_mes': 'Ano-Mês',
-                'qtd_linhas': 'Quantidade de Linhas'
-            }
-        )
-        
-        grafico_historico_linhas_regulares.update_layout(
-            xaxis_title='Período (Ano-Mês)',
-            yaxis_title='Qtd. de Linhas',
-            hovermode="x unified"
-        )
-        grafico_historico_linhas_regulares = grafico_historico_linhas_regulares.to_html(full_html=False)
-    else:
-        grafico_historico_linhas_regulares = None
 
     ###################### Render
 
@@ -223,5 +192,5 @@ def dados_operacionais_stco(request):
         'grafico_demanda_pagamento': grafico_demanda_pagamento,
         'grafico_demanda_integracao': grafico_demanda_integracao,
 
-        'grafico_historico_linhas_regulares': grafico_historico_linhas_regulares,
+        # 'grafico_historico_linhas_regulares': grafico_historico_linhas_regulares,
     })

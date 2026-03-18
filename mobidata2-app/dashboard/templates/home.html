@@ -71,10 +71,13 @@
                 </nav>
             </aside>
             <main class="col-md-9 col-lg-10 ps-md-5">
+
                 <section id="renovacao-da-frota" class="py-4">
+
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-                        <h2>Renovação da Frota</h2>
+                        <h2>Idade e Renovação da Frota</h2>
                     </div>
+
                     <div class="row">
                         {% if grafico_historico_idade_media_da_frota %}
                         <div class="grafico">
@@ -140,16 +143,19 @@
                         {% endif %}
                     </div>
                 </section>
+
                 <section id="tamanho-da-frota" class="py-4">
+
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
                         <h2>Tamanho da Frota</h2>
                     </div>
+
                     <div class="row">
                         {% if grafico_comparativo_frota_operante_frota_total %}
                         <div class="grafico">
                             {{ grafico_comparativo_frota_operante_frota_total|safe }}
                             <p style="font-size: small; margin-bottom: 0;">
-                                <b>OBS.:</b> Frota Operante indica <b>a média</b> dos ônibus que estão circulando nas ruas <b>nos dias úteis</b>. (Ver item 2.1.17 no Anuário de Transportes Urbanos de Salvador 2024)
+                                <b>OBS.:</b> Frota Operante indica <b>a média</b> dos ônibus que estão circulando nas ruas <b>nos dias úteis</b>. (Ver item 2.1.17 no Anuário de Transportes Urbanos de Salvador de 2024)
                             </p>
                             <p style="font-size: small; margin-bottom: 0;">
                                 <b>OBS.:</b> Frota Total indica todos os ônibus cadastrados pelos Consórcios Operadores na SEMOB (Secretaria Municipal de Mobilidade de Salvador)
@@ -208,10 +214,48 @@
                         {% endif %}
                     </div>
                 </section>
+
+                <section id="oferta-onibus" class="py-4">
+
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                        <h2>Oferta de Linhas e Ônibus</h2>
+                    </div>
+
+                    <div class="row">
+                        {% if grafico_historico_linhas_regulares %}
+                            <div class="grafico">
+                                {{ grafico_historico_linhas_regulares|safe }}
+                                <p style="font-size: small; margin-bottom: 0;">
+                                    <b>OBS.:</b> A partir do Anuário de Transportes Urbanos de Salvador de 2020, não há mais dados separados por mês, é feito um apanhado correspondente a média anual (representado no mês de dezembro para os anos 2021-2024), exceto para o ano de 2020, no qual o apanhado foi referente ao mês de janeiro
+                                </p>
+                                <p style="font-size: small; margin-bottom: 0;">
+                                    <b>OBS.:</b> A partir do Anuário de Transportes Urbanos de Salvador de 2023, o total de linhas não inclui as linhas
+                                    correspondentes ao sistema BRT, que é tratado de forma separada no(s) documento(s)
+                                </p>
+                                <p style="font-size: small; margin-bottom: 0;">
+                                    <b>OBS.:</b> Dados de 2017 estão em falta
+                                </p>
+                                <div>
+                                    <a href="{% url 'exportar_csv' 'dop_historico_de_linhas' %}" class="btn btn-outline-success btn-sm">
+                                        <i class="fas fa-download"></i> Exportar Dados (CSV)
+                                    </a>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="alert alert-warning">
+                                Nenhum dado disponível de Demanda Total e Integrações por Mês.
+                            </div>
+                        {% endif %}
+                    </div>
+
+                </section>
+
                 <section id="climatizacao-da-frota" class="py-4">
+
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
                         <h2>Climatização da Frota</h2>
                     </div>
+
                     <div class="row">
                         {% if grafico_climatizacao_frota_total %}
                         <div class="grafico">

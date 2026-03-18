@@ -1,5 +1,5 @@
 ### Ônibus Municipal
-# Renovação da Frota
+# Idade e Renovação da Frota
 from .historico_idade_media_da_frota import get_historico_idade_media_da_frota
 from .aquisicoes_onibus_novos_por_ano import get_grafico_aquisicoes_onibus_novos_por_ano
 from .aquisicoes_onibus_novos_por_mes import get_aquisicoes_onibus_novos_por_mes
@@ -8,6 +8,8 @@ from .aquisicoes_onibus_usados_por_mes import get_aquisicoes_onibus_usados_por_m
 from .comparativo_frota_operante_frota_total import get_comparativo_frota_operante_frota_total
 from .frota_operante import get_frota_operante
 from .frota_total import get_frota_total
+# Oferta de Linhas e Ônibus
+from .historico_linhas_regulares import get_historico_linhas_regulares
 # Climatização da Frota
 from .climatizacao_frota_total import get_climatizacao_frota_total
 from .climatizacao_frota_por_consorcio import get_climatizacao_frota_por_consorcio
