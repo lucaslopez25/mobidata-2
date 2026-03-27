@@ -23,7 +23,7 @@ def get_historico_km_percorridos():
     
     fig.update_layout(
         xaxis_title='Período (Ano-Mês)', 
-        yaxis_title='Quilômetros (kms)',
+        yaxis_title='Milhões de quilômetros (kms)',
         template='plotly_white'
     )
     
