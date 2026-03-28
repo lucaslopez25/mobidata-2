@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS historico_linhas_regulares(
     id SERIAL PRIMARY KEY,
     ano INTEGER,
     mes INTEGER,
-    qtd_linhas FLOAT
+    qtd_linhas INTEGER
 );
 
 INSERT INTO historico_linhas_regulares(ano, mes, qtd_linhas) VALUES
