@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-RESULTFILENAME = "tudo.sql"
+RESULTFILENAME = "zz_tudo.sql"
 
 def generate_unifile():
     filelist = []
