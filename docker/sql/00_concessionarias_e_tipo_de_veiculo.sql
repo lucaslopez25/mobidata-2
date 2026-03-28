@@ -1,3 +1,5 @@
+-- Porque esse arquivo existe? O unificador precisa colocar essas tabelas primeiro para orientar as demais tabelas.
+
 CREATE TABLE IF NOT EXISTS concessionarias(
     id_concessionaria VARCHAR(10) PRIMARY KEY,
     nome_concessionaria VARCHAR(60),
