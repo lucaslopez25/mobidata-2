@@ -1,0 +1,27 @@
+<section id="receitas-e-custos" class="py-4">
+
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+        <h2>Receitas e Custos</h2>
+    </div>
+
+    <div class="row">
+        {% if grafico_receitas_por_concessionaria %}
+        <div class="grafico">
+            {{ grafico_receitas_por_concessionaria|safe }}
+            <p style="font-size: small; margin-bottom: 0;">
+                <b>OBS.:</b> Gráfico teste, possibilidade de haver comportamentos inesperados
+            </p>
+        </div>
+        <!-- <div>
+            <a href="{% url 'exportar_csv' 'dop_quilometragem' %}" class="btn btn-outline-success btn-sm">
+                <i class="fas fa-download"></i> Exportar Dados (CSV)
+            </a>
+        </div> -->
+        {% else %}
+        <div class="alert alert-warning">
+            Nenhum dado disponível de grafico_receitas_por_concessionaria.
+        </div>
+        {% endif %}
+    </div>
+
+</section>

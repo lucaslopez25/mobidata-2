@@ -26,6 +26,9 @@ from .historico_km_percorridos import get_historico_km_percorridos
 from .climatizacao_frota_total import get_climatizacao_frota_total
 from .climatizacao_frota_por_consorcio import get_climatizacao_frota_por_consorcio
 
+# Receitas e Custos
+from .receitas_por_concessionaria import get_receitas_por_concessionaria
+
 ### Metrô
 # Passageiros
 from .metro_pax_transportados_por_ano import get_metro_pax_transportados_por_ano

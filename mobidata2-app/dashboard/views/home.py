@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from dashboard.charts_and_data import climatizacao_frota_total, climatizacao_frota_por_consorcio, assaltos_por_viagem, metro_pax_transportados_por_ano, metro_pax_transportados_por_mes, aquisicoes_onibus_novos_por_ano, aquisicoes_onibus_novos_por_mes, aquisicoes_onibus_usados_por_mes, historico_idade_media_da_frota, comparativo_frota_operante_frota_total, frota_operante, frota_total, historico_linhas_regulares, comparativo_corredores_de_onibus, demanda_pax_stec, demanda_pax_pagamento, demanda_pax_integracao, historico_pax_transportados, historico_km_percorridos
+from dashboard.charts_and_data import climatizacao_frota_total, climatizacao_frota_por_consorcio, assaltos_por_viagem, metro_pax_transportados_por_ano, metro_pax_transportados_por_mes, aquisicoes_onibus_novos_por_ano, aquisicoes_onibus_novos_por_mes, aquisicoes_onibus_usados_por_mes, historico_idade_media_da_frota, comparativo_frota_operante_frota_total, frota_operante, frota_total, historico_linhas_regulares, comparativo_corredores_de_onibus, demanda_pax_stec, demanda_pax_pagamento, demanda_pax_integracao, historico_pax_transportados, historico_km_percorridos, receitas_por_concessionaria
 
 def home(request):
 
@@ -36,6 +36,9 @@ def home(request):
         # Climatização da Frota
         'grafico_climatizacao_frota_total': climatizacao_frota_total.get_climatizacao_frota_total().to_html(full_html=False, include_plotlyjs='cdn'),
         'grafico_climatizacao_frota_por_consorcio': climatizacao_frota_por_consorcio.get_climatizacao_frota_por_consorcio().to_html(full_html=False, include_plotlyjs='cdn'),
+
+        # Receitas e Custos
+        'grafico_receitas_por_concessionaria': receitas_por_concessionaria.get_receitas_por_concessionaria(),
 
         ### Metrô
         # Passageiros 
