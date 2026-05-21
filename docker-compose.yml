@@ -39,7 +39,8 @@ services:
             DB_USER: mobidatauser
             DB_PASSWORD: k1llC4r5
         depends_on:
-            - mobidata-postgres
+            mobidata-postgres:
+                condition: service_healthy
 
     pgadmin-mobidata:
         image: dpage/pgadmin4
