@@ -17,6 +17,11 @@ services:
         # Porta exposta no localhost do usuário é 25432
         ports:
             - "25432:5432"
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U mobidatauser -d dados_mobilidade"]
+            interval: 5s
+            timeout: 5s
+            retries: 5
         
     mobidata-app:
         container_name: mobidata_app
