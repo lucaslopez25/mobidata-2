@@ -1,22 +1,19 @@
 # version: '3.9' OBSOLETO
 
-services:
-    # Base de dados Postgres
-    mobidata-postgres:
+services: 
+    mobidata-postgres: # Base de dados Postgres
         container_name: mobidata_postgres
         build:
             context: .
-            dockerfile: ./docker/mobidata-postgres/Dockerfile
-        # Pasta de persistência do banco no container docker é mobidata-db-postgres
+            dockerfile: ./docker/mobidata-postgres/Dockerfile # Pasta de persistência do banco no container docker é mobidata-db-postgres
         volumes:
             - mobidata-db-postgres:/var/lib/postgresql/data
         environment:
             POSTGRES_PASSWORD: k1llC4r5
             POSTGRES_USER: mobidatauser
             POSTGRES_DB: postgres
-        # Porta exposta no localhost do usuário é 25432
         ports:
-            - "25432:5432"
+            - "25432:5432" # Porta exposta no localhost do usuário é 25432
         healthcheck:
             test: ["CMD-SHELL", "pg_isready -U mobidatauser -d dados_mobilidade"]
             interval: 5s
@@ -25,16 +22,14 @@ services:
         
     mobidata-app:
         container_name: mobidata_app
-        # Quando você ver "build: .", isso significa que estamos importando o Dockerfile localizado na mesma pasta que o docker-compose
-        build: 
+        build: # Quando você ver "build: .", isso significa que estamos importando o Dockerfile localizado na mesma pasta que o docker-compose
             context: .
             dockerfile: ./docker/mobidata-django/Dockerfile
-        # Porta exposta do django no localhost do usuário é 28000, evitando de conflitar com a porta 8000, mas é possível configurar outras portas no lugar dela :)
         ports:
-            - "28000:8000" 
-        # Pasta de persistência mobidata-app é homônima ao app (não precisa ser homônimo mas estamos tentando manter as coisas aqui um pouco higiênicas)
+            - "28000:8000" # Porta exposta do django no localhost do usuário é 28000, evitando de conflitar com a porta 8000, mas é possível configurar outras portas no lugar dela :)
         volumes:
-            - ./mobidata2-app:/app
+            - ./mobidata2-app:/app # Pasta de persistência mobidata-app é homônima ao app (não precisa ser homônimo mas estamos tentando manter as coisas aqui um pouco higiênicas)
+            - ./sql:/sql:ro # RO significa read-only. O container não poderá mudar os arquivos SQL.
         command: >
             sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
         environment:
@@ -43,6 +38,7 @@ services:
             DB_NAME_2: dados_mobilidade
             DB_USER: mobidatauser
             DB_PASSWORD: k1llC4r5
+            SQL_DIR: /sql # Variável para facilitar a referência dos arquivos SQL do projeto
         depends_on:
             mobidata-postgres:
                 condition: service_healthy
