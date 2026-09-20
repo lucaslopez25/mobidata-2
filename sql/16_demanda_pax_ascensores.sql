@@ -6,6 +6,8 @@ CREATE TABLE IF NOT EXISTS demanda_pax_ascensores (
     qtd_pax INTEGER,
 );
 
+TRUNCATE TABLE demanda_pax_ascensores RESTART IDENTITY CASCADE;
+
 INSERT INTO demanda_pax_ascensores (id_ascensor_urbano, mes, ano, qtd_pax) VALUES
 -- ANO 2024
 -- Elevador Lacerda (LCRD)
@@ -72,4 +74,5 @@ INSERT INTO demanda_pax_ascensores (id_ascensor_urbano, mes, ano, qtd_pax) VALUE
 ('pilr', 9, 2024, 9409),
 ('pilr', 10, 2024, 8880),
 ('pilr', 11, 2024, 4560),
-('pilr', 12, 2024, 9576);
+('pilr', 12, 2024, 9576)
+ON CONFLICT DO NOTHING;
