@@ -24,6 +24,7 @@ INSERT INTO concessionarias(id_concessionaria, nome_concessionaria, endereco_gar
 ('STEC', 'STEC', 'n/a', 'n/a', 'n/a'),
 ('STCO', 'TOTAL - SISTEMA DE TRANSPORTE COLETIVO POR ÔNIBUS', 'n/a', 'n/a', 'n/a'),
 ('TOTL', 'TOTAL - STCO, BRT E STEC', 'n/a', 'n/a', 'n/a')
+
 ON CONFLICT (id_concessionaria)
 DO UPDATE SET
     nome_concessionaria = EXCLUDED.nome_concessionaria,
