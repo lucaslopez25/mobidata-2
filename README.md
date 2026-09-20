@@ -22,15 +22,31 @@ O **Mobidata** é uma plataforma de dados abertos para análise histórica da mo
 - **Banco de Dados**: PostgreSQL, pgAdmin 4.
 - **Infraestrutura**: Docker & Docker Compose.
 
+## Pré-requisitos
+
+- [Docker](https://docs.docker.com/get-docker/) e Docker Compose
+- [Git](https://git-scm.com/)
+- GNU Make (`make`) — em Windows, use WSL ou Git Bash com `make` instalado
+
 ## Como Executar
+
+### Primeira vez
 
 - No terminal:
 
-```
+```bash
 git clone https://github.com/lucaslopez25/mobidata-2
 cd mobidata-2
 docker compose up -d
+docker compose ps
+make load-data
 ```
+
+- Acessos:
+
+Portal: localhost:28000
+pgAdmin: localhost:25050
+Host PostgreSQL: localhost:25432
 
 ## Utilidades
 
@@ -38,7 +54,6 @@ docker compose up -d
 ```
 make load-data
 ```
-
 
 - Para exportar dependências
 
@@ -51,3 +66,11 @@ docker exec -it mobidata_app pip freeze > requirements.txt
 ```
 docker exec -it mobidata_app bash
 ```
+## Banco de Dados
+
+O projeto usa dois bancos de dados separados logicamente no PostgreSQL, postgres e dados_mobilidade. O roteamento é feito em mobidata2project/database-router.py.
+Todas as alterações do schema são feitas via SQL pois o próprio Django não cria nem altera esse schema, ficando apenas com privilégios de leitura e escrita (rw).
+
+## Dados (RAW)
+
+Os dados em script SQL puro estão disponíveis em /sql
