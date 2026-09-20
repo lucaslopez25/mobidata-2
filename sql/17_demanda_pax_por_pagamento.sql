@@ -9,6 +9,8 @@ CREATE TABLE IF NOT EXISTS demanda_pax_por_pagamento (
     demanda_int_brt BIGINT
 );
 
+TRUNCATE TABLE demanda_pax_por_pagamento RESTART IDENTITY CASCADE;
+
 INSERT INTO demanda_pax_por_pagamento(ano, mes, tipo_pagamento, demanda, demanda_int_metro, demanda_int_stec, demanda_int_brt) VALUES
 -- Dados de VALE-TRANSPORTE - 2024 (REVISADO)
 (2024, 1, 'VALE-TRANSPORTE', 6616634, 3077066, 192102, 71173),
@@ -78,10 +80,8 @@ INSERT INTO demanda_pax_por_pagamento(ano, mes, tipo_pagamento, demanda, demanda
 (2024, 9, 'GRATUIDADE', 3574698, NULL, NULL, NULL),
 (2024, 10, 'GRATUIDADE', 3706404, NULL, NULL, NULL),
 (2024, 11, 'GRATUIDADE', 3399409, NULL, NULL, NULL),
-(2024, 12, 'GRATUIDADE', 3559575, NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+(2024, 12, 'GRATUIDADE', 3559575, NULL, NULL, NULL),
 
-INSERT INTO demanda_pax_por_pagamento(ano, mes, tipo_pagamento, demanda, demanda_int_metro, demanda_int_stec, demanda_int_brt) VALUES
 -- Dados de VALE-TRANSPORTE - 2023 (REVISADO)
 (2023, 1, 'VALE-TRANSPORTE', 6993981, 2696794, 204445, NULL),
 (2023, 2, 'VALE-TRANSPORTE', 6944495, 2323122, 183266, NULL),
@@ -151,10 +151,9 @@ INSERT INTO demanda_pax_por_pagamento(ano, mes, tipo_pagamento, demanda, demanda
 (2023, 9, 'GRATUIDADE', 3249597, NULL, NULL, NULL),
 (2023, 10, 'GRATUIDADE', 3423725, NULL, NULL, NULL),
 (2023, 11, 'GRATUIDADE', 3368243, NULL, NULL, NULL),
-(2023, 12, 'GRATUIDADE', 3282262, NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+(2023, 12, 'GRATUIDADE', 3282262, NULL, NULL, NULL),
 
-INSERT INTO demanda_pax_por_pagamento(ano, mes, tipo_pagamento, demanda, demanda_int_metro, demanda_int_stec, demanda_int_brt) VALUES
+-- 2022
 (2022, 1, 'VALE-TRANSPORTE', 6202539, 2201713, 195901, NULL),
 (2022, 2, 'VALE-TRANSPORTE', 6211039, 2182145, 190896, NULL),
 (2022, 3, 'VALE-TRANSPORTE', 7009333, 2530498, 212844, NULL),
@@ -218,10 +217,8 @@ INSERT INTO demanda_pax_por_pagamento(ano, mes, tipo_pagamento, demanda, demanda
 (2022, 9, 'GRATUIDADE', 2924592, NULL, NULL, NULL),
 (2022, 10, 'GRATUIDADE', 2819594, NULL, NULL, NULL),
 (2022, 11, 'GRATUIDADE', 2784358, NULL, NULL, NULL),
-(2022, 12, 'GRATUIDADE', 2903696, NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+(2022, 12, 'GRATUIDADE', 2903696, NULL, NULL, NULL),
 
-INSERT INTO demanda_pax_por_pagamento (ano, mes, tipo_pagamento, demanda, demanda_int_metro, demanda_int_stec, demanda_int_brt) VALUES
 --PG 19 ANUARIO 2021
 (2021, 1, 'VALE-TRANSPORTE', 5962748, 1859147, NULL, NULL),
 (2021, 2, 'VALE-TRANSPORTE', 5668130, 1838813, NULL, NULL),
@@ -286,10 +283,8 @@ INSERT INTO demanda_pax_por_pagamento (ano, mes, tipo_pagamento, demanda, demand
 (2021, 9, 'GRATUIDADE', 2428875, NULL, NULL, NULL),
 (2021, 10, 'GRATUIDADE', 2477286, NULL, NULL, NULL),
 (2021, 11, 'GRATUIDADE', 2502163, NULL, NULL, NULL),
-(2021, 12, 'GRATUIDADE', 2499048, NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+(2021, 12, 'GRATUIDADE', 2499048, NULL, NULL, NULL),
 
-INSERT INTO demanda_pax_por_pagamento (ano, mes, tipo_pagamento, demanda, demanda_int_metro, demanda_int_stec, demanda_int_brt) VALUES
 --PG 16 ANUARIO 2020
 (2020, 1, 'VALE-TRANSPORTE', 8124462, 2482110, NULL, NULL),
 (2020, 2, 'VALE-TRANSPORTE', 7455897, 2223006, NULL, NULL),
