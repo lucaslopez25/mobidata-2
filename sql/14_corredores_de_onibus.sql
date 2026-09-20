@@ -7,6 +7,8 @@ CREATE TABLE IF NOT EXISTS corredores_de_onibus(
     ano INTEGER
 );
 
+TRUNCATE TABLE corredores_de_onibus RESTART IDENTITY CASCADE;
+
 INSERT INTO corredores_de_onibus(nome_corredor, qtd_onibus_por_hora, extensao_em_kms, qtd_linhas_convencionais, ano) VALUES
 ('BR - 324', 51, 21.39, 12, 2024),
 ('AV. ALIOMAR BALEEIRO', 44, 19.04, 12, 2024),
@@ -150,10 +152,8 @@ INSERT INTO corredores_de_onibus(nome_corredor, qtd_onibus_por_hora, extensao_em
 ('AV. CARDEAL DA SILVA', 32, 2.17, 11, 2019),
 ('AV. SETE DE SETEMBRO', 49, 2.10, 14, 2019),
 ('AV. JOANA ANGÉLICA', 33, 1.38, 5, 2019),
-('RUA CARLOS GOMES', 98, 1.11, 30, 2019)
-ON CONFLICT DO NOTHING;
+('RUA CARLOS GOMES', 98, 1.11, 30, 2019),
 
-INSERT INTO corredores_de_onibus(nome_corredor, qtd_onibus_por_hora, extensao_em_kms, qtd_linhas_convencionais, ano) VALUES
 ('BR - 324', 71, 21.39, 19, 2018),
 ('AV. ALIOMAR BALEEIRO', 61, 19.04, 17, 2018),
 ('AV. AFRÂNIO PEIXOTO', 163, 14.50, 48, 2018),
@@ -176,4 +176,5 @@ INSERT INTO corredores_de_onibus(nome_corredor, qtd_onibus_por_hora, extensao_em
 ('AV. CARDEAL DA SILVA', 35, 2.17, 11, 2018),
 ('AV. SETE DE SETEMBRO', 71, 2.10, 15, 2018),
 ('AV. JOANA ANGÉLICA', 30, 1.38, 6, 2018),
-('RUA CARLOS GOMES', 90, 1.11, 20, 2018);
+('RUA CARLOS GOMES', 90, 1.11, 20, 2018)
+ON CONFLICT DO NOTHING;
