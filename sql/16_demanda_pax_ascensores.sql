@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS demanda_pax_ascensores (
     id_ascensor_urbano VARCHAR(4) REFERENCES ascensores_urbanos(id),
     mes INTEGER,
     ano INTEGER,
-    qtd_pax INTEGER,
+    qtd_pax INTEGER
 );
 
 TRUNCATE TABLE demanda_pax_ascensores RESTART IDENTITY CASCADE;
