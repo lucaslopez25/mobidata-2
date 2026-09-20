@@ -27,7 +27,7 @@ O **Mobidata** é uma plataforma de dados abertos para análise histórica da mo
 - No terminal:
 
 ```
-git clone [https://github.com/lucaslopez25/mobidata-2](https://github.com/lucaslopez25/mobidata-2)
+git clone https://github.com/lucaslopez25/mobidata-2
 cd mobidata-2
 docker compose up -d
 ```
