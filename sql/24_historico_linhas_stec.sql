@@ -4,7 +4,10 @@ CREATE TABLE IF NOT EXISTS historico_linhas_stec(
     qtd_linhas FLOAT
 );
 
+TRUNCATE TABLE historico_linhas_stec RESTART IDENTITY CASCADE;
+
 INSERT INTO historico_linhas_stec(ano, qtd_linhas) VALUES
 -- ANUÁRIO 2024 PAGINA 98 DE 122
 -- NÃO INFORMA MÊS, TABELA SERÁ DISCRIMINADA APENAS POR ANO!
-(2024, 29);
+(2024, 29)
+ON CONFLICT DO NOTHING;

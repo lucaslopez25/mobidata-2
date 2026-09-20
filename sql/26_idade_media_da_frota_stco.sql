@@ -6,6 +6,8 @@ CREATE TABLE IF NOT EXISTS idade_media_da_frota(
     idade_media FLOAT
 );
 
+TRUNCATE TABLE historico_linhas_regulares RESTART IDENTITY CASCADE;
+
 INSERT INTO idade_media_da_frota(id_concessionaria, mes, ano, idade_media) VALUES
 -- SPE2 => OTTRANS
 ('SPE2', 1, 2022, 7.30),

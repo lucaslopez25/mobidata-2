@@ -6,6 +6,8 @@ CREATE TABLE IF NOT EXISTS historico_linhas_por_concessionaria(
     qtd_linhas INTEGER
 );
 
+TRUNCATE TABLE historico_linhas_por_concessionaria RESTART IDENTITY CASCADE;
+
 INSERT INTO historico_linhas_por_concessionaria(id_concessionaria, ano, mes, qtd_linhas) VALUES
 -- página 14 anuário 2024
 -- INCLUI LINHAS BRT
@@ -13,41 +15,36 @@ INSERT INTO historico_linhas_por_concessionaria(id_concessionaria, ano, mes, qtd
 -- levado dezembro em consideração
 ('SPE2', 2024, 12, 137), -- OT TRANS SPE2
 ('SPE3', 2024, 12, 96), -- PLATAFORMA SPE3
-('BRT1', 2024, 12, 4); -- BRT
+('BRT1', 2024, 12, 4), -- BRT
 
-INSERT INTO historico_linhas_por_concessionaria(id_concessionaria, ano, mes, qtd_linhas) VALUES
 -- página 16 anuário 2023
 -- INCLUI LINHAS BRT
 -- não aparece destacado por mês
 -- levado dezembro em consideração
 ('SPE2', 2023, 12, 121), -- OT TRANS SPE2
 ('SPE3', 2023, 12, 91), -- PLATAFORMA SPE3
-('BRT1', 2023, 12, 3); -- BRT
+('BRT1', 2023, 12, 3), -- BRT
 
-INSERT INTO historico_linhas_por_concessionaria(id_concessionaria, ano, mes, qtd_linhas) VALUES
 -- página 14 anuário 2022
 -- INCLUI LINHAS BRT
 -- não aparece destacado por mês
 -- levado dezembro em consideração
 ('SPE2', 2022, 12, 144), -- OT TRANS SPE2
 ('SPE3', 2022, 12, 109), -- PLATAFORMA SPE3
-('BRT1', 2022, 12, 1); -- BRT operação assistida em Setembro 22
+('BRT1', 2022, 12, 1), -- BRT operação assistida em Setembro 22
 
-INSERT INTO historico_linhas_por_concessionaria(id_concessionaria, ano, mes, qtd_linhas) VALUES
 -- página 12 anuário 2021
 -- não aparece destacado por mês
 -- levado dezembro em consideração
 ('SPE2', 2021, 12, 130), -- OT TRANS SPE2
-('SPE3', 2021, 12, 104); -- PLATAFORMA SPE3
+('SPE3', 2021, 12, 104), -- PLATAFORMA SPE3
 
-INSERT INTO historico_linhas_por_concessionaria(id_concessionaria, ano, mes, qtd_linhas) VALUES
 -- página 11 anuário 2020
 -- apenas aparece mês de janeiro
 ('SPE1', 2020, 1, 110), -- SALVADOR NORTE CSN SPE1
 ('SPE2', 2020, 1, 103), -- OT TRANS SPE2
-('SPE3', 2020, 1, 102); -- PLATAFORMA SPE3
+('SPE3', 2020, 1, 102), -- PLATAFORMA SPE3
 
-INSERT INTO historico_linhas_por_concessionaria(id_concessionaria, ano, mes, qtd_linhas) VALUES
 -- página 12 anuário 2019
 -- último anuário que teve qtd de linhas mês a mês
 
@@ -91,9 +88,8 @@ INSERT INTO historico_linhas_por_concessionaria(id_concessionaria, ano, mes, qtd
 ('SPE3', 2019, 9, 99),
 ('SPE3', 2019, 10, 99),
 ('SPE3', 2019, 11, 100),
-('SPE3', 2019, 12, 102);
+('SPE3', 2019, 12, 102),
 
-INSERT INTO historico_linhas_por_concessionaria(id_concessionaria, ano, mes, qtd_linhas) VALUES
 -- página 13 anuário 2018
 -- anuário possui qtd de linhas mês a mês
 
@@ -137,11 +133,10 @@ INSERT INTO historico_linhas_por_concessionaria(id_concessionaria, ano, mes, qtd
 ('SPE3', 2018, 9, 107),
 ('SPE3', 2018, 10, 101),
 ('SPE3', 2018, 11, 108),
-('SPE3', 2018, 12, 105);
+('SPE3', 2018, 12, 105),
 
 -- 2017 em falta ainda
 
-INSERT INTO historico_linhas_por_concessionaria(id_concessionaria, ano, mes, qtd_linhas) VALUES
 -- página 5 anuário 2016
 
 -- SALVADOR NORTE CSN SPE1
@@ -184,7 +179,8 @@ INSERT INTO historico_linhas_por_concessionaria(id_concessionaria, ano, mes, qtd
 ('SPE3', 2016, 9, 134),
 ('SPE3', 2016, 10, 133),
 ('SPE3', 2016, 11, 133),
-('SPE3', 2016, 12, 135);
+('SPE3', 2016, 12, 135)
+ON CONFLICT DO NOTHING;
 
 -- INSERT INTO historico_linhas_por_concessionaria(id_concessionaria, ano, mes, qtd_linhas) VALUES
 -- -- LINHAS EM POOL (COMPARTILHADAS) PARA O ANO DE 2016

@@ -5,6 +5,8 @@ CREATE TABLE IF NOT EXISTS veiculos_novos_adquiridos_por_ano (
     veiculos INTEGER
 );
 
+TRUNCATE TABLE veiculos_novos_adquiridos_por_ano RESTART IDENTITY CASCADE;
+
 INSERT INTO veiculos_novos_adquiridos_por_ano(ano, veiculos) VALUES
 (2001, 355),
 (2002, 304),

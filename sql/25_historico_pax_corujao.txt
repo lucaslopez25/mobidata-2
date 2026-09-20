@@ -5,6 +5,7 @@
 --     qtd_passageiros FLOAT
 -- );
 
+-- TRUNCATE TABLE historico_pax_corujao RESTART IDENTITY CASCADE;
 
 -- página 16 anuário 2016
 -- (2016, 1, ),
@@ -19,3 +20,5 @@
 -- (2016, 10, ),
 -- (2016, 11, ),
 -- (2016, 12, ),
+
+-- ON CONFLICT DO NOTHING;

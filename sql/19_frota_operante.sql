@@ -6,6 +6,8 @@ CREATE TABLE IF NOT EXISTS frota_operante(
     qtd_operante_de_onibus INTEGER
 );
 
+TRUNCATE TABLE frota_operante RESTART IDENTITY CASCADE;
+
 INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) VALUES
 -- SPE2 => OTTRANS
 ('SPE2', 1, 2024, 882),
@@ -32,10 +34,8 @@ INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) 
 ('SPE3', 9, 2024, 702),
 ('SPE3', 10, 2024, 703),
 ('SPE3', 11, 2024, 703),
-('SPE3', 12, 2024, 685)
-ON CONFLICT DO NOTHING;
+('SPE3', 12, 2024, 685),
 
-INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) VALUES
 -- SPE2 => OTTRANS
 ('SPE2', 1, 2023, 887),
 ('SPE2', 2, 2023, 892),
@@ -61,10 +61,8 @@ INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) 
 ('SPE3', 9, 2023, 709),
 ('SPE3', 10, 2023, 703),
 ('SPE3', 11, 2023, 702),
-('SPE3', 12, 2023, 690)
-ON CONFLICT DO NOTHING;
+('SPE3', 12, 2023, 690),
 
-INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) VALUES
 -- SPE2 => OTTRANS
 ('SPE2', 1, 2022, 884), -- Janeiro
 ('SPE2', 2, 2022, 934), -- Fevereiro
@@ -90,10 +88,8 @@ INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) 
 ('SPE3', 9, 2022, 709), -- Setembro
 ('SPE3', 10, 2022, 709), -- Outubro
 ('SPE3', 11, 2022, 710), -- Novembro
-('SPE3', 12, 2022, 688) -- Dezembro
-ON CONFLICT DO NOTHING;
+('SPE3', 12, 2022, 688), -- Dezembro
 
-INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) VALUES
 -- FROTA OPERANTE DE 2021
 -- VER PÁGINA 21 DO ANUÁRIO DE 2021
 -- SPE1 => SALVADOR NORTE
@@ -134,10 +130,8 @@ INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) 
 ('SPE3', 9, 2021, 671), -- Setembro
 ('SPE3', 10, 2021, 684), -- Outubro
 ('SPE3', 11, 2021, 683), -- Novembro
-('SPE3', 12, 2021, 683) -- Dezembro
-ON CONFLICT DO NOTHING;
+('SPE3', 12, 2021, 683), -- Dezembro
 
-INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) VALUES
 -- INTEGRA SALVADOR NORTE (SPE1) - 2020
 ('SPE1', 1, 2020, 691),
 ('SPE1', 2, 2020, 693),
@@ -176,10 +170,8 @@ INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) 
 ('SPE3', 9, 2020, 525),
 ('SPE3', 10, 2020, 567),
 ('SPE3', 11, 2020, 598),
-('SPE3', 12, 2020, 612)
-ON CONFLICT DO NOTHING;
+('SPE3', 12, 2020, 612),
 
-INSERT INTO frota_operante(id_concessionaria, mes, ano, qtd_operante_de_onibus) VALUES
 -- INTEGRA SALVADOR NORTE (SPE1) - 2019
 ('SPE1', 1, 2019, 602),
 ('SPE1', 2, 2019, 620),

@@ -25,6 +25,8 @@ INSERT INTO concessionarias(id_concessionaria, nome_concessionaria, endereco_gar
 ('STCO', 'TOTAL - SISTEMA DE TRANSPORTE COLETIVO POR ÔNIBUS', 'n/a', 'n/a', 'n/a'),
 ('TOTL', 'TOTAL - STCO, BRT E STEC', 'n/a', 'n/a', 'n/a')
 
+-- OBS: Adicionar POOL como operadora para o gráfico do arquivo 22_historico_linhas_por_concessionaria.sql
+
 ON CONFLICT (id_concessionaria)
 DO UPDATE SET
     nome_concessionaria = EXCLUDED.nome_concessionaria,

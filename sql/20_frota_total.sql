@@ -6,6 +6,8 @@ CREATE TABLE IF NOT EXISTS frota_total(
     qtd_total_de_onibus INTEGER
 );
 
+TRUNCATE TABLE frota_total RESTART IDENTITY CASCADE;
+
 INSERT INTO frota_total(id_concessionaria, mes, ano, qtd_total_de_onibus) VALUES
 -- FROTA TOTAL DE 2021
 -- VER PÁGINA 21 DO ANUÁRIO DE 2021
@@ -21,10 +23,9 @@ INSERT INTO frota_total(id_concessionaria, mes, ano, qtd_total_de_onibus) VALUES
 ('STCO', 9, 2021, 2169),
 ('STCO', 10, 2021, 2032),
 ('STCO', 11, 2021, 2101),
-('STCO', 12, 2021, 1776)
-ON CONFLICT DO NOTHING;
+('STCO', 12, 2021, 1776),
 
-INSERT INTO frota_total(id_concessionaria, mes, ano, qtd_total_de_onibus) VALUES
+-- FROTA POR OPERADORA DE 2022
 -- SPE2 => OTTRANS
 ('SPE2', 1, 2022, 1041),
 ('SPE2', 2, 2022, 1041),
@@ -50,10 +51,9 @@ INSERT INTO frota_total(id_concessionaria, mes, ano, qtd_total_de_onibus) VALUES
 ('SPE3', 9, 2022, 769),
 ('SPE3', 10, 2022, 771),
 ('SPE3', 11, 2022, 745),
-('SPE3', 12, 2022, 745)
-ON CONFLICT DO NOTHING;
+('SPE3', 12, 2022, 745),
 
-INSERT INTO frota_total(id_concessionaria, mes, ano, qtd_total_de_onibus) VALUES
+-- FROTA POR OPERADORA DE 2023
 -- SPE2 => OTTRANS
 ('SPE2', 1, 2023, 1033),
 ('SPE2', 2, 2023, 1005),
@@ -79,10 +79,9 @@ INSERT INTO frota_total(id_concessionaria, mes, ano, qtd_total_de_onibus) VALUES
 ('SPE3', 9, 2023, 858),
 ('SPE3', 10, 2023, 858),
 ('SPE3', 11, 2023, 858),
-('SPE3', 12, 2023, 859)
-ON CONFLICT DO NOTHING;
+('SPE3', 12, 2023, 859),
 
-INSERT INTO frota_total(id_concessionaria, mes, ano, qtd_total_de_onibus) VALUES
+-- FROTA POR OPERADORA DE 2024
 -- SPE2 => OTTRANS
 ('SPE2', 1, 2024, 1098),
 ('SPE2', 2, 2024, 1098),

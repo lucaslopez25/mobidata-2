@@ -5,6 +5,8 @@ CREATE TABLE IF NOT EXISTS historico_linhas_regulares(
     qtd_linhas INTEGER
 );
 
+TRUNCATE TABLE historico_linhas_regulares RESTART IDENTITY CASCADE;
+
 INSERT INTO historico_linhas_regulares(ano, mes, qtd_linhas) VALUES
 -- página 14 anuário 2024
 -- NÃO INCLUI LINHAS BRT
@@ -70,4 +72,5 @@ INSERT INTO historico_linhas_regulares(ano, mes, qtd_linhas) VALUES
 (2016, 9, 435),
 (2016, 19, 427),
 (2016, 11, 421),
-(2016, 12, 427);
+(2016, 12, 427)
+ON CONFLICT DO NOTHING;

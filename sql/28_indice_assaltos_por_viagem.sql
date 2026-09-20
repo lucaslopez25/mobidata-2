@@ -5,6 +5,8 @@ CREATE TABLE IF NOT EXISTS indice_assaltos_por_viagem(
     indice NUMERIC(4,2)
 );
 
+TRUNCATE TABLE indice_assaltos_por_viagem RESTART IDENTITY CASCADE;
+
 INSERT INTO indice_assaltos_por_viagem(ano, mes, indice) VALUES
 -- FONTE: INTEGRA - OPERADORES
 -- 2020
@@ -75,4 +77,5 @@ INSERT INTO indice_assaltos_por_viagem(ano, mes, indice) VALUES
 (2024, 9, 0.17),
 (2024,10, 0.18),
 (2024,11, 0.09),
-(2024,12, 0.13);
+(2024,12, 0.13)
+ON CONFLICT DO NOTHING;

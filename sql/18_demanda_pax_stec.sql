@@ -7,6 +7,8 @@ CREATE TABLE IF NOT EXISTS demanda_pax_stec(
     percentual_comparativo_equivalente_total NUMERIC(5,2)
 );
 
+TRUNCATE TABLE demanda_pax_stec RESTART IDENTITY CASCADE;
+
 INSERT INTO demanda_pax_stec(ano, mes, pax_total, pax_equivalente, percentual_comparativo_equivalente_total) VALUES
 -- Página 98 de 122
 (2024, 1, 1757495, 1074250, 61.00),
