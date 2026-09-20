@@ -8,6 +8,8 @@ CREATE TABLE IF NOT EXISTS ascensores_urbanos (
     observacoes TEXT
 );
 
+TRUNCATE TABLE ascensores_urbanos RESTART IDENTITY CASCADE;
+
 -- Formato da data é YYYY-MM-DD
 
 INSERT INTO ascensores_urbanos(id, nome, data_de_inauguracao, horario_operacao, quantidade_bondes, capacidade_por_bonde, observacoes) VALUES
