@@ -4,6 +4,8 @@ CREATE TABLE IF NOT EXISTS tipo_de_veiculo(
     vida_util_em_anos INTEGER
 );
 
+TRUNCATE TABLE tipo_de_veiculo RESTART IDENTITY CASCADE;
+
 INSERT INTO tipo_de_veiculo(nome_tipo, vida_util_em_anos) VALUES
 ('micro-ônibus', 5),
 ('midi-ônibus', 7),
