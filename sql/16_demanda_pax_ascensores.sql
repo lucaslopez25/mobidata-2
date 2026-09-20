@@ -1,4 +1,4 @@
-CREATE TABLE demanda_pax_ascensores (
+CREATE TABLE IF NOT EXISTS demanda_pax_ascensores (
     id_demanda SERIAL PRIMARY KEY,
     id_ascensor_urbano VARCHAR(4) REFERENCES ascensores_urbanos(id),
     mes INTEGER,

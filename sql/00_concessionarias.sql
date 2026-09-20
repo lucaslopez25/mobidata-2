@@ -1,4 +1,4 @@
--- Porque 00_ na frente? Para que o aa_unificador coloque essa tabela (considerada básica no diagrama) logo no início do query de inserção pronto "tudo.sql"
+-- Porque 00_ na frente? Para que o script unificador coloque essa tabela (considerada básica no diagrama) logo no início do query
 
 CREATE TABLE IF NOT EXISTS concessionarias(
     id_concessionaria VARCHAR(10) PRIMARY KEY,
@@ -7,6 +7,12 @@ CREATE TABLE IF NOT EXISTS concessionarias(
     cep VARCHAR(10),
     telefone VARCHAR(30)
 );
+
+TRUNCATE TABLE concessionarias RESTART IDENTITY CASCADE;
+-- Para que serve o TRUNCATE TABLE? Caso precisemos restaurar todos os dados, o TRUNCATE deleta todas as linhas de uma vez da tabela sem precisar de WHERE
+-- E a tabela permanece com sua estrutura intacta pronta para receber novos dados/dados que já existiam, mas dessa vez vindos do zero
+-- Além disso reseta os IDs e também é mais rápida que DELETE
+-- Cuidado! Reverter um TRUNCATE fora de transação é bem chato!
 
 INSERT INTO concessionarias(id_concessionaria, nome_concessionaria, endereco_garagens, cep, telefone) VALUES
 -- FONTE para DADOS da SPE1 - INTEGRA SALVADOR NORTE: Página 10, Anuário 2020

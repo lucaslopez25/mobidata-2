@@ -1,4 +1,4 @@
-CREATE TABLE indicadores_financeiros_stco (
+CREATE TABLE IF NOT EXISTS indicadores_financeiros_stco (
     id SERIAL PRIMARY KEY,
     id_concessionaria VARCHAR(10) REFERENCES concessionarias(id_concessionaria),
     tipo_conta VARCHAR(50) NOT NULL,
@@ -154,7 +154,7 @@ INSERT INTO indicadores_financeiros_stco (id_concessionaria, tipo_conta, ano, va
 ('SPE1', 'Margem EBITDA', 2019, -255, '%', 'FIPECAFI (balanços)', '2.55% negativo')
 ON CONFLICT DO NOTHING;
 
-CREATE TABLE salario_minimo (
+CREATE TABLE IF NOT EXISTS salario_minimo (
     id SERIAL PRIMARY KEY,
     ano INTEGER NOT NULL,
     data_ajuste DATE NOT NULL,
@@ -180,7 +180,7 @@ INSERT INTO salario_minimo (ano, data_ajuste, valor_salario, ato_legal, percentu
 (2015, '2015-01-01', 788.00, 'Decreto 8.381/2014', 8.84)
 ON CONFLICT DO NOTHING;
 
-CREATE TABLE tarifa_preco_stco (
+CREATE TABLE IF NOT EXISTS tarifa_preco_stco (
     ano INT,
     valor DECIMAL(10, 2),
     data_alteracao DATE
@@ -199,7 +199,7 @@ INSERT INTO tarifa_preco_stco (ano, valor, data_alteracao) VALUES
 (2024, 5.20, '2023-11-13')
 ON CONFLICT DO NOTHING;
 
-CREATE TABLE dados_stco (
+CREATE TABLE IF NOT EXISTS dados_stco (
     id SERIAL PRIMARY KEY,
     ano INT,
     passageiros_total BIGINT,

@@ -57,7 +57,7 @@ INSERT INTO frota_de_taxis (ano, taxis_comum_autonomos, taxis_comum_empresas, to
 (2023, 6680, 10, 6690, 248, 6938),
 (2024, 6789, 8, 6797, 247, 7044);
 
-CREATE TABLE distribuicao_taxis_por_tipo_de_servico (
+CREATE TABLE IF NOT EXISTS distribuicao_taxis_por_tipo_de_servico (
     id_distribuicao_taxis_por_tipo_de_servico SERIAL PRIMARY KEY,
     ano INTEGER,
     tipo_de_servico TEXT,
@@ -92,7 +92,7 @@ INSERT INTO distribuicao_taxis_por_tipo_de_servico (ano, tipo_de_servico, entida
 
 -- PAGINA 60 DE 98 DO ANUARIO 2022 ==== OBS FINAL DA PÁGINA, RODAPÉ
 -- TÁXIS POR TIPO DE COMBUSTIVEL
-CREATE TABLE taxis_por_combustivel (
+CREATE TABLE IF NOT EXISTS taxis_por_combustivel (
     id_taxis_por_combustivel SERIAL PRIMARY KEY,
     ano INTEGER,
     tipo_combustivel TEXT,
@@ -125,7 +125,7 @@ INSERT INTO taxis_por_combustivel (ano, tipo_combustivel, quantidade) VALUES
 (2024, 'Óleo Diesel', 3),
 (2024, 'Não Informado', 0);
 
-CREATE TABLE idade_media_da_frota_de_taxis (
+CREATE TABLE IF NOT EXISTS idade_media_da_frota_de_taxis (
     id_idade_media_taxis SERIAL PRIMARY KEY,
     ano INTEGER,
     idade_media FLOAT
@@ -138,7 +138,7 @@ INSERT INTO idade_media_da_frota_de_taxis (ano, idade_media) VALUES
 
 -- PAGINA 63 DE 98 DO ANUARIO 2022
 -- TÁXIS POR TIPO DE COMBUSTIVEL
-CREATE TABLE tipos_veiculos_servico_taxis (
+CREATE TABLE IF NOT EXISTS tipos_veiculos_servico_taxis (
     id_tipos_veiculos_taxis SERIAL PRIMARY KEY,
     ano_registro INTEGER,
     mes_registro INTEGER,

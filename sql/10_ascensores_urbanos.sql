@@ -1,4 +1,4 @@
-CREATE TABLE ascensores_urbanos (
+CREATE TABLE IF NOT EXISTS ascensores_urbanos (
     id VARCHAR(4) PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     data_de_inauguracao DATE,

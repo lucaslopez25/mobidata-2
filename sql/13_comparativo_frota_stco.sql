@@ -6,6 +6,8 @@ CREATE TABLE IF NOT EXISTS comparativo_frota_stco (
     percentual_operante_total NUMERIC(5,2)
 );
 
+TRUNCATE TABLE comparativo_frota_stco RESTART IDENTITY CASCADE;
+
 INSERT INTO comparativo_frota_stco(ano, frota_operante, frota_total, idade_media, percentual_operante_total) VALUES
 -- ANUÁRIO 2024
 -- pg. 50 de 122

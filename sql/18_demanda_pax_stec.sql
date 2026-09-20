@@ -1,4 +1,4 @@
-CREATE TABLE demanda_pax_stec(
+CREATE TABLE IF NOT EXISTS demanda_pax_stec(
     id SERIAL PRIMARY KEY,
     ano INTEGER,
     mes INTEGER,
