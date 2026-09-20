@@ -4,7 +4,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-4169E1?style=for-the-badge&logo=postgresql)
 ![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?style=for-the-badge&logo=docker)
 
-O **Mobidata** é uma plataforma de dados abertos para análise histórica da mobilidade urbana na cidade de Salvador (Bahia). O projeto agrega os dados e os organiza tornando a exploração mais fácil e acessível aos cidadãos e ao público comum.
+O **Mobidata** é uma plataforma de dados abertos para análise histórica da mobilidade urbana na cidade de Salvador-BA. O projeto agrega os dados e os organiza tornando a exploração mais fácil e acessível aos cidadãos e ao público comum.
 
 
 ## Dados disponíveis
