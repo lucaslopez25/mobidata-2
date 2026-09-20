@@ -34,6 +34,12 @@ docker compose up -d
 
 ## Utilidades
 
+- Carregar dados no banco
+```
+make load-data
+```
+
+
 - Para exportar dependências
 
 ```

@@ -183,7 +183,7 @@ INSERT INTO historico_linhas_por_concessionaria(id_concessionaria, ano, mes, qtd
 ON CONFLICT DO NOTHING;
 
 -- INSERT INTO historico_linhas_por_concessionaria(id_concessionaria, ano, mes, qtd_linhas) VALUES
--- -- LINHAS EM POOL (COMPARTILHADAS) PARA O ANO DE 2016
+-- LINHAS EM POOL (COMPARTILHADAS) PARA O ANO DE 2016
 -- ('POOL', 2016, 1, 2),
 -- ('POOL', 2016, 2, 1),
 -- ('POOL', 2016, 10, 2),

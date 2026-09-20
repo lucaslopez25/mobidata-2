@@ -70,7 +70,7 @@ INSERT INTO historico_linhas_regulares(ano, mes, qtd_linhas) VALUES
 (2016, 7, 435),
 (2016, 8, 435),
 (2016, 9, 435),
-(2016, 19, 427),
+(2016, 10, 427),
 (2016, 11, 421),
 (2016, 12, 427)
 ON CONFLICT DO NOTHING;
