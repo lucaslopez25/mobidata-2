@@ -83,6 +83,7 @@ DATABASES = {
         'NAME': os.environ.get("DB_NAME"),
         'USER': os.environ.get("DB_USER"),
         'PASSWORD': os.environ.get("DB_PASSWORD"),
+        'PORT': os.environ.get("DB_PORT", 5432),
     },
     'dados_db': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -90,6 +91,7 @@ DATABASES = {
         'NAME': os.environ.get('DB_NAME_2'),
         'USER': os.environ.get("DB_USER"),
         'PASSWORD': os.environ.get("DB_PASSWORD"),
+        'PORT': os.environ.get("DB_PORT", 5432),
     }
 }
 
