@@ -10,8 +10,8 @@ O **Mobidata** é uma plataforma de dados abertos para análise histórica da mo
 ## Dados disponíveis
 
 - **Ônibus Municipal**: Idade e Renovação da Frota, Tamanho da Frota, Oferta de Linhas e Ônibus, Passageiros, Oferta de Viagens e Quilometragem Percorrida, Climatização da Frota, Receitas e Custos (dados referentes a STCO e BRT).
-- **Metrô**: Passageiros.
-- **STEC (Sistema de Transporte Especial Complementar)**: Passageiros.
+- **Metrô**: Histórico de Passageiros ao longo dos anos.
+- **STEC (Sistema de Transporte Especial Complementar)**: Histórico de Passageiros ao longo dos anos.
 - **Mobilidade Ativa**: Mapa da Rede Cicloviária de Salvador fornecido pelo CICLOMAPA.
 - **Outros Indicadores**: Segurança Pública e Mobilidade, como índice de assaltos a ônibus.
 
