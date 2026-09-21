@@ -1,6 +1,6 @@
 # Mobidata 2
 
-![Django](https://img.shields.io/badge/Django-5.1.6-092E20?style=for-the-badge&logo=django)
+![Django](https://img.shields.io/badge/Django-6.1.1-092E20?style=for-the-badge&logo=django)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-4169E1?style=for-the-badge&logo=postgresql)
 ![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?style=for-the-badge&logo=docker)
 
