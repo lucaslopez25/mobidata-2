@@ -73,11 +73,6 @@ AVAILABLE_MODELS_FOR_EXPORT = {
         'filename': 'indicadores_financeiros_stco.csv',
         'fields': ['ano', 'id_concessionaria', 'tipo_conta', 'valor', 'unidade_medida', 'fonte', 'observacoes'],
     },
-    'ae_indicadores_financeiros_stco': {
-        'model': IndicadoresFinanceirosStco,
-        'filename': 'indicadores_financeiros_stco.csv',
-        'fields': ['ano', 'id_concessionaria', 'tipo_conta', 'valor', 'unidade_medida', 'fonte', 'observacoes'],
-    },
     'dopstec_demanda_pax_stec': {
         'model': DemandaPaxStec,
         'filename': 'demanda_passageiros_stec.csv',
